@@ -1,0 +1,2552 @@
+[
+  {
+    "id": "bio_001",
+    "subjectId": "biology",
+    "topic": "Cellular Biology & Biological Molecules",
+    "testTag": "MDCAT",
+    "difficulty": "Easy",
+    "isPastPaper": true,
+    "question": "The fluid mosaic model of the plasma membrane, describing a phospholipid bilayer studded with proteins, was proposed by which scientists in 1972?",
+    "options": [
+      "Watson and Crick",
+      "Singer and Nicolson",
+      "Schleiden and Schwann",
+      "Beadle and Tatum"
+    ],
+    "answer": 1,
+    "explanation": "Singer and Nicolson proposed the fluid mosaic model in 1972."
+  },
+  {
+    "id": "bio_002",
+    "subjectId": "biology",
+    "topic": "Cellular Biology & Biological Molecules",
+    "testTag": "NET",
+    "difficulty": "Medium",
+    "isPastPaper": true,
+    "question": "In eukaryotic cells, which of the following organelles specifically contains 70S ribosomes, providing evidence for the endosymbiotic theory?",
+    "options": [
+      "Rough Endoplasmic Reticulum",
+      "Nucleus",
+      "Mitochondria",
+      "Golgi Apparatus"
+    ],
+    "answer": 2,
+    "explanation": "Mitochondria contain 70S ribosomes similar to prokaryotes."
+  },
+  {
+    "id": "bio_003",
+    "subjectId": "biology",
+    "topic": "Cellular Biology & Biological Molecules",
+    "testTag": "USAT",
+    "difficulty": "Medium",
+    "isPastPaper": true,
+    "question": "A normal red blood cell is placed in a hypertonic saline solution. Which of the following accurately describes the resulting osmotic behavior?",
+    "options": [
+      "Plasmolysis",
+      "Haemolysis",
+      "Crenation",
+      "Turgor pressure increases"
+    ],
+    "answer": 2,
+    "explanation": "RBCs shrink and crenate in hypertonic solutions."
+  },
+  {
+    "id": "bio_004",
+    "subjectId": "biology",
+    "topic": "Cellular Biology & Biological Molecules",
+    "testTag": "MDCAT",
+    "difficulty": "Medium",
+    "isPastPaper": true,
+    "question": "The primary function of the heavily folded inner mitochondrial membrane (cristae) is to:",
+    "options": [
+      "Store circular mitochondrial DNA",
+      "Increase surface area for the electron transport chain",
+      "Synthesize steroid hormones",
+      "Anchor 80S ribosomes"
+    ],
+    "answer": 1,
+    "explanation": "Cristae increase surface area for ETC complexes."
+  },
+  {
+    "id": "bio_005",
+    "subjectId": "biology",
+    "topic": "Cellular Biology & Biological Molecules",
+    "testTag": "MDCAT",
+    "difficulty": "Hard",
+    "isPastPaper": true,
+    "question": "Eukaryotic cilia and flagella are composed of microtubules arranged in which of the following specific structural patterns?",
+    "options": [
+      "9+0 arrangement",
+      "9+2 arrangement",
+      "9+3 arrangement",
+      "8+2 arrangement"
+    ],
+    "answer": 1,
+    "explanation": "Cilia and flagella have a 9+2 microtubule axoneme."
+  },
+  {
+    "id": "bio_006",
+    "subjectId": "biology",
+    "topic": "Cellular Biology & Biological Molecules",
+    "testTag": "NET",
+    "difficulty": "Easy",
+    "isPastPaper": true,
+    "question": "Which of the following is NOT typically found in a mature, higher plant cell?",
+    "options": [
+      "Large central vacuole",
+      "Cellulose cell wall",
+      "Centrioles",
+      "Plasmodesmata"
+    ],
+    "answer": 2,
+    "explanation": "Higher plant cells lack centrioles."
+  },
+  {
+    "id": "bio_007",
+    "subjectId": "biology",
+    "topic": "Cellular Biology & Biological Molecules",
+    "testTag": "USAT",
+    "difficulty": "Easy",
+    "isPastPaper": true,
+    "question": "Which class of biological molecules is characterized by the presence of peptide bonds linking its monomeric units?",
+    "options": [
+      "Carbohydrates",
+      "Lipids",
+      "Proteins",
+      "Nucleic Acids"
+    ],
+    "answer": 2,
+    "explanation": "Proteins consist of amino acids linked by peptide bonds."
+  },
+  {
+    "id": "bio_008",
+    "subjectId": "biology",
+    "topic": "Cellular Biology & Biological Molecules",
+    "testTag": "MDCAT",
+    "difficulty": "Medium",
+    "isPastPaper": true,
+    "question": "During the formation of a triglyceride, how many water molecules are removed in the condensation reactions between glycerol and fatty acids?",
+    "options": [
+      "One",
+      "Two",
+      "Three",
+      "Four"
+    ],
+    "answer": 2,
+    "explanation": "Three ester bonds release 3 water molecules."
+  },
+  {
+    "id": "bio_009",
+    "subjectId": "biology",
+    "topic": "Cellular Biology & Biological Molecules",
+    "testTag": "MDCAT",
+    "difficulty": "Easy",
+    "isPastPaper": true,
+    "question": "Which of the following nitrogenous bases is a purine found in both DNA and RNA?",
+    "options": [
+      "Cytosine",
+      "Thymine",
+      "Guanine",
+      "Uracil"
+    ],
+    "answer": 2,
+    "explanation": "Adenine and Guanine are purines present in both DNA and RNA."
+  },
+  {
+    "id": "bio_010",
+    "subjectId": "biology",
+    "topic": "Cellular Biology & Biological Molecules",
+    "testTag": "NET",
+    "difficulty": "Easy",
+    "isPastPaper": true,
+    "question": "The sequence of amino acids in a polypeptide chain constitutes which level of protein structure?",
+    "options": [
+      "Primary structure",
+      "Secondary structure",
+      "Tertiary structure",
+      "Quaternary structure"
+    ],
+    "answer": 0,
+    "explanation": "Linear sequence is primary structure."
+  },
+  {
+    "id": "bio_011",
+    "subjectId": "biology",
+    "topic": "Cellular Biology & Biological Molecules",
+    "testTag": "MDCAT",
+    "difficulty": "Medium",
+    "isPastPaper": true,
+    "question": "According to the induced-fit model of enzyme action, the active site is:",
+    "options": [
+      "A rigid, non-flexible structure",
+      "Complementary to the substrate only after binding",
+      "Identical to the substrate in shape",
+      "Destroyed after the reaction is complete"
+    ],
+    "answer": 1,
+    "explanation": "Active site adapts shape upon substrate binding."
+  },
+  {
+    "id": "bio_012",
+    "subjectId": "biology",
+    "topic": "Cellular Biology & Biological Molecules",
+    "testTag": "MDCAT",
+    "difficulty": "Hard",
+    "isPastPaper": true,
+    "question": "In competitive inhibition, the inhibitor binds to the enzyme's active site. How can the effect of a competitive inhibitor be overcome?",
+    "options": [
+      "By decreasing the temperature",
+      "By adding a non-competitive inhibitor",
+      "By significantly increasing the substrate concentration",
+      "By changing the pH of the medium"
+    ],
+    "answer": 2,
+    "explanation": "Increasing substrate concentration outcompetes competitive inhibitors."
+  },
+  {
+    "id": "bio_013",
+    "subjectId": "biology",
+    "topic": "Cellular Biology & Biological Molecules",
+    "testTag": "USAT",
+    "difficulty": "Medium",
+    "isPastPaper": true,
+    "question": "Which of the following environmental factors most commonly leads to the denaturation of human enzymes?",
+    "options": [
+      "Substrate concentration exceeding Vmax",
+      "Temperatures dropping below 10°C",
+      "Temperatures exceeding 50°C",
+      "Presence of coenzymes"
+    ],
+    "answer": 2,
+    "explanation": "High temperatures above 50°C denature human enzymes."
+  },
+  {
+    "id": "bio_014",
+    "subjectId": "biology",
+    "topic": "Bioenergetics, Diversity & Plant Physiology",
+    "testTag": "MDCAT",
+    "difficulty": "Easy",
+    "isPastPaper": true,
+    "question": "Glycolysis, the first stage of cellular respiration, occurs in which cellular compartment?",
+    "options": [
+      "Mitochondrial matrix",
+      "Inner mitochondrial membrane",
+      "Cytoplasm",
+      "Thylakoid lumen"
+    ],
+    "answer": 2,
+    "explanation": "Glycolysis occurs in the cytoplasm."
+  },
+  {
+    "id": "bio_015",
+    "subjectId": "biology",
+    "topic": "Bioenergetics, Diversity & Plant Physiology",
+    "testTag": "NET",
+    "difficulty": "Medium",
+    "isPastPaper": true,
+    "question": "During the Krebs cycle, the 2-carbon acetyl-CoA combines with a 4-carbon compound to form a 6-carbon molecule known as:",
+    "options": [
+      "Malate",
+      "Succinate",
+      "Citrate",
+      "Alpha-ketoglutarate"
+    ],
+    "answer": 2,
+    "explanation": "Acetyl-CoA + Oxaloacetate -> Citrate."
+  },
+  {
+    "id": "bio_016",
+    "subjectId": "biology",
+    "topic": "Bioenergetics, Diversity & Plant Physiology",
+    "testTag": "MDCAT",
+    "difficulty": "Medium",
+    "isPastPaper": true,
+    "question": "What is the net yield of ATP molecules produced directly from the glycolysis of a single glucose molecule?",
+    "options": [
+      "2 ATP",
+      "4 ATP",
+      "34 ATP",
+      "36 ATP"
+    ],
+    "answer": 0,
+    "explanation": "Net yield of glycolysis is 2 ATP."
+  },
+  {
+    "id": "bio_017",
+    "subjectId": "biology",
+    "topic": "Bioenergetics, Diversity & Plant Physiology",
+    "testTag": "MDCAT",
+    "difficulty": "Hard",
+    "isPastPaper": true,
+    "question": "In the light-dependent reactions of photosynthesis, the primary electron acceptor for Photosystem II (P680) passes electrons directly to:",
+    "options": [
+      "Photosystem I (P700)",
+      "Plastoquinone (Pq)",
+      "Ferredoxin (Fd)",
+      "NADP+ reductase"
+    ],
+    "answer": 1,
+    "explanation": "P680 passes electrons to Plastoquinone."
+  },
+  {
+    "id": "bio_018",
+    "subjectId": "biology",
+    "topic": "Bioenergetics, Diversity & Plant Physiology",
+    "testTag": "NET",
+    "difficulty": "Medium",
+    "isPastPaper": true,
+    "question": "The Calvin cycle (light-independent reactions) utilizes ATP and NADPH to fix carbon dioxide. The enzyme responsible for the initial carbon fixation step is:",
+    "options": [
+      "PEP carboxylase",
+      "ATP synthase",
+      "RuBisCO",
+      "Hexokinase"
+    ],
+    "answer": 2,
+    "explanation": "RuBisCO fixes carbon dioxide in Calvin cycle."
+  },
+  {
+    "id": "bio_019",
+    "subjectId": "biology",
+    "topic": "Cellular Biology & Biological Molecules",
+    "testTag": "USAT",
+    "difficulty": "Easy",
+    "isPastPaper": true,
+    "question": "During which specific phase of the cell cycle does DNA replication occur?",
+    "options": [
+      "G1 phase",
+      "S phase",
+      "G2 phase",
+      "M phase"
+    ],
+    "answer": 1,
+    "explanation": "S phase is when DNA replication occurs."
+  },
+  {
+    "id": "bio_020",
+    "subjectId": "biology",
+    "topic": "Cellular Biology & Biological Molecules",
+    "testTag": "MDCAT",
+    "difficulty": "Medium",
+    "isPastPaper": true,
+    "question": "The exchange of genetic material between non-sister chromatids of homologous chromosomes is known as crossing over. This process occurs during:",
+    "options": [
+      "Prophase of Mitosis",
+      "Prophase I of Meiosis",
+      "Metaphase II of Meiosis",
+      "Anaphase I of Meiosis"
+    ],
+    "answer": 1,
+    "explanation": "Crossing over occurs during Prophase I of Meiosis."
+  },
+  {
+    "id": "bio_021",
+    "subjectId": "biology",
+    "topic": "Cellular Biology & Biological Molecules",
+    "testTag": "MDCAT",
+    "difficulty": "Easy",
+    "isPastPaper": true,
+    "question": "Which stage of mitosis is characterized by the alignment of chromosomes along the equatorial plane of the cell?",
+    "options": [
+      "Prophase",
+      "Metaphase",
+      "Anaphase",
+      "Telophase"
+    ],
+    "answer": 1,
+    "explanation": "Metaphase is alignment along equatorial plane."
+  },
+  {
+    "id": "bio_022",
+    "subjectId": "biology",
+    "topic": "Genetics, Inheritance & Biotechnology",
+    "testTag": "NET",
+    "difficulty": "Medium",
+    "isPastPaper": true,
+    "question": "Failure of homologous chromosomes or sister chromatids to separate properly during meiosis is termed nondisjunction. This can lead to which of the following syndromes?",
+    "options": [
+      "Sickle-Cell Anaemia",
+      "Cystic Fibrosis",
+      "Down Syndrome",
+      "Haemophilia"
+    ],
+    "answer": 2,
+    "explanation": "Nondisjunction causes Trisomy 21 (Down Syndrome)."
+  },
+  {
+    "id": "bio_023",
+    "subjectId": "biology",
+    "topic": "Genetics, Inheritance & Biotechnology",
+    "testTag": "MDCAT",
+    "difficulty": "Medium",
+    "isPastPaper": true,
+    "question": "In Mendelian genetics, a dihybrid cross between two heterozygotes (AaBb x AaBb) for unlinked genes will theoretically yield which phenotypic ratio?",
+    "options": [
+      "3:1",
+      "1:2:1",
+      "9:3:3:1",
+      "1:1:1:1"
+    ],
+    "answer": 2,
+    "explanation": "Dihybrid cross ratio is 9:3:3:1."
+  },
+  {
+    "id": "bio_024",
+    "subjectId": "biology",
+    "topic": "Genetics, Inheritance & Biotechnology",
+    "testTag": "USAT",
+    "difficulty": "Medium",
+    "isPastPaper": true,
+    "question": "The human ABO blood group system is an example of which genetic phenomenon?",
+    "options": [
+      "Incomplete dominance",
+      "Polygenic inheritance",
+      "Epistasis",
+      "Multiple alleles and Co-dominance"
+    ],
+    "answer": 3,
+    "explanation": "ABO blood groups show multiple alleles and codominance."
+  },
+  {
+    "id": "bio_025",
+    "subjectId": "biology",
+    "topic": "Genetics, Inheritance & Biotechnology",
+    "testTag": "MDCAT",
+    "difficulty": "Hard",
+    "isPastPaper": true,
+    "question": "A man with blood group AB and a woman with blood group O have a child. Which of the following blood groups is impossible for their child to have?",
+    "options": [
+      "Group A",
+      "Group B",
+      "Group AB",
+      "Both Group A and Group B are impossible"
+    ],
+    "answer": 2,
+    "explanation": "Children can be A or B; Group AB and O are impossible."
+  },
+  {
+    "id": "bio_026",
+    "subjectId": "biology",
+    "topic": "Genetics, Inheritance & Biotechnology",
+    "testTag": "NET",
+    "difficulty": "Hard",
+    "isPastPaper": true,
+    "question": "Haemophilia A is an X-linked recessive disorder. If a carrier mother and a normal father have a son, what is the probability that the son will be affected?",
+    "options": [
+      "0%",
+      "25%",
+      "50%",
+      "100%"
+    ],
+    "answer": 2,
+    "explanation": "Son has 50% probability of inheriting carrier X."
+  },
+  {
+    "id": "bio_027",
+    "subjectId": "biology",
+    "topic": "Genetics, Inheritance & Biotechnology",
+    "testTag": "MDCAT",
+    "difficulty": "Hard",
+    "isPastPaper": true,
+    "question": "Sickle-cell anaemia is caused by a point mutation in the beta-globin gene. Specifically, it involves the substitution of which amino acid for glutamic acid at position 6?",
+    "options": [
+      "Valine",
+      "Leucine",
+      "Proline",
+      "Histidine"
+    ],
+    "answer": 0,
+    "explanation": "Glutamic acid is replaced by Valine at position 6."
+  },
+  {
+    "id": "bio_028",
+    "subjectId": "biology",
+    "topic": "Genetics, Inheritance & Biotechnology",
+    "testTag": "USAT",
+    "difficulty": "Medium",
+    "isPastPaper": true,
+    "question": "According to Chargaff's rules regarding DNA structure, which of the following base-pairing equations is consistently true across different species?",
+    "options": [
+      "A + T = G + C",
+      "A + G = T + C",
+      "A = C",
+      "G = T"
+    ],
+    "answer": 1,
+    "explanation": "Purines equal Pyrimidines: A + G = T + C."
+  },
+  {
+    "id": "bio_029",
+    "subjectId": "biology",
+    "topic": "Genetics, Inheritance & Biotechnology",
+    "testTag": "MDCAT",
+    "difficulty": "Easy",
+    "isPastPaper": true,
+    "question": "Which enzyme is primarily responsible for unwinding the DNA double helix ahead of the replication fork during DNA replication?",
+    "options": [
+      "DNA Polymerase III",
+      "DNA Ligase",
+      "Helicase",
+      "Primase"
+    ],
+    "answer": 2,
+    "explanation": "Helicase unwinds DNA double helix."
+  },
+  {
+    "id": "bio_030",
+    "subjectId": "biology",
+    "topic": "Genetics, Inheritance & Biotechnology",
+    "testTag": "NET",
+    "difficulty": "Easy",
+    "isPastPaper": true,
+    "question": "The process by which the sequence of nucleotides in mRNA is used to direct the synthesis of a specific polypeptide is called:",
+    "options": [
+      "Transcription",
+      "Translation",
+      "Replication",
+      "Transduction"
+    ],
+    "answer": 1,
+    "explanation": "Translation synthesizes protein from mRNA."
+  },
+  {
+    "id": "bio_031",
+    "subjectId": "biology",
+    "topic": "Bioenergetics, Diversity & Plant Physiology",
+    "testTag": "MDCAT",
+    "difficulty": "Medium",
+    "isPastPaper": true,
+    "question": "In the Hardy-Weinberg equation (p² + 2pq + q² = 1), what does the term '2pq' represent within a population?",
+    "options": [
+      "dominant allele",
+      "recessive allele",
+      "homozygous dominant genotype",
+      "heterozygous genotype"
+    ],
+    "answer": 3,
+    "explanation": "2pq represents heterozygous genotype frequency."
+  },
+  {
+    "id": "bio_032",
+    "subjectId": "biology",
+    "topic": "Bioenergetics, Diversity & Plant Physiology",
+    "testTag": "USAT",
+    "difficulty": "Easy",
+    "isPastPaper": true,
+    "question": "Which evolutionary theory proposed by Jean-Baptiste Lamarck suggests that traits acquired during an organism's lifetime can be passed to offspring?",
+    "options": [
+      "Natural Selection",
+      "Theory of Inheritance of Acquired Characteristics",
+      "Neo-Darwinism",
+      "Punctuated Equilibrium"
+    ],
+    "answer": 1,
+    "explanation": "Lamarck proposed inheritance of acquired characteristics."
+  },
+  {
+    "id": "bio_033",
+    "subjectId": "biology",
+    "topic": "Bioenergetics, Diversity & Plant Physiology",
+    "testTag": "MDCAT",
+    "difficulty": "Medium",
+    "isPastPaper": true,
+    "question": "Homologous structures, such as the forelimbs of a human and the wings of a bat, provide evidence for evolution because they indicate:",
+    "options": [
+      "Convergent evolution",
+      "Analogous origins",
+      "Common ancestry",
+      "Identical functions"
+    ],
+    "answer": 2,
+    "explanation": "Homologous structures indicate common ancestry."
+  },
+  {
+    "id": "bio_034",
+    "subjectId": "biology",
+    "topic": "Bioenergetics, Diversity & Plant Physiology",
+    "testTag": "MDCAT",
+    "difficulty": "Medium",
+    "isPastPaper": true,
+    "question": "Which of the following represents the correct hierarchical sequence of biological classification from most inclusive to least inclusive?",
+    "options": [
+      "Kingdom, Phylum, Order, Class, Family, Genus, Species",
+      "Kingdom, Phylum, Class, Order, Family, Genus, Species",
+      "Domain, Phylum, Kingdom, Class, Order, Genus, Family",
+      "Species, Genus, Family, Order, Class, Phylum, Kingdom"
+    ],
+    "answer": 1,
+    "explanation": "Kingdom -> Phylum -> Class -> Order -> Family -> Genus -> Species."
+  },
+  {
+    "id": "bio_035",
+    "subjectId": "biology",
+    "topic": "Bioenergetics, Diversity & Plant Physiology",
+    "testTag": "NET",
+    "difficulty": "Easy",
+    "isPastPaper": true,
+    "question": "Organisms in the Phylum Porifera (sponges) exhibit which level of bodily organization?",
+    "options": [
+      "Cellular level",
+      "Tissue level",
+      "Organ level",
+      "Organ system level"
+    ],
+    "answer": 0,
+    "explanation": "Sponges exhibit cellular level of organization."
+  },
+  {
+    "id": "bio_036",
+    "subjectId": "biology",
+    "topic": "Bioenergetics, Diversity & Plant Physiology",
+    "testTag": "MDCAT",
+    "difficulty": "Medium",
+    "isPastPaper": true,
+    "question": "True coelomates possess a body cavity completely lined by tissue derived from which embryonic germ layer?",
+    "options": [
+      "Ectoderm",
+      "Endoderm",
+      "Mesoderm",
+      "Epidermis"
+    ],
+    "answer": 2,
+    "explanation": "True coelom is completely lined by mesoderm."
+  },
+  {
+    "id": "bio_037",
+    "subjectId": "biology",
+    "topic": "Bioenergetics, Diversity & Plant Physiology",
+    "testTag": "USAT",
+    "difficulty": "Easy",
+    "isPastPaper": true,
+    "question": "Viruses are obligate intracellular parasites. The protein coat enclosing the viral genetic material is specifically known as the:",
+    "options": [
+      "Envelope",
+      "Capsid",
+      "Nucleoid",
+      "Virion"
+    ],
+    "answer": 1,
+    "explanation": "Protein coat of a virus is the capsid."
+  },
+  {
+    "id": "bio_038",
+    "subjectId": "biology",
+    "topic": "Bioenergetics, Diversity & Plant Physiology",
+    "testTag": "MDCAT",
+    "difficulty": "Medium",
+    "isPastPaper": true,
+    "question": "The Human Immunodeficiency Virus (HIV) targets and destroys which specific cells of the human immune system?",
+    "options": [
+      "Cytotoxic T cells (CD8+)",
+      "Helper T cells (CD4+)",
+      "B lymphocytes",
+      "Macrophages only"
+    ],
+    "answer": 1,
+    "explanation": "HIV destroys CD4+ Helper T cells."
+  },
+  {
+    "id": "bio_039",
+    "subjectId": "biology",
+    "topic": "Bioenergetics, Diversity & Plant Physiology",
+    "testTag": "NET",
+    "difficulty": "Easy",
+    "isPastPaper": true,
+    "question": "Bacteria reproduce asexually through a process that involves the replication of the circular chromosome and division of the cell into two identical daughter cells. This is called:",
+    "options": [
+      "Conjugation",
+      "Transformation",
+      "Transduction",
+      "Binary Fission"
+    ],
+    "answer": 3,
+    "explanation": "Bacterial asexual reproduction is binary fission."
+  },
+  {
+    "id": "bio_040",
+    "subjectId": "biology",
+    "topic": "Bioenergetics, Diversity & Plant Physiology",
+    "testTag": "MDCAT",
+    "difficulty": "Easy",
+    "isPastPaper": true,
+    "question": "Peptidoglycan is the major structural component of the cell walls in which group of organisms?",
+    "options": [
+      "Fungi",
+      "Plants",
+      "Archaea",
+      "Bacteria (Eubacteria)"
+    ],
+    "answer": 3,
+    "explanation": "Peptidoglycan forms bacterial cell walls."
+  },
+  {
+    "id": "bio_041",
+    "subjectId": "biology",
+    "topic": "Bioenergetics, Diversity & Plant Physiology",
+    "testTag": "MDCAT",
+    "difficulty": "Medium",
+    "isPastPaper": true,
+    "question": "Carnivorous plants, such as the Venus flytrap, grow in soils that are typically deficient in which essential macronutrient?",
+    "options": [
+      "Carbon",
+      "Oxygen",
+      "Nitrogen",
+      "Hydrogen"
+    ],
+    "answer": 2,
+    "explanation": "Carnivorous plants trap insects for nitrogen."
+  },
+  {
+    "id": "bio_042",
+    "subjectId": "biology",
+    "topic": "Bioenergetics, Diversity & Plant Physiology",
+    "testTag": "USAT",
+    "difficulty": "Medium",
+    "isPastPaper": true,
+    "question": "In the cohesion-tension theory of sap ascent in plants, the primary driving force that pulls water up the xylem is:",
+    "options": [
+      "Root pressure",
+      "Active transport of ions",
+      "Transpiration from the leaves",
+      "Capillary action alone"
+    ],
+    "answer": 2,
+    "explanation": "Transpiration from leaves pulls water upward."
+  },
+  {
+    "id": "bio_043",
+    "subjectId": "biology",
+    "topic": "Human Physiology & Coordination",
+    "testTag": "MDCAT",
+    "difficulty": "Easy",
+    "isPastPaper": true,
+    "question": "The normal resting blood pressure of a healthy adult human is typically recorded as:",
+    "options": [
+      "100/60 mmHg",
+      "120/80 mmHg",
+      "140/90 mmHg",
+      "80/120 mmHg"
+    ],
+    "answer": 1,
+    "explanation": "Normal blood pressure is 120/80 mmHg."
+  },
+  {
+    "id": "bio_044",
+    "subjectId": "biology",
+    "topic": "Human Physiology & Coordination",
+    "testTag": "NET",
+    "difficulty": "Medium",
+    "isPastPaper": true,
+    "question": "In the human heart, oxygenated blood returning from the lungs directly enters which anatomical chamber?",
+    "options": [
+      "Right Atrium",
+      "Right Ventricle",
+      "Left Atrium",
+      "Left Ventricle"
+    ],
+    "answer": 2,
+    "explanation": "Oxygenated blood enters Left Atrium."
+  },
+  {
+    "id": "bio_045",
+    "subjectId": "biology",
+    "topic": "Human Physiology & Coordination",
+    "testTag": "MDCAT",
+    "difficulty": "Hard",
+    "isPastPaper": true,
+    "question": "Which component of the electrocardiogram (ECG) represents the depolarization of the ventricles prior to their contraction?",
+    "options": [
+      "P wave",
+      "QRS complex",
+      "T wave",
+      "U wave"
+    ],
+    "answer": 1,
+    "explanation": "QRS complex represents ventricular depolarization."
+  },
+  {
+    "id": "bio_046",
+    "subjectId": "biology",
+    "topic": "Human Physiology & Coordination",
+    "testTag": "MDCAT",
+    "difficulty": "Medium",
+    "isPastPaper": true,
+    "question": "The enzyme pepsin, which initiates protein digestion in the human stomach, is secreted in an inactive form called pepsinogen. What activates pepsinogen?",
+    "options": [
+      "Amylase",
+      "Bile salts",
+      "Hydrochloric acid (HCl)",
+      "Enterokinase"
+    ],
+    "answer": 2,
+    "explanation": "HCl activates pepsinogen into pepsin."
+  },
+  {
+    "id": "bio_047",
+    "subjectId": "biology",
+    "topic": "Human Physiology & Coordination",
+    "testTag": "USAT",
+    "difficulty": "Easy",
+    "isPastPaper": true,
+    "question": "The microscopic finger-like projections in the small intestine that vastly increase the surface area for nutrient absorption are called:",
+    "options": [
+      "Cilia",
+      "Microtubules",
+      "Villi",
+      "Rugae"
+    ],
+    "answer": 2,
+    "explanation": "Villi increase surface area for absorption."
+  },
+  {
+    "id": "bio_048",
+    "subjectId": "biology",
+    "topic": "Human Physiology & Coordination",
+    "testTag": "MDCAT",
+    "difficulty": "Medium",
+    "isPastPaper": true,
+    "question": "During gaseous exchange in the human lungs, oxygen diffuses from the alveoli into the blood primarily due to:",
+    "options": [
+      "Active transport mechanisms",
+      "A steep partial pressure gradient",
+      "Facilitated diffusion via carrier proteins",
+      "Osmosis"
+    ],
+    "answer": 1,
+    "explanation": "Oxygen diffuses down its partial pressure gradient."
+  },
+  {
+    "id": "bio_049",
+    "subjectId": "biology",
+    "topic": "Human Physiology & Coordination",
+    "testTag": "NET",
+    "difficulty": "Hard",
+    "isPastPaper": true,
+    "question": "The Bohr effect describes how the oxygen-binding affinity of hemoglobin is influenced by blood pH. A decrease in blood pH (increased acidity) will cause hemoglobin to:",
+    "options": [
+      "Bind oxygen more tightly",
+      "Release oxygen more readily",
+      "Irreversibly bind to carbon dioxide",
+      "Unfold and denature completely"
+    ],
+    "answer": 1,
+    "explanation": "Decreased pH causes Hb to release oxygen more readily."
+  },
+  {
+    "id": "bio_050",
+    "subjectId": "biology",
+    "topic": "Human Physiology & Coordination",
+    "testTag": "MDCAT",
+    "difficulty": "Easy",
+    "isPastPaper": true,
+    "question": "In the human excretory system, the functional unit of the kidney responsible for filtration, reabsorption, and secretion is the:",
+    "options": [
+      "Neuron",
+      "Alveolus",
+      "Nephron",
+      "Glomerulus"
+    ],
+    "answer": 2,
+    "explanation": "Nephron is the functional unit of kidney."
+  },
+  {
+    "id": "bio_051",
+    "subjectId": "biology",
+    "topic": "Human Physiology & Coordination",
+    "testTag": "MDCAT",
+    "difficulty": "Hard",
+    "isPastPaper": true,
+    "question": "Antidiuretic hormone (ADH), which promotes water reabsorption in the collecting ducts of the kidney, is synthesized by the:",
+    "options": [
+      "Anterior pituitary",
+      "Adrenal cortex",
+      "Hypothalamus",
+      "Kidney"
+    ],
+    "answer": 2,
+    "explanation": "ADH is synthesized in the hypothalamus and released by posterior pituitary."
+  },
+  {
+    "id": "bio_052",
+    "subjectId": "biology",
+    "topic": "Human Physiology & Coordination",
+    "testTag": "NET",
+    "difficulty": "Medium",
+    "isPastPaper": true,
+    "question": "In a resting neuron, the resting membrane potential is typically maintained at approximately -70 mV. This is primarily established by the activity of the:",
+    "options": [
+      "Voltage-gated sodium channels",
+      "Calcium pump",
+      "Sodium-potassium (Na+/K+) pump",
+      "Ligand-gated ion channels"
+    ],
+    "answer": 2,
+    "explanation": "Na+/K+ pump maintains resting membrane potential."
+  },
+  {
+    "id": "bio_053",
+    "subjectId": "biology",
+    "topic": "Human Physiology & Coordination",
+    "testTag": "MDCAT",
+    "difficulty": "Medium",
+    "isPastPaper": true,
+    "question": "During the generation of an action potential, the rapid depolarization of the neuronal membrane is caused by an influx of which ion?",
+    "options": [
+      "Potassium (K+)",
+      "Sodium (Na+)",
+      "Calcium (Ca2+)",
+      "Chloride (Cl-)"
+    ],
+    "answer": 1,
+    "explanation": "Sodium influx causes rapid depolarization."
+  },
+  {
+    "id": "bio_054",
+    "subjectId": "biology",
+    "topic": "Human Physiology & Coordination",
+    "testTag": "USAT",
+    "difficulty": "Medium",
+    "isPastPaper": true,
+    "question": "The autonomic nervous system is divided into the sympathetic and parasympathetic divisions. Which of the following is a classic sympathetic 'fight-or-flight' response?",
+    "options": [
+      "Constriction of pupils",
+      "Decreased heart rate",
+      "Dilation of bronchioles",
+      "Increased digestion"
+    ],
+    "answer": 2,
+    "explanation": "Dilation of bronchioles is a sympathetic response."
+  },
+  {
+    "id": "bio_055",
+    "subjectId": "biology",
+    "topic": "Human Physiology & Coordination",
+    "testTag": "MDCAT",
+    "difficulty": "Easy",
+    "isPastPaper": true,
+    "question": "Which part of the human brain is primarily responsible for coordinating voluntary muscle movements, maintaining posture, and balance?",
+    "options": [
+      "Cerebrum",
+      "Medulla oblongata",
+      "Cerebellum",
+      "Thalamus"
+    ],
+    "answer": 2,
+    "explanation": "Cerebellum coordinates voluntary muscle movements and balance."
+  },
+  {
+    "id": "bio_056",
+    "subjectId": "biology",
+    "topic": "Human Physiology & Coordination",
+    "testTag": "MDCAT",
+    "difficulty": "Easy",
+    "isPastPaper": true,
+    "question": "Insulin and glucagon are antagonistic hormones that regulate blood glucose levels. They are secreted by the Islets of Langerhans located in the:",
+    "options": [
+      "Liver",
+      "Thyroid gland",
+      "Pancreas",
+      "Adrenal medulla"
+    ],
+    "answer": 2,
+    "explanation": "Pancreas secretes insulin and glucagon."
+  },
+  {
+    "id": "bio_057",
+    "subjectId": "biology",
+    "topic": "Human Physiology & Coordination",
+    "testTag": "NET",
+    "difficulty": "Hard",
+    "isPastPaper": true,
+    "question": "In the sliding filament model of skeletal muscle contraction, which specific molecule binds to calcium ions, initiating the exposure of myosin-binding sites on actin?",
+    "options": [
+      "Tropomyosin",
+      "Troponin",
+      "ATP",
+      "Acetylcholine"
+    ],
+    "answer": 1,
+    "explanation": "Calcium binds to Troponin during muscle contraction."
+  },
+  {
+    "id": "bio_058",
+    "subjectId": "biology",
+    "topic": "Human Physiology & Coordination",
+    "testTag": "USAT",
+    "difficulty": "Easy",
+    "isPastPaper": true,
+    "question": "Human skeletal muscles are attached to bones by tough bands of fibrous connective tissue known as:",
+    "options": [
+      "Ligaments",
+      "Cartilage",
+      "Tendons",
+      "Fascia"
+    ],
+    "answer": 2,
+    "explanation": "Tendons attach muscle to bone."
+  },
+  {
+    "id": "bio_059",
+    "subjectId": "biology",
+    "topic": "Human Physiology & Coordination",
+    "testTag": "MDCAT",
+    "difficulty": "Medium",
+    "isPastPaper": true,
+    "question": "Arthritis is a broad term encompassing disorders of the joints. Gouty arthritis is specifically caused by the accumulation of which substance in the joint cavities?",
+    "options": [
+      "Calcium phosphate",
+      "Uric acid crystals",
+      "Lactic acid",
+      "Synovial fluid"
+    ],
+    "answer": 1,
+    "explanation": "Uric acid crystals cause gouty arthritis."
+  },
+  {
+    "id": "bio_060",
+    "subjectId": "biology",
+    "topic": "Human Physiology & Coordination",
+    "testTag": "MDCAT",
+    "difficulty": "Medium",
+    "isPastPaper": true,
+    "question": "In the human female reproductive cycle, the surge of which specific hormone triggers ovulation approximately on day 14?",
+    "options": [
+      "Estrogen",
+      "Progesterone",
+      "Follicle-Stimulating Hormone (FSH)",
+      "Luteinizing Hormone (LH)"
+    ],
+    "answer": 3,
+    "explanation": "LH surge triggers ovulation."
+  },
+  {
+    "id": "bio_061",
+    "subjectId": "biology",
+    "topic": "Human Physiology & Coordination",
+    "testTag": "NET",
+    "difficulty": "Easy",
+    "isPastPaper": true,
+    "question": "Fertilization of the human ovum by a sperm cell most commonly occurs in which anatomical structure?",
+    "options": [
+      "Uterus",
+      "Ovary",
+      "Fallopian tube (Oviduct)",
+      "Cervix"
+    ],
+    "answer": 2,
+    "explanation": "Fertilization occurs in Fallopian tube."
+  },
+  {
+    "id": "bio_062",
+    "subjectId": "biology",
+    "topic": "Human Physiology & Coordination",
+    "testTag": "MDCAT",
+    "difficulty": "Medium",
+    "isPastPaper": true,
+    "question": "The causative agent of Syphilis, a sexually transmitted disease, is the bacterium:",
+    "options": [
+      "Neisseria gonorrhoeae",
+      "Treponema pallidum",
+      "Chlamydia trachomatis",
+      "Human papillomavirus"
+    ],
+    "answer": 1,
+    "explanation": "Treponema pallidum causes syphilis."
+  },
+  {
+    "id": "bio_063",
+    "subjectId": "biology",
+    "topic": "Genetics, Inheritance & Biotechnology",
+    "testTag": "USAT",
+    "difficulty": "Medium",
+    "isPastPaper": true,
+    "question": "Recombinant DNA technology relies heavily on enzymes that can cut DNA at specific palindromic recognition sequences. These enzymes are known as:",
+    "options": [
+      "DNA ligases",
+      "Restriction endonucleases",
+      "Reverse transcriptases",
+      "DNA polymerases"
+    ],
+    "answer": 1,
+    "explanation": "Restriction endonucleases cut DNA at specific palindromic sites."
+  },
+  {
+    "id": "bio_064",
+    "subjectId": "biology",
+    "topic": "Genetics, Inheritance & Biotechnology",
+    "testTag": "MDCAT",
+    "difficulty": "Hard",
+    "isPastPaper": true,
+    "question": "Polymerase Chain Reaction (PCR) is a technique used to amplify specific DNA segments. The high-temperature denaturation step separates DNA strands at approximately what temperature?",
+    "options": [
+      "37°C",
+      "55°C",
+      "72°C",
+      "94-96°C"
+    ],
+    "answer": 3,
+    "explanation": "PCR denaturation step occurs at 94-96°C."
+  },
+  {
+    "id": "bio_065",
+    "subjectId": "biology",
+    "topic": "Genetics, Inheritance & Biotechnology",
+    "testTag": "NET",
+    "difficulty": "Medium",
+    "isPastPaper": true,
+    "question": "In gel electrophoresis, DNA fragments migrate through the agarose gel matrix toward the positive electrode (anode) because DNA molecules are inherently:",
+    "options": [
+      "Positively charged due to nitrogenous bases",
+      "Negatively charged due to phosphate groups",
+      "Neutral and pulled by gravity",
+      "Highly hydrophobic"
+    ],
+    "answer": 1,
+    "explanation": "DNA is negatively charged due to phosphate groups."
+  },
+  {
+    "id": "bio_066",
+    "subjectId": "biology",
+    "topic": "Genetics, Inheritance & Biotechnology",
+    "testTag": "MDCAT",
+    "difficulty": "Medium",
+    "isPastPaper": true,
+    "question": "The first successfully cloned mammal from an adult somatic cell was Dolly the sheep. Which cloning technique was utilized for this achievement?",
+    "options": [
+      "Recombinant DNA synthesis",
+      "Somatic cell nuclear transfer (SCNT)",
+      "Polymerase chain reaction",
+      "Embryo twinning"
+    ],
+    "answer": 1,
+    "explanation": "Dolly was cloned via SCNT."
+  },
+  {
+    "id": "bio_067",
+    "subjectId": "biology",
+    "topic": "Cellular Biology & Biological Molecules",
+    "testTag": "MDCAT",
+    "difficulty": "Medium",
+    "isPastPaper": true,
+    "question": "Water possesses unique properties vital for life. Which property of water allows it to absorb significant amounts of heat with only a slight change in its own temperature?",
+    "options": [
+      "High heat of vaporization",
+      "High specific heat capacity",
+      "Cohesion and surface tension",
+      "Polarity as a universal solvent"
+    ],
+    "answer": 1,
+    "explanation": "High specific heat capacity buffers temperature changes."
+  },
+  {
+    "id": "bio_068",
+    "subjectId": "biology",
+    "topic": "Genetics, Inheritance & Biotechnology",
+    "testTag": "USAT",
+    "difficulty": "Easy",
+    "isPastPaper": true,
+    "question": "The process of utilizing mRNA probes to identify specific target sequences within a complex mixture of nucleic acids is a key diagnostic tool. This broadly falls under:",
+    "options": [
+      "Gene therapy",
+      "Monoclonal antibody production",
+      "Disease diagnosis via molecular probing",
+      "Recombinant protein synthesis"
+    ],
+    "answer": 2,
+    "explanation": "Molecular probing is used for disease diagnosis."
+  },
+  {
+    "id": "bio_069",
+    "subjectId": "biology",
+    "topic": "Human Physiology & Coordination",
+    "testTag": "MDCAT",
+    "difficulty": "Medium",
+    "isPastPaper": true,
+    "question": "Which plant hormone is primarily responsible for promoting apical dominance and cell elongation in phototropism?",
+    "options": [
+      "Gibberellin",
+      "Cytokinin",
+      "Ethylene",
+      "Auxin"
+    ],
+    "answer": 3,
+    "explanation": "Auxin promotes cell elongation and apical dominance."
+  },
+  {
+    "id": "bio_070",
+    "subjectId": "biology",
+    "topic": "Human Physiology & Coordination",
+    "testTag": "NET",
+    "difficulty": "Medium",
+    "isPastPaper": true,
+    "question": "The innate immune system utilizes physical and chemical barriers. Which substance in human tears and saliva acts as an antibacterial enzyme by breaking down bacterial cell walls?",
+    "options": [
+      "Interferon",
+      "Lysozyme",
+      "Histamine",
+      "Immunoglobulin A"
+    ],
+    "answer": 1,
+    "explanation": "Lysozyme hydrolyzes bacterial cell walls."
+  },
+  {
+    "id": "bio_071",
+    "subjectId": "biology",
+    "topic": "Bioenergetics, Diversity & Plant Physiology",
+    "testTag": "MDCAT",
+    "difficulty": "Easy",
+    "isPastPaper": true,
+    "question": "In an ecosystem, the flow of energy is strictly unidirectional. Approximately what percentage of energy is successfully transferred from one trophic level to the next?",
+    "options": [
+      "1%",
+      "10%",
+      "50%",
+      "90%"
+    ],
+    "answer": 1,
+    "explanation": "10% of energy is transferred between trophic levels."
+  },
+  {
+    "id": "bio_072",
+    "subjectId": "biology",
+    "topic": "Genetics, Inheritance & Biotechnology",
+    "testTag": "USAT",
+    "difficulty": "Easy",
+    "isPastPaper": true,
+    "question": "A specific nucleotide sequence that codes for the synthesis of a discrete polypeptide is the modern molecular definition of a:",
+    "options": [
+      "Chromosome",
+      "Centromere",
+      "Gene",
+      "Telomere"
+    ],
+    "answer": 2,
+    "explanation": "Gene is a specific nucleotide coding sequence."
+  },
+  {
+    "id": "bio_073",
+    "subjectId": "biology",
+    "topic": "Human Physiology & Coordination",
+    "testTag": "MDCAT",
+    "difficulty": "Medium",
+    "isPastPaper": true,
+    "question": "Which component of the central nervous system acts as the major relay station, routing sensory impulses to the appropriate regions of the cerebral cortex?",
+    "options": [
+      "Hypothalamus",
+      "Thalamus",
+      "Cerebellum",
+      "Pons"
+    ],
+    "answer": 1,
+    "explanation": "Thalamus is the sensory relay station."
+  },
+  {
+    "id": "bio_074",
+    "subjectId": "biology",
+    "topic": "Human Physiology & Coordination",
+    "testTag": "NET",
+    "difficulty": "Easy",
+    "isPastPaper": true,
+    "question": "Cartilage is a specialized type of connective tissue. The living cells embedded within the extracellular matrix of cartilage are known as:",
+    "options": [
+      "Osteocytes",
+      "Chondrocytes",
+      "Fibroblasts",
+      "Macrophages"
+    ],
+    "answer": 1,
+    "explanation": "Chondrocytes are cartilage cells."
+  },
+  {
+    "id": "bio_075",
+    "subjectId": "biology",
+    "topic": "Genetics, Inheritance & Biotechnology",
+    "testTag": "MDCAT",
+    "difficulty": "Medium",
+    "isPastPaper": true,
+    "question": "The concept that continuous variation in a trait, such as human height or skin color, is governed by the additive effects of two or more genes is known as:",
+    "options": [
+      "Pleiotropy",
+      "Epistasis",
+      "Polygenic inheritance",
+      "Codominance"
+    ],
+    "answer": 2,
+    "explanation": "Polygenic inheritance governs continuous variation."
+  },
+  {
+    "id": "bio_076",
+    "subjectId": "biology",
+    "topic": "Cellular Biology & Biological Molecules",
+    "testTag": "NET",
+    "difficulty": "Hard",
+    "isPastPaper": true,
+    "question": "In competitive enzyme inhibition, how are the Vmax (maximum reaction velocity) and Km (Michaelis constant) affected compared to an uninhibited reaction?",
+    "options": [
+      "Vmax decreases, Km is unchanged",
+      "Vmax is unchanged, Km increases",
+      "Both Vmax and Km decrease",
+      "Both Vmax and Km increase"
+    ],
+    "answer": 1,
+    "explanation": "Vmax is unchanged, Km increases in competitive inhibition."
+  },
+  {
+    "id": "bio_077",
+    "subjectId": "biology",
+    "topic": "Bioenergetics, Diversity & Plant Physiology",
+    "testTag": "MDCAT",
+    "difficulty": "Easy",
+    "isPastPaper": true,
+    "question": "Fungi exhibit a unique body structure consisting of a network of thread-like filaments. These individual filaments are called:",
+    "options": [
+      "Mycelium",
+      "Hyphae",
+      "Septa",
+      "Spores"
+    ],
+    "answer": 1,
+    "explanation": "Hyphae are fungal filaments."
+  },
+  {
+    "id": "bio_078",
+    "subjectId": "biology",
+    "topic": "Human Physiology & Coordination",
+    "testTag": "USAT",
+    "difficulty": "Medium",
+    "isPastPaper": true,
+    "question": "Which respiratory volume represents the amount of air inhaled or exhaled during a normal, quiet resting breath?",
+    "options": [
+      "Vital capacity",
+      "Residual volume",
+      "Tidal volume",
+      "Inspiratory reserve volume"
+    ],
+    "answer": 2,
+    "explanation": "Tidal volume is normal resting breath volume."
+  },
+  {
+    "id": "bio_079",
+    "subjectId": "biology",
+    "topic": "Human Physiology & Coordination",
+    "testTag": "MDCAT",
+    "difficulty": "Medium",
+    "isPastPaper": true,
+    "question": "The functional structural unit of compact bone, consisting of concentric layers of bone matrix surrounding a central canal, is called a(n):",
+    "options": [
+      "Osteon (Haversian system)",
+      "Trabecula",
+      "Lacuna",
+      "Canaliculus"
+    ],
+    "answer": 0,
+    "explanation": "Osteon is the structural unit of compact bone."
+  },
+  {
+    "id": "bio_080",
+    "subjectId": "biology",
+    "topic": "Bioenergetics, Diversity & Plant Physiology",
+    "testTag": "MDCAT",
+    "difficulty": "Easy",
+    "isPastPaper": true,
+    "question": "Which viral disease is characterized by an acute infection of the central nervous system resulting in symptoms like hydrophobia, and is typically transmitted via animal bites?",
+    "options": [
+      "Poliomyelitis",
+      "Hepatitis B",
+      "Rabies",
+      "Influenza"
+    ],
+    "answer": 2,
+    "explanation": "Rabies causes hydrophobia."
+  },
+  {
+    "id": "bio_081",
+    "subjectId": "biology",
+    "topic": "Bioenergetics, Diversity & Plant Physiology",
+    "testTag": "NET",
+    "difficulty": "Medium",
+    "isPastPaper": true,
+    "question": "During the dark reactions (Calvin cycle) of photosynthesis, the reduction of 3-phosphoglycerate (3-PGA) to glyceraldehyde 3-phosphate (G3P) requires the input of:",
+    "options": [
+      "ATP only",
+      "NADPH only",
+      "Both ATP and NADPH",
+      "Neither ATP nor NADPH"
+    ],
+    "answer": 2,
+    "explanation": "Reduction of 3-PGA requires ATP and NADPH."
+  },
+  {
+    "id": "bio_082",
+    "subjectId": "biology",
+    "topic": "Genetics, Inheritance & Biotechnology",
+    "testTag": "MDCAT",
+    "difficulty": "Easy",
+    "isPastPaper": true,
+    "question": "Plasmids are small, circular, extrachromosomal DNA molecules frequently utilized as vectors in genetic engineering. They are naturally found in:",
+    "options": [
+      "Viruses",
+      "Animal cells",
+      "Plant cells",
+      "Bacteria"
+    ],
+    "answer": 3,
+    "explanation": "Plasmids are naturally found in bacteria."
+  },
+  {
+    "id": "bio_083",
+    "subjectId": "biology",
+    "topic": "Bioenergetics, Diversity & Plant Physiology",
+    "testTag": "USAT",
+    "difficulty": "Easy",
+    "isPastPaper": true,
+    "question": "When comparing aerobic and anaerobic respiration in mammalian muscle cells, what is the toxic end product of the anaerobic pathway?",
+    "options": [
+      "Ethanol",
+      "Carbon dioxide",
+      "Lactic acid",
+      "Acetyl-CoA"
+    ],
+    "answer": 2,
+    "explanation": "Lactic acid is the anaerobic product in muscle cells."
+  },
+  {
+    "id": "bio_084",
+    "subjectId": "biology",
+    "topic": "Human Physiology & Coordination",
+    "testTag": "MDCAT",
+    "difficulty": "Medium",
+    "isPastPaper": true,
+    "question": "The corpus luteum, formed from the ruptured ovarian follicle post-ovulation, acts as a temporary endocrine gland. Its primary function is to secrete:",
+    "options": [
+      "Follicle-Stimulating Hormone",
+      "Progesterone",
+      "Luteinizing Hormone",
+      "Oxytocin"
+    ],
+    "answer": 1,
+    "explanation": "Corpus luteum secretes progesterone."
+  },
+  {
+    "id": "bio_085",
+    "subjectId": "biology",
+    "topic": "Human Physiology & Coordination",
+    "testTag": "NET",
+    "difficulty": "Easy",
+    "isPastPaper": true,
+    "question": "In the classification of joints, the sutures of the human skull are an example of which type of joint?",
+    "options": [
+      "Synovial (freely movable)",
+      "Cartilaginous (slightly movable)",
+      "Fibrous (immovable)",
+      "Pivot"
+    ],
+    "answer": 2,
+    "explanation": "Skull sutures are fibrous immovable joints."
+  },
+  {
+    "id": "bio_086",
+    "subjectId": "biology",
+    "topic": "Cellular Biology & Biological Molecules",
+    "testTag": "MDCAT",
+    "difficulty": "Easy",
+    "isPastPaper": true,
+    "question": "Which of the following modes of cellular transport involves the active engulfment of large, solid particles by the cell membrane, commonly referred to as 'cell eating'?",
+    "options": [
+      "Pinocytosis",
+      "Receptor-mediated endocytosis",
+      "Phagocytosis",
+      "Exocytosis"
+    ],
+    "answer": 2,
+    "explanation": "Phagocytosis is cell eating."
+  },
+  {
+    "id": "bio_087",
+    "subjectId": "biology",
+    "topic": "Genetics, Inheritance & Biotechnology",
+    "testTag": "USAT",
+    "difficulty": "Medium",
+    "isPastPaper": true,
+    "question": "In genetic crosses, a test cross is used to determine the unknown genotype of an organism exhibiting a dominant phenotype. This is achieved by crossing it with a:",
+    "options": [
+      "Homozygous dominant individual",
+      "Heterozygous individual",
+      "Homozygous recessive individual",
+      "Organism of a different species"
+    ],
+    "answer": 2,
+    "explanation": "Test cross crosses with homozygous recessive."
+  },
+  {
+    "id": "bio_088",
+    "subjectId": "biology",
+    "topic": "Cellular Biology & Biological Molecules",
+    "testTag": "MDCAT",
+    "difficulty": "Easy",
+    "isPastPaper": true,
+    "question": "The specialized region of a chromosome where the two sister chromatids are held together and where spindle fibers attach during cell division is the:",
+    "options": [
+      "Telomere",
+      "Centrosome",
+      "Kinetochore / Centromere",
+      "Nucleosome"
+    ],
+    "answer": 2,
+    "explanation": "Centromere is where chromatids join."
+  },
+  {
+    "id": "bio_089",
+    "subjectId": "biology",
+    "topic": "Human Physiology & Coordination",
+    "testTag": "NET",
+    "difficulty": "Medium",
+    "isPastPaper": true,
+    "question": "Surfactant is a lipoprotein complex secreted by type II alveolar cells in the lungs. Its primary physiological role is to:",
+    "options": [
+      "Increase airway resistance",
+      "Reduce surface tension and prevent alveolar collapse",
+      "Transport oxygen across the membrane",
+      "Stimulate the respiratory center in the brain"
+    ],
+    "answer": 1,
+    "explanation": "Surfactant reduces alveolar surface tension."
+  },
+  {
+    "id": "bio_090",
+    "subjectId": "biology",
+    "topic": "Human Physiology & Coordination",
+    "testTag": "MDCAT",
+    "difficulty": "Easy",
+    "isPastPaper": true,
+    "question": "Which of the following is considered the primary pacemaker of the mammalian heart, generating the electrical impulses that initiate the cardiac cycle?",
+    "options": [
+      "Atrioventricular (AV) node",
+      "Bundle of His",
+      "Purkinje fibers",
+      "Sinoatrial (SA) node"
+    ],
+    "answer": 3,
+    "explanation": "SA node is primary heart pacemaker."
+  },
+  {
+    "id": "bio_091",
+    "subjectId": "biology",
+    "topic": "Human Physiology & Coordination",
+    "testTag": "MDCAT",
+    "difficulty": "Medium",
+    "isPastPaper": true,
+    "question": "The all-or-none response is a principle governing action potential generation in neurons. It states that:",
+    "options": [
+      "All neurons fire simultaneously or none do",
+      "A stimulus must reach threshold potential to trigger an action potential",
+      "Action potentials vary in size depending on stimulus strength",
+      "Neurotransmitters are released in full or not at all"
+    ],
+    "answer": 1,
+    "explanation": "Threshold potential must be reached to fire action potential."
+  },
+  {
+    "id": "bio_092",
+    "subjectId": "biology",
+    "topic": "Genetics, Inheritance & Biotechnology",
+    "testTag": "USAT",
+    "difficulty": "Medium",
+    "isPastPaper": true,
+    "question": "What is the probability of a couple having a child with cystic fibrosis (an autosomal recessive disorder) if both parents are healthy carriers (heterozygous)?",
+    "options": [
+      "0%",
+      "25%",
+      "50%",
+      "75%"
+    ],
+    "answer": 1,
+    "explanation": "Carrier cross Aa x Aa yields 25% aa."
+  },
+  {
+    "id": "bio_093",
+    "subjectId": "biology",
+    "topic": "Cellular Biology & Biological Molecules",
+    "testTag": "NET",
+    "difficulty": "Medium",
+    "isPastPaper": true,
+    "question": "Which class of enzymes specifically catalyzes the transfer of functional groups (e.g., a phosphate group) from one molecule to another?",
+    "options": [
+      "Hydrolases",
+      "Ligases",
+      "Transferases",
+      "Isomerases"
+    ],
+    "answer": 2,
+    "explanation": "Transferases transfer functional groups."
+  },
+  {
+    "id": "bio_094",
+    "subjectId": "biology",
+    "topic": "Bioenergetics, Diversity & Plant Physiology",
+    "testTag": "MDCAT",
+    "difficulty": "Medium",
+    "isPastPaper": true,
+    "question": "The continuous unidirectional flow of water upward through the xylem of a plant is primarily maintained by cohesive forces between water molecules. This cohesive property is due to:",
+    "options": [
+      "Ionic bonding",
+      "Hydrogen bonding",
+      "Covalent bonding",
+      "Van der Waals forces"
+    ],
+    "answer": 1,
+    "explanation": "Hydrogen bonding causes water cohesion."
+  },
+  {
+    "id": "bio_095",
+    "subjectId": "biology",
+    "topic": "Human Physiology & Coordination",
+    "testTag": "MDCAT",
+    "difficulty": "Medium",
+    "isPastPaper": true,
+    "question": "In the nephron, the selective reabsorption of glucose and amino acids from the glomerular filtrate occurs primarily in the:",
+    "options": [
+      "Bowman's capsule",
+      "Proximal convoluted tubule",
+      "Loop of Henle",
+      "Distal convoluted tubule"
+    ],
+    "answer": 1,
+    "explanation": "Proximal convoluted tubule reabsorbs glucose."
+  },
+  {
+    "id": "bio_096",
+    "subjectId": "biology",
+    "topic": "Genetics, Inheritance & Biotechnology",
+    "testTag": "USAT",
+    "difficulty": "Easy",
+    "isPastPaper": true,
+    "question": "The central dogma of molecular biology describes the directional flow of genetic information. Which of the following correctly represents this flow?",
+    "options": [
+      "Protein -> RNA -> DNA",
+      "RNA -> DNA -> Protein",
+      "DNA -> Protein -> RNA",
+      "DNA -> RNA -> Protein"
+    ],
+    "answer": 3,
+    "explanation": "Central dogma: DNA -> RNA -> Protein."
+  },
+  {
+    "id": "bio_097",
+    "subjectId": "biology",
+    "topic": "Cellular Biology & Biological Molecules",
+    "testTag": "NET",
+    "difficulty": "Easy",
+    "isPastPaper": true,
+    "question": "Which of the following structural polysaccharides forms the exoskeleton of arthropods and the cell walls of fungi?",
+    "options": [
+      "Cellulose",
+      "Glycogen",
+      "Chitin",
+      "Starch"
+    ],
+    "answer": 2,
+    "explanation": "Chitin forms arthropod exoskeletons."
+  },
+  {
+    "id": "bio_098",
+    "subjectId": "biology",
+    "topic": "Human Physiology & Coordination",
+    "testTag": "MDCAT",
+    "difficulty": "Medium",
+    "isPastPaper": true,
+    "question": "The structural modification of the stomach lining that allows it to expand significantly after a large meal involves prominent folds called:",
+    "options": [
+      "Villi",
+      "Plicae circulares",
+      "Rugae",
+      "Haustra"
+    ],
+    "answer": 2,
+    "explanation": "Rugae are stomach mucosal folds."
+  },
+  {
+    "id": "bio_099",
+    "subjectId": "biology",
+    "topic": "Genetics, Inheritance & Biotechnology",
+    "testTag": "MDCAT",
+    "difficulty": "Medium",
+    "isPastPaper": true,
+    "question": "A frameshift mutation is generally considered more deleterious than a point mutation because it:",
+    "options": [
+      "Only affects a single amino acid",
+      "Alters the entire reading frame downstream of the mutation",
+      "Causes the chromosome to break",
+      "Inactivates DNA polymerase"
+    ],
+    "answer": 1,
+    "explanation": "Frameshift alters reading frame downstream."
+  },
+  {
+    "id": "bio_100",
+    "subjectId": "biology",
+    "topic": "Human Physiology & Coordination",
+    "testTag": "USAT",
+    "difficulty": "Medium",
+    "isPastPaper": true,
+    "question": "The lymphatic system plays a crucial role in immune defense and fluid homeostasis. Which type of biological molecule is uniquely absorbed into the lacteals of the lymphatic system rather than the blood capillaries?",
+    "options": [
+      "Amino acids",
+      "Monosaccharides",
+      "Dietary lipids (fats)",
+      "Water-soluble vitamins"
+    ],
+    "answer": 2,
+    "explanation": "Dietary lipids are absorbed into lacteals."
+  },
+  {
+    "id": "bio_101",
+    "subjectId": "biology",
+    "topic": "Human Physiology & Coordination",
+    "testTag": "MDCAT",
+    "difficulty": "Medium",
+    "isPastPaper": true,
+    "question": "During muscle contraction, the neurotransmitter released at the neuromuscular junction to initiate depolarization of the sarcolemma is:",
+    "options": [
+      "Dopamine",
+      "Serotonin",
+      "Acetylcholine",
+      "GABA"
+    ],
+    "answer": 2,
+    "explanation": "ACh is released at neuromuscular junctions."
+  },
+  {
+    "id": "bio_102",
+    "subjectId": "biology",
+    "topic": "Bioenergetics, Diversity & Plant Physiology",
+    "testTag": "NET",
+    "difficulty": "Medium",
+    "isPastPaper": true,
+    "question": "Which division of the plant kingdom is characterized by the presence of vascular tissue but the absence of seeds, utilizing spores for reproduction?",
+    "options": [
+      "Bryophyta",
+      "Pteridophyta",
+      "Gymnospermae",
+      "Angiospermae"
+    ],
+    "answer": 1,
+    "explanation": "Pteridophytes are seedless vascular plants."
+  },
+  {
+    "id": "bio_103",
+    "subjectId": "biology",
+    "topic": "Genetics, Inheritance & Biotechnology",
+    "testTag": "MDCAT",
+    "difficulty": "Hard",
+    "isPastPaper": true,
+    "question": "The phenomenon of pleiotropy occurs when:",
+    "options": [
+      "Multiple genes control a single trait",
+      "A single gene affects multiple, seemingly unrelated phenotypic traits",
+      "One gene masks the expression of another",
+      "Environmental factors alter genotype"
+    ],
+    "answer": 1,
+    "explanation": "Pleiotropy: one gene affects multiple traits."
+  },
+  {
+    "id": "bio_104",
+    "subjectId": "biology",
+    "topic": "Bioenergetics, Diversity & Plant Physiology",
+    "testTag": "USAT",
+    "difficulty": "Easy",
+    "isPastPaper": true,
+    "question": "In cellular respiration, the final electron acceptor in the electron transport chain (ETC) is:",
+    "options": [
+      "NAD+",
+      "FAD",
+      "Oxygen",
+      "Water"
+    ],
+    "answer": 2,
+    "explanation": "Oxygen is the terminal electron acceptor in ETC."
+  },
+  {
+    "id": "bio_105",
+    "subjectId": "biology",
+    "topic": "Human Physiology & Coordination",
+    "testTag": "MDCAT",
+    "difficulty": "Medium",
+    "isPastPaper": true,
+    "question": "Which of the following hormones is directly responsible for stimulating the contraction of uterine muscles during childbirth?",
+    "options": [
+      "Prolactin",
+      "Oxytocin",
+      "Progesterone",
+      "Relaxin"
+    ],
+    "answer": 1,
+    "explanation": "Oxytocin stimulates uterine contractions."
+  },
+  {
+    "id": "bio_106",
+    "subjectId": "biology",
+    "topic": "Human Physiology & Coordination",
+    "testTag": "NET",
+    "difficulty": "Easy",
+    "isPastPaper": true,
+    "question": "The part of the human eye that contains the photoreceptor cells (rods and cones) and is responsible for converting light into neural signals is the:",
+    "options": [
+      "Cornea",
+      "Lens",
+      "Iris",
+      "Retina"
+    ],
+    "answer": 3,
+    "explanation": "Retina contains photoreceptors."
+  },
+  {
+    "id": "bio_107",
+    "subjectId": "biology",
+    "topic": "Human Physiology & Coordination",
+    "testTag": "MDCAT",
+    "difficulty": "Medium",
+    "isPastPaper": true,
+    "question": "Which type of immune response involves the production of specific antibodies by B lymphocytes to neutralize circulating pathogens?",
+    "options": [
+      "Innate immunity",
+      "Cell-mediated immunity",
+      "Humoral immunity",
+      "Passive immunity"
+    ],
+    "answer": 2,
+    "explanation": "Humoral immunity involves antibody production by B cells."
+  },
+  {
+    "id": "bio_108",
+    "subjectId": "biology",
+    "topic": "Genetics, Inheritance & Biotechnology",
+    "testTag": "USAT",
+    "difficulty": "Easy",
+    "isPastPaper": true,
+    "question": "In the structure of DNA, the two complementary strands are held together by hydrogen bonds between the nitrogenous bases. How many hydrogen bonds exist between Cytosine and Guanine?",
+    "options": [
+      "One",
+      "Two",
+      "Three",
+      "Four"
+    ],
+    "answer": 2,
+    "explanation": "C and G pair with 3 hydrogen bonds."
+  },
+  {
+    "id": "bio_109",
+    "subjectId": "biology",
+    "topic": "Human Physiology & Coordination",
+    "testTag": "MDCAT",
+    "difficulty": "Hard",
+    "isPastPaper": true,
+    "question": "The counter-current multiplier system in the Loop of Henle is essential for:",
+    "options": [
+      "Filtering plasma proteins out of blood",
+      "Creating a hypertonic medullary interstitium to concentrate urine",
+      "Secreting urea into collecting duct",
+      "Reabsorbing glucose into peritubular capillaries"
+    ],
+    "answer": 1,
+    "explanation": "Loop of Henle concentrates urine."
+  },
+  {
+    "id": "bio_110",
+    "subjectId": "biology",
+    "topic": "Bioenergetics, Diversity & Plant Physiology",
+    "testTag": "NET",
+    "difficulty": "Easy",
+    "isPastPaper": true,
+    "question": "Which of the following is a key characteristic of organisms belonging to Kingdom Monera?",
+    "options": [
+      "Membrane-bound nucleus",
+      "Multicellular organization",
+      "Prokaryotic cellular structure",
+      "Chitinous cell wall"
+    ],
+    "answer": 2,
+    "explanation": "Monerans are prokaryotic."
+  },
+  {
+    "id": "bio_111",
+    "subjectId": "biology",
+    "topic": "Human Physiology & Coordination",
+    "testTag": "MDCAT",
+    "difficulty": "Medium",
+    "isPastPaper": true,
+    "question": "In an angiosperm life cycle, double fertilization results in the formation of a diploid zygote and a:",
+    "options": [
+      "Haploid endosperm",
+      "Diploid seed coat",
+      "Triploid endosperm",
+      "Tetraploid fruit"
+    ],
+    "answer": 2,
+    "explanation": "Double fertilization forms 2n zygote and 3n endosperm."
+  },
+  {
+    "id": "bio_112",
+    "subjectId": "biology",
+    "topic": "Bioenergetics, Diversity & Plant Physiology",
+    "testTag": "USAT",
+    "difficulty": "Medium",
+    "isPastPaper": true,
+    "question": "The term 'carrying capacity' in population ecology refers to:",
+    "options": [
+      "Maximum reproductive rate",
+      "Maximum population size a specific environment can sustainably support",
+      "Number of predators an ecosystem maintains",
+      "Total biomass of producers"
+    ],
+    "answer": 1,
+    "explanation": "Carrying capacity is the maximum sustainable population size."
+  },
+  {
+    "id": "bio_113",
+    "subjectId": "biology",
+    "topic": "Genetics, Inheritance & Biotechnology",
+    "testTag": "MDCAT",
+    "difficulty": "Easy",
+    "isPastPaper": true,
+    "question": "Which of the following scientists is credited with formulating the initial laws of inheritance through extensive experiments with pea plants?",
+    "options": [
+      "Charles Darwin",
+      "Gregor Mendel",
+      "Thomas Hunt Morgan",
+      "Louis Pasteur"
+    ],
+    "answer": 1,
+    "explanation": "Mendel formulated laws of inheritance."
+  },
+  {
+    "id": "bio_114",
+    "subjectId": "biology",
+    "topic": "Human Physiology & Coordination",
+    "testTag": "NET",
+    "difficulty": "Medium",
+    "isPastPaper": true,
+    "question": "The breakdown of a large lipid droplet into smaller, easily digestible droplets by bile salts in the small intestine is a mechanical process known as:",
+    "options": [
+      "Saponification",
+      "Esterification",
+      "Emulsification",
+      "Hydrolysis"
+    ],
+    "answer": 2,
+    "explanation": "Emulsification breaks lipid droplets."
+  },
+  {
+    "id": "bio_115",
+    "subjectId": "biology",
+    "topic": "Genetics, Inheritance & Biotechnology",
+    "testTag": "USAT",
+    "difficulty": "Easy",
+    "isPastPaper": true,
+    "question": "Which type of RNA carries the specific amino acid to the ribosome during the process of translation?",
+    "options": [
+      "mRNA",
+      "rRNA",
+      "tRNA",
+      "snRNA"
+    ],
+    "answer": 2,
+    "explanation": "tRNA carries amino acids to the ribosome."
+  },
+  {
+    "id": "bio_116",
+    "subjectId": "biology",
+    "topic": "Genetics, Inheritance & Biotechnology",
+    "testTag": "MDCAT",
+    "difficulty": "Medium",
+    "isPastPaper": true,
+    "question": "A mutation that changes a normal codon into a premature stop codon, thereby truncating the resulting polypeptide, is known as a:",
+    "options": [
+      "Missense mutation",
+      "Nonsense mutation",
+      "Silent mutation",
+      "Frameshift mutation"
+    ],
+    "answer": 1,
+    "explanation": "Nonsense mutation creates a premature stop codon."
+  },
+  {
+    "id": "bio_117",
+    "subjectId": "biology",
+    "topic": "Human Physiology & Coordination",
+    "testTag": "NET",
+    "difficulty": "Medium",
+    "isPastPaper": true,
+    "question": "The part of the brainstem that serves as a vital center for controlling autonomic functions such as breathing, heart rate, and blood pressure is the:",
+    "options": [
+      "Cerebrum",
+      "Hypothalamus",
+      "Medulla oblongata",
+      "Cerebellum"
+    ],
+    "answer": 2,
+    "explanation": "Medulla oblongata controls vital autonomic functions."
+  },
+  {
+    "id": "bio_118",
+    "subjectId": "biology",
+    "topic": "Cellular Biology & Biological Molecules",
+    "testTag": "MDCAT",
+    "difficulty": "Medium",
+    "isPastPaper": true,
+    "question": "During meiosis, homologous chromosomes pair up closely side-by-side. This specific pairing process is called:",
+    "options": [
+      "Synapsis",
+      "Crossing over",
+      "Chiasmata formation",
+      "Segregation"
+    ],
+    "answer": 0,
+    "explanation": "Synapsis is homologous chromosome pairing."
+  },
+  {
+    "id": "bio_119",
+    "subjectId": "biology",
+    "topic": "Cellular Biology & Biological Molecules",
+    "testTag": "USAT",
+    "difficulty": "Medium",
+    "isPastPaper": true,
+    "question": "Which of the following cellular structures is responsible for synthesizing ribosomal RNA (rRNA) and assembling ribosome subunits?",
+    "options": [
+      "Golgi apparatus",
+      "Rough ER",
+      "Nucleolus",
+      "Lysosome"
+    ],
+    "answer": 2,
+    "explanation": "Nucleolus synthesizes rRNA."
+  },
+  {
+    "id": "bio_120",
+    "subjectId": "biology",
+    "topic": "Genetics, Inheritance & Biotechnology",
+    "testTag": "MDCAT",
+    "difficulty": "Medium",
+    "isPastPaper": true,
+    "question": "The principle of independent assortment applies only to genes that are:",
+    "options": [
+      "Located on the same chromosome (linked)",
+      "Located on different chromosomes (unlinked)",
+      "Inherited exclusively from the mother",
+      "Recessive"
+    ],
+    "answer": 1,
+    "explanation": "Independent assortment applies to unlinked genes."
+  },
+  {
+    "id": "bio_121",
+    "subjectId": "biology",
+    "topic": "Human Physiology & Coordination",
+    "testTag": "NET",
+    "difficulty": "Easy",
+    "isPastPaper": true,
+    "question": "In the human skeletal system, the axial skeleton includes the:",
+    "options": [
+      "Skull, vertebral column, and rib cage",
+      "Pectoral girdle and arms",
+      "Pelvic girdle and legs",
+      "Clavicle and scapula only"
+    ],
+    "answer": 0,
+    "explanation": "Axial skeleton includes skull, spine, and ribs."
+  },
+  {
+    "id": "bio_122",
+    "subjectId": "biology",
+    "topic": "Bioenergetics, Diversity & Plant Physiology",
+    "testTag": "MDCAT",
+    "difficulty": "Medium",
+    "isPastPaper": true,
+    "question": "Which form of selection favors the intermediate phenotype and acts against both extreme variants in a population?",
+    "options": [
+      "Directional selection",
+      "Disruptive selection",
+      "Stabilizing selection",
+      "Artificial selection"
+    ],
+    "answer": 2,
+    "explanation": "Stabilizing selection favors intermediate phenotype."
+  },
+  {
+    "id": "bio_123",
+    "subjectId": "biology",
+    "topic": "Human Physiology & Coordination",
+    "testTag": "USAT",
+    "difficulty": "Easy",
+    "isPastPaper": true,
+    "question": "The phase of the cardiac cycle in which the ventricles contract, pumping blood into the aorta and pulmonary artery, is termed:",
+    "options": [
+      "Atrial diastole",
+      "Ventricular systole",
+      "Ventricular diastole",
+      "Atrial systole"
+    ],
+    "answer": 1,
+    "explanation": "Ventricular systole is ventricular contraction."
+  },
+  {
+    "id": "bio_124",
+    "subjectId": "biology",
+    "topic": "Cellular Biology & Biological Molecules",
+    "testTag": "MDCAT",
+    "difficulty": "Medium",
+    "isPastPaper": true,
+    "question": "Non-competitive enzyme inhibitors alter the rate of a reaction by:",
+    "options": [
+      "Competing directly with the substrate for active site",
+      "Binding to an allosteric site and changing the enzyme's conformational shape",
+      "Denaturing the enzyme permanently",
+      "Acting as a coenzyme to speed up reaction"
+    ],
+    "answer": 1,
+    "explanation": "Non-competitive inhibitors bind allosteric sites."
+  },
+  {
+    "id": "bio_125",
+    "subjectId": "biology",
+    "topic": "Bioenergetics, Diversity & Plant Physiology",
+    "testTag": "NET",
+    "difficulty": "Easy",
+    "isPastPaper": true,
+    "question": "Which of the following is considered the earliest and most primitive form of life on Earth, according to the fossil record?",
+    "options": [
+      "Eukaryotic algae",
+      "Multicellular fungi",
+      "Prokaryotic bacteria",
+      "Simple sponges"
+    ],
+    "answer": 2,
+    "explanation": "Prokaryotes are the earliest fossil life."
+  },
+  {
+    "id": "bio_126",
+    "subjectId": "biology",
+    "topic": "Human Physiology & Coordination",
+    "testTag": "MDCAT",
+    "difficulty": "Easy",
+    "isPastPaper": true,
+    "question": "The primary nitrogenous waste product excreted by terrestrial mammals, synthesized in the liver from ammonia, is:",
+    "options": [
+      "Uric acid",
+      "Urea",
+      "Creatinine",
+      "Ammonia"
+    ],
+    "answer": 1,
+    "explanation": "Mammals excrete urea."
+  },
+  {
+    "id": "bio_127",
+    "subjectId": "biology",
+    "topic": "Human Physiology & Coordination",
+    "testTag": "USAT",
+    "difficulty": "Easy",
+    "isPastPaper": true,
+    "question": "A patient has a blood pressure reading of 160/100 mmHg. This condition of chronic high blood pressure is medically termed:",
+    "options": [
+      "Hypotension",
+      "Arteriosclerosis",
+      "Hypertension",
+      "Ischemia"
+    ],
+    "answer": 2,
+    "explanation": "Hypertension is high blood pressure."
+  },
+  {
+    "id": "bio_128",
+    "subjectId": "biology",
+    "topic": "Bioenergetics, Diversity & Plant Physiology",
+    "testTag": "MDCAT",
+    "difficulty": "Medium",
+    "isPastPaper": true,
+    "question": "Which phase of photosynthesis involves the splitting of water molecules (photolysis) to release oxygen, electrons, and protons?",
+    "options": [
+      "Calvin cycle",
+      "Light-dependent reactions",
+      "Carbon fixation",
+      "Chemiosmosis only"
+    ],
+    "answer": 1,
+    "explanation": "Photolysis occurs in light-dependent reactions."
+  },
+  {
+    "id": "bio_129",
+    "subjectId": "biology",
+    "topic": "Genetics, Inheritance & Biotechnology",
+    "testTag": "NET",
+    "difficulty": "Medium",
+    "isPastPaper": true,
+    "question": "An organism with the genotype AaBb produces gametes. Assuming independent assortment, what percentage of the gametes will carry the 'ab' allele combination?",
+    "options": [
+      "0%",
+      "25%",
+      "50%",
+      "100%"
+    ],
+    "answer": 1,
+    "explanation": "AaBb produces 25% 'ab' gametes."
+  },
+  {
+    "id": "bio_130",
+    "subjectId": "biology",
+    "topic": "Cellular Biology & Biological Molecules",
+    "testTag": "MDCAT",
+    "difficulty": "Medium",
+    "isPastPaper": true,
+    "question": "The disease kwashiorkor is primarily caused by a severe dietary deficiency of:",
+    "options": [
+      "Carbohydrates",
+      "Lipids",
+      "Proteins",
+      "Vitamin C"
+    ],
+    "answer": 2,
+    "explanation": "Kwashiorkor is severe protein deficiency."
+  },
+  {
+    "id": "bio_131",
+    "subjectId": "biology",
+    "topic": "Human Physiology & Coordination",
+    "testTag": "USAT",
+    "difficulty": "Easy",
+    "isPastPaper": true,
+    "question": "Which of the following joints is classified as a hinge joint, allowing movement primarily in a single plane?",
+    "options": [
+      "Shoulder joint",
+      "Hip joint",
+      "Knee joint",
+      "Radioulnar joint"
+    ],
+    "answer": 2,
+    "explanation": "Knee is a hinge joint."
+  },
+  {
+    "id": "bio_132",
+    "subjectId": "biology",
+    "topic": "Bioenergetics, Diversity & Plant Physiology",
+    "testTag": "MDCAT",
+    "difficulty": "Medium",
+    "isPastPaper": true,
+    "question": "The symbiotic association between a fungus and the roots of a vascular plant, which enhances nutrient absorption for the plant, is called:",
+    "options": [
+      "Lichen",
+      "Mycorrhizae",
+      "Parasitism",
+      "Commensalism"
+    ],
+    "answer": 1,
+    "explanation": "Mycorrhizae is fungal root association."
+  },
+  {
+    "id": "bio_133",
+    "subjectId": "biology",
+    "topic": "Human Physiology & Coordination",
+    "testTag": "NET",
+    "difficulty": "Hard",
+    "isPastPaper": true,
+    "question": "Which hormone is released by the adrenal cortex and primarily functions to increase sodium reabsorption in the kidneys?",
+    "options": [
+      "Antidiuretic hormone",
+      "Aldosterone",
+      "Cortisol",
+      "Epinephrine"
+    ],
+    "answer": 1,
+    "explanation": "Aldosterone increases sodium reabsorption."
+  },
+  {
+    "id": "bio_134",
+    "subjectId": "biology",
+    "topic": "Bioenergetics, Diversity & Plant Physiology",
+    "testTag": "MDCAT",
+    "difficulty": "Medium",
+    "isPastPaper": true,
+    "question": "The process by which genetic material is transferred directly between two bacteria via a physical bridge (pilus) is termed:",
+    "options": [
+      "Transformation",
+      "Transduction",
+      "Conjugation",
+      "Binary fission"
+    ],
+    "answer": 2,
+    "explanation": "Conjugation transfers genes via pilus."
+  },
+  {
+    "id": "bio_135",
+    "subjectId": "biology",
+    "topic": "Bioenergetics, Diversity & Plant Physiology",
+    "testTag": "USAT",
+    "difficulty": "Easy",
+    "isPastPaper": true,
+    "question": "In an ecosystem, primary consumers occupy which trophic level?",
+    "options": [
+      "First trophic level",
+      "Second trophic level",
+      "Third trophic level",
+      "Fourth trophic level"
+    ],
+    "answer": 1,
+    "explanation": "Primary consumers occupy 2nd trophic level."
+  },
+  {
+    "id": "bio_136",
+    "subjectId": "biology",
+    "topic": "Genetics, Inheritance & Biotechnology",
+    "testTag": "MDCAT",
+    "difficulty": "Medium",
+    "isPastPaper": true,
+    "question": "The enzyme DNA ligase plays a crucial role in DNA replication by:",
+    "options": [
+      "Synthesizing RNA primers",
+      "Unwinding the double helix",
+      "Joining Okazaki fragments on the lagging strand",
+      "Adding nucleotides continuously to the leading strand"
+    ],
+    "answer": 2,
+    "explanation": "DNA ligase joins Okazaki fragments."
+  },
+  {
+    "id": "bio_137",
+    "subjectId": "biology",
+    "topic": "Human Physiology & Coordination",
+    "testTag": "NET",
+    "difficulty": "Medium",
+    "isPastPaper": true,
+    "question": "A person with blood group O is considered a universal donor because their red blood cells lack:",
+    "options": [
+      "Both A and B antibodies",
+      "Both A and B antigens",
+      "Rh factor",
+      "Hemoglobin"
+    ],
+    "answer": 1,
+    "explanation": "Blood group O RBCs lack A and B antigens."
+  },
+  {
+    "id": "bio_138",
+    "subjectId": "biology",
+    "topic": "Cellular Biology & Biological Molecules",
+    "testTag": "MDCAT",
+    "difficulty": "Medium",
+    "isPastPaper": true,
+    "question": "Which of the following is a primary characteristic of a malignant tumor distinguishing it from a benign tumor?",
+    "options": [
+      "Slow growth rate",
+      "Encapsulation",
+      "Ability to metastasize",
+      "Highly differentiated cells"
+    ],
+    "answer": 2,
+    "explanation": "Malignant tumors metastasize."
+  },
+  {
+    "id": "bio_139",
+    "subjectId": "biology",
+    "topic": "Human Physiology & Coordination",
+    "testTag": "USAT",
+    "difficulty": "Easy",
+    "isPastPaper": true,
+    "question": "The respiratory pigment found in the red blood cells of humans, responsible for oxygen transport, is:",
+    "options": [
+      "Myoglobin",
+      "Hemocyanin",
+      "Chlorophyll",
+      "Hemoglobin"
+    ],
+    "answer": 3,
+    "explanation": "Hemoglobin transports oxygen."
+  },
+  {
+    "id": "bio_140",
+    "subjectId": "biology",
+    "topic": "Genetics, Inheritance & Biotechnology",
+    "testTag": "MDCAT",
+    "difficulty": "Easy",
+    "isPastPaper": true,
+    "question": "In recombinant DNA technology, which vector is most commonly used to insert foreign genes into bacterial cells?",
+    "options": [
+      "Retrovirus",
+      "Plasmid",
+      "YAC (Yeast Artificial Chromosome)",
+      "Bacteriophage only"
+    ],
+    "answer": 1,
+    "explanation": "Plasmids are bacterial cloning vectors."
+  },
+  {
+    "id": "bio_141",
+    "subjectId": "biology",
+    "topic": "Bioenergetics, Diversity & Plant Physiology",
+    "testTag": "NET",
+    "difficulty": "Medium",
+    "isPastPaper": true,
+    "question": "What is the total theoretical yield of ATP from the complete aerobic oxidation of one molecule of glucose in a eukaryotic cell?",
+    "options": [
+      "2 ATP",
+      "4 ATP",
+      "36-38 ATP",
+      "50 ATP"
+    ],
+    "answer": 2,
+    "explanation": "Aerobic respiration yields 36-38 ATP."
+  },
+  {
+    "id": "bio_142",
+    "subjectId": "biology",
+    "topic": "Human Physiology & Coordination",
+    "testTag": "MDCAT",
+    "difficulty": "Easy",
+    "isPastPaper": true,
+    "question": "Which part of a mature sperm cell is packed with mitochondria to provide the energy required for motility?",
+    "options": [
+      "Acrosome",
+      "Head",
+      "Midpiece",
+      "Tail (Flagellum)"
+    ],
+    "answer": 2,
+    "explanation": "Sperm midpiece contains mitochondria."
+  },
+  {
+    "id": "bio_143",
+    "subjectId": "biology",
+    "topic": "Genetics, Inheritance & Biotechnology",
+    "testTag": "USAT",
+    "difficulty": "Easy",
+    "isPastPaper": true,
+    "question": "Down syndrome is a genetic disorder resulting from the presence of an extra copy of which chromosome?",
+    "options": [
+      "Chromosome 13",
+      "Chromosome 18",
+      "Chromosome 21",
+      "X Chromosome"
+    ],
+    "answer": 2,
+    "explanation": "Down syndrome is Trisomy 21."
+  },
+  {
+    "id": "bio_144",
+    "subjectId": "biology",
+    "topic": "Cellular Biology & Biological Molecules",
+    "testTag": "MDCAT",
+    "difficulty": "Easy",
+    "isPastPaper": true,
+    "question": "The protective, selectively permeable outer boundary of an animal cell is the:",
+    "options": [
+      "Cell wall",
+      "Nuclear envelope",
+      "Plasma membrane",
+      "Capsule"
+    ],
+    "answer": 2,
+    "explanation": "Plasma membrane bounds animal cells."
+  },
+  {
+    "id": "bio_145",
+    "subjectId": "biology",
+    "topic": "Human Physiology & Coordination",
+    "testTag": "NET",
+    "difficulty": "Easy",
+    "isPastPaper": true,
+    "question": "Which of the following describes the function of the enzyme amylase?",
+    "options": [
+      "Breaks down proteins into amino acids",
+      "Breaks down lipids into fatty acids",
+      "Breaks down starch into simple sugars",
+      "Synthesizes DNA"
+    ],
+    "answer": 2,
+    "explanation": "Amylase breaks down starch."
+  },
+  {
+    "id": "bio_146",
+    "subjectId": "biology",
+    "topic": "Human Physiology & Coordination",
+    "testTag": "MDCAT",
+    "difficulty": "Medium",
+    "isPastPaper": true,
+    "question": "In the context of the nerve impulse, the threshold potential is defined as the:",
+    "options": [
+      "Minimum depolarization required to trigger an action potential",
+      "Maximum voltage reached during an action potential",
+      "Resting voltage of a neuron",
+      "Hyperpolarization phase"
+    ],
+    "answer": 0,
+    "explanation": "Threshold is minimum depolarization to fire action potential."
+  },
+  {
+    "id": "bio_147",
+    "subjectId": "biology",
+    "topic": "Cellular Biology & Biological Molecules",
+    "testTag": "USAT",
+    "difficulty": "Medium",
+    "isPastPaper": true,
+    "question": "A plant cell placed in a hypotonic solution will become:",
+    "options": [
+      "Plasmolyzed",
+      "Flaccid",
+      "Turgid",
+      "Crenated"
+    ],
+    "answer": 2,
+    "explanation": "Plant cells become turgid in hypotonic solutions."
+  },
+  {
+    "id": "bio_148",
+    "subjectId": "biology",
+    "topic": "Bioenergetics, Diversity & Plant Physiology",
+    "testTag": "MDCAT",
+    "difficulty": "Easy",
+    "isPastPaper": true,
+    "question": "The evolutionary process that leads to the formation of new species is called:",
+    "options": [
+      "Microevolution",
+      "Speciation",
+      "Genetic drift",
+      "Extinction"
+    ],
+    "answer": 1,
+    "explanation": "Speciation forms new species."
+  },
+  {
+    "id": "bio_149",
+    "subjectId": "biology",
+    "topic": "Human Physiology & Coordination",
+    "testTag": "NET",
+    "difficulty": "Medium",
+    "isPastPaper": true,
+    "question": "Which of the following blood vessels carries deoxygenated blood from the heart to the lungs?",
+    "options": [
+      "Aorta",
+      "Pulmonary vein",
+      "Pulmonary artery",
+      "Superior vena cava"
+    ],
+    "answer": 2,
+    "explanation": "Pulmonary artery carries deoxygenated blood."
+  },
+  {
+    "id": "bio_150",
+    "subjectId": "biology",
+    "topic": "Human Physiology & Coordination",
+    "testTag": "MDCAT",
+    "difficulty": "Easy",
+    "isPastPaper": true,
+    "question": "The basic structural and functional unit of the nervous system is the:",
+    "options": [
+      "Glial cell",
+      "Neuron",
+      "Synapse",
+      "Ganglion"
+    ],
+    "answer": 1,
+    "explanation": "Neuron is functional unit of nervous system."
+  }
+]
