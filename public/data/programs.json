@@ -1,0 +1,703 @@
+[
+  {
+    "id": "bs-computer-science",
+    "program_name": "BS Computer Science",
+    "introduction": "BS Computer Science is one of the most sought-after undergraduate programs in Pakistan and globally. It equips students with a deep understanding of computation, algorithms, data structures, and software engineering principles. The program provides a strong foundation in programming languages, databases, networking, and modern technologies such as cloud computing and machine learning. As the world becomes increasingly digital, the demand for computer scientists has skyrocketed in almost every industry, from finance and healthcare to entertainment and education. Students learn to solve complex problems, develop innovative software solutions, and understand the theoretical underpinnings of computer systems. The future outlook for this program is exceptionally bright, with continuous advancements in AI, cybersecurity, and Web3 creating new and lucrative career opportunities. Graduates are highly valued for their analytical thinking, coding proficiency, and ability to adapt to rapidly changing technological landscapes.",
+    "offering_universities": [
+      "NUST (Islamabad)",
+      "FAST-NUCES (Multiple Campuses)",
+      "LUMS (Lahore)",
+      "PUCIT (Lahore)",
+      "COMSATS"
+    ],
+    "duration": "4 years",
+    "eligibility": "FSc Pre-Engineering, ICS, or A-Levels with Mathematics and Physics. Minimum 50-60% marks and university entry test (e.g., NET, NU Test).",
+    "career_prospects": "Software Engineer, Web Developer, Systems Analyst, Database Administrator, IT Consultant, Game Developer.",
+    "average_starting_salary": "PKR 40,000 - 80,000 / month",
+    "specializations": "Artificial Intelligence, Cybersecurity, Software Engineering, Data Science, Web Development.",
+    "core_courses": [
+      "Programming Fundamentals",
+      "Data Structures & Algorithms",
+      "Operating Systems",
+      "Database Systems",
+      "Software Engineering"
+    ]
+  },
+  {
+    "id": "mbbs",
+    "program_name": "Bachelor of Medicine, Bachelor of Surgery (MBBS)",
+    "introduction": "MBBS is the most prestigious and highly competitive medical degree in Pakistan. This rigorous five-year program prepares students for a career as a medical doctor, providing comprehensive knowledge of human anatomy, physiology, biochemistry, pharmacology, and clinical practices. The curriculum is divided into basic medical sciences during the initial years, followed by extensive clinical rotations in hospitals where students gain hands-on experience in various departments such as medicine, surgery, pediatrics, and gynecology. The medical profession is highly respected in Pakistani society, and graduates have the opportunity to make a profound impact on public health. After completing the degree and a mandatory one-year house job, doctors can pursue specialized fellowships (FCPS) or practice as general physicians. The program requires immense dedication, empathy, and resilience, as students deal with real-world health crises and patient care. The demand for qualified doctors remains perpetually high both domestically and internationally.",
+    "offering_universities": [
+      "King Edward Medical University (KEMU)",
+      "Aga Khan University (AKU)",
+      "Dow University of Health Sciences (DUHS)",
+      "UHS Affiliated Colleges",
+      "Nishtar Medical University"
+    ],
+    "duration": "5 years + 1 year House Job",
+    "eligibility": "FSc Pre-Medical or A-Levels with Biology, Chemistry, and Physics. Minimum 60-70% marks and highly competitive MDCAT score.",
+    "career_prospects": "General Physician, Medical Officer, Surgeon, Specialist Consultant, Healthcare Administrator.",
+    "average_starting_salary": "PKR 50,000 - 70,000 / month",
+    "specializations": "Cardiology, Neurology, General Surgery, Pediatrics, Psychiatry, Radiology.",
+    "core_courses": [
+      "Anatomy",
+      "Physiology",
+      "Biochemistry",
+      "Pathology",
+      "Pharmacology",
+      "Medicine",
+      "Surgery"
+    ]
+  },
+  {
+    "id": "bba",
+    "program_name": "Bachelor of Business Administration (BBA)",
+    "introduction": "The Bachelor of Business Administration (BBA) is a premier undergraduate degree designed to develop the next generation of corporate leaders, entrepreneurs, and business managers. This four-year program provides a holistic understanding of how organizations function, covering essential domains such as marketing, finance, human resources, supply chain, and strategic management. Students are exposed to real-world business case studies, interactive projects, and industry internships that build their decision-making and leadership skills. In Pakistan's growing economy, BBA graduates are highly sought after by multinational corporations, banks, FMCGs, and tech startups. The program emphasizes communication, analytical thinking, and entrepreneurial spirit, enabling students to either climb the corporate ladder or launch their own successful ventures. With a versatile skill set, BBA alumni can seamlessly transition across various industries and roles, making it one of the most dynamic and adaptable degrees available.",
+    "offering_universities": [
+      "LUMS (Lahore)",
+      "IBA (Karachi)",
+      "NUST Business School (Islamabad)",
+      "LSE (Lahore)",
+      "SZABIST"
+    ],
+    "duration": "4 years",
+    "eligibility": "FSc/FA/ICS/I.Com or A-Levels with minimum 50% marks. University specific entry tests (e.g., IBA aptitude test, NET).",
+    "career_prospects": "Marketing Manager, Financial Analyst, HR Executive, Brand Manager, Entrepreneur, Management Consultant.",
+    "average_starting_salary": "PKR 35,000 - 60,000 / month",
+    "specializations": "Marketing, Finance, Human Resource Management, Supply Chain Management, Entrepreneurship.",
+    "core_courses": [
+      "Principles of Management",
+      "Financial Accounting",
+      "Marketing Management",
+      "Business Communication",
+      "Organizational Behavior"
+    ]
+  },
+  {
+    "id": "bs-accounting-finance",
+    "program_name": "BS Accounting and Finance",
+    "introduction": "BS Accounting and Finance is a specialized degree tailored for students aiming for high-powered careers in the financial sector, corporate auditing, and investment banking. This rigorous four-year program combines the technical precision of accounting with the strategic foresight of finance. Students learn how to analyze financial statements, manage corporate wealth, evaluate investment opportunities, and understand complex tax and corporate laws. In Pakistan, this degree often provides exemptions for professional certifications like CA, ACCA, and CFA, giving graduates a significant head start in their professional journeys. The curriculum is highly quantitative and analytical, preparing students to navigate global financial markets and economic fluctuations. Graduates are essential to the success of any organization, as they ensure financial health, compliance, and strategic growth. The career outlook is exceptionally stable and lucrative, with opportunities ranging from Big Four accounting firms to multinational banks.",
+    "offering_universities": [
+      "LUMS (Lahore)",
+      "IBA (Karachi)",
+      "LSE (Lahore)",
+      "NUST (Islamabad)",
+      "Hailey College of Commerce (PU)"
+    ],
+    "duration": "4 years",
+    "eligibility": "FSc/FA/ICS/I.Com or A-Levels with minimum 50% marks. Strong mathematical background preferred.",
+    "career_prospects": "Financial Analyst, Auditor, Investment Banker, Tax Consultant, Corporate Treasurer, Risk Manager.",
+    "average_starting_salary": "PKR 35,000 - 65,000 / month",
+    "specializations": "Corporate Finance, Audit and Taxation, Islamic Banking, Investment Management.",
+    "core_courses": [
+      "Financial Accounting",
+      "Corporate Finance",
+      "Taxation",
+      "Auditing",
+      "Managerial Accounting",
+      "Business Law"
+    ]
+  },
+  {
+    "id": "bs-software-engineering",
+    "program_name": "BS Software Engineering",
+    "introduction": "BS Software Engineering focuses on the systematic, disciplined, and quantifiable approach to the development, operation, and maintenance of software systems. Unlike general computer science, this program heavily emphasizes the software development lifecycle (SDLC), project management, software quality assurance, and user experience design. Students learn how to design large-scale, robust, and secure software architectures that meet specific client requirements. The curriculum includes hands-on experience with modern development frameworks, agile methodologies, and collaborative coding practices. In Pakistan's booming IT export sector, software engineers are the backbone of the industry, working in software houses, tech startups, and global outsourced projects. The program cultivates not just coding skills, but the engineering mindset required to build scalable and reliable software products. With technology deeply integrated into modern life, software engineers enjoy excellent job security, high salaries, and opportunities for remote international work.",
+    "offering_universities": [
+      "NUST (Islamabad)",
+      "FAST-NUCES",
+      "PUCIT (Lahore)",
+      "COMSATS",
+      "UET (Lahore)"
+    ],
+    "duration": "4 years",
+    "eligibility": "FSc Pre-Engineering, ICS, or A-Levels with Mathematics. Minimum 50-60% marks and entry test.",
+    "career_prospects": "Software Engineer, Full Stack Developer, QA Engineer, Project Manager, UI/UX Designer, DevOps Engineer.",
+    "average_starting_salary": "PKR 40,000 - 80,000 / month",
+    "specializations": "Web Application Development, Mobile App Development, Quality Assurance, Game Development.",
+    "core_courses": [
+      "Software Requirement Engineering",
+      "Software Design & Architecture",
+      "Software Quality Assurance",
+      "Web Engineering",
+      "Project Management"
+    ]
+  },
+  {
+    "id": "bs-data-science",
+    "program_name": "BS Data Science",
+    "introduction": "BS Data Science is a cutting-edge program designed to train professionals who can extract meaningful insights from massive and complex datasets. As data becomes the 'new oil' of the digital economy, this degree blends computer science, statistics, and mathematics to teach students how to process, analyze, and visualize data. The curriculum covers advanced topics such as machine learning, big data analytics, data mining, and predictive modeling. Students learn to use industry-standard tools like Python, R, Hadoop, and SQL to solve real-world problems in sectors like finance, healthcare, e-commerce, and logistics. In Pakistan, the demand for data scientists is growing rapidly as companies realize the value of data-driven decision making. Graduates of this program are equipped to build AI models, optimize business operations, and forecast future trends, making them highly valuable assets in the modern job market with exceptional salary potential.",
+    "offering_universities": [
+      "FAST-NUCES",
+      "NUST",
+      "LUMS",
+      "ITU (Lahore)",
+      "COMSATS"
+    ],
+    "duration": "4 years",
+    "eligibility": "FSc Pre-Engineering, ICS, or A-Levels with strong Mathematics background.",
+    "career_prospects": "Data Scientist, Data Analyst, Machine Learning Engineer, Business Intelligence Analyst, Data Engineer.",
+    "average_starting_salary": "PKR 45,000 - 90,000 / month",
+    "specializations": "Machine Learning, Big Data Analytics, Business Intelligence, Artificial Intelligence.",
+    "core_courses": [
+      "Probability and Statistics",
+      "Data Mining",
+      "Machine Learning",
+      "Big Data Analytics",
+      "Data Visualization"
+    ]
+  },
+  {
+    "id": "bds",
+    "program_name": "Bachelor of Dental Surgery (BDS)",
+    "introduction": "The Bachelor of Dental Surgery (BDS) is a rigorous four-year professional degree focused on the diagnosis, prevention, and treatment of oral diseases and conditions. It is the second most popular medical program in Pakistan after MBBS. Students gain comprehensive knowledge of oral anatomy, pathology, dental materials, and specialized surgical procedures. The curriculum involves extensive clinical training in dental hospitals, where students practice under supervision, learning skills such as tooth extraction, root canals, orthodontics, and prosthodontics. Following the four-year academic program, graduates must complete a mandatory one-year house job. Dental professionals are in high demand in both public healthcare systems and private practice. Many graduates choose to set up their own lucrative private clinics or pursue postgraduate specializations like FCPS in Orthodontics or Oral and Maxillofacial Surgery. The profession combines medical knowledge with precision craftsmanship.",
+    "offering_universities": [
+      "De'Montmorency College of Dentistry",
+      "Liaquat University of Medical & Health Sciences",
+      "Dow Dental College",
+      "CMH Lahore Medical College"
+    ],
+    "duration": "4 years + 1 year House Job",
+    "eligibility": "FSc Pre-Medical with minimum 60-70% marks and competitive MDCAT score.",
+    "career_prospects": "Dental Surgeon, Orthodontist, Oral and Maxillofacial Surgeon, Dental Public Health Officer.",
+    "average_starting_salary": "PKR 40,000 - 60,000 / month",
+    "specializations": "Orthodontics, Oral Surgery, Prosthodontics, Periodontology.",
+    "core_courses": [
+      "Oral Anatomy",
+      "Dental Materials",
+      "Oral Pathology",
+      "Prosthodontics",
+      "Operative Dentistry"
+    ]
+  },
+  {
+    "id": "bs-electrical-engineering",
+    "program_name": "BS Electrical Engineering",
+    "introduction": "BS Electrical Engineering is one of the foundational and most prestigious engineering disciplines in Pakistan. This four-year program covers the study and application of electricity, electronics, and electromagnetism. Students explore a wide range of topics, from microchips and circuit design to massive power generation and distribution networks. The curriculum is highly mathematical and analytical, involving laboratory work and complex design projects. With Pakistan's ongoing focus on energy infrastructure, telecommunications, and industrial automation, electrical engineers play a critical role in national development. Graduates can work in power generation companies (WAPDA, NTDC), telecommunication firms, electronics manufacturing, and robotics. The degree also provides a strong foundation for pursuing advanced studies in emerging fields like renewable energy systems and embedded systems. Electrical engineers are respected for their rigorous problem-solving skills and technical ingenuity.",
+    "offering_universities": [
+      "UET (Lahore)",
+      "NUST (Islamabad)",
+      "GIKI (Topi)",
+      "NED University (Karachi)",
+      "PIEAS"
+    ],
+    "duration": "4 years",
+    "eligibility": "FSc Pre-Engineering or A-Levels (Physics, Math, Chemistry/CS) with minimum 60% marks and Entry Test (ECAT/NET).",
+    "career_prospects": "Electrical Engineer, Power Engineer, Electronics Engineer, Telecommunication Engineer, Control Systems Engineer.",
+    "average_starting_salary": "PKR 30,000 - 50,000 / month",
+    "specializations": "Power Systems, Electronics, Telecommunications, Control Systems.",
+    "core_courses": [
+      "Circuit Analysis",
+      "Electromagnetic Field Theory",
+      "Power Engineering",
+      "Digital Logic Design",
+      "Control Systems"
+    ]
+  },
+  {
+    "id": "bs-mechanical-engineering",
+    "program_name": "BS Mechanical Engineering",
+    "introduction": "BS Mechanical Engineering is a broad and versatile engineering discipline that applies the principles of physics and materials science for the analysis, design, manufacturing, and maintenance of mechanical systems. It is the core of the manufacturing and automotive industries. Students learn about thermodynamics, fluid mechanics, structural analysis, and kinematics. The program includes extensive hands-on training using CAD (Computer-Aided Design) software and practical workshop experience. In Pakistan, mechanical engineers are highly sought after in sectors such as automobile manufacturing, heavy machinery, HVAC design, aerospace, and energy plants. The degree develops a strong aptitude for innovation, allowing graduates to design everything from small engine parts to massive industrial plants. It remains a highly respected and stable career choice with excellent opportunities in both the public and private sectors.",
+    "offering_universities": [
+      "UET (Lahore)",
+      "NUST (Islamabad)",
+      "GIKI (Topi)",
+      "NED University (Karachi)",
+      "PIEAS"
+    ],
+    "duration": "4 years",
+    "eligibility": "FSc Pre-Engineering or A-Levels with Physics, Chemistry, and Math. ECAT/NET required.",
+    "career_prospects": "Mechanical Engineer, Design Engineer, HVAC Engineer, Automotive Engineer, Manufacturing Engineer.",
+    "average_starting_salary": "PKR 30,000 - 50,000 / month",
+    "specializations": "Thermal Sciences, Manufacturing, Automotive Engineering, HVAC, Robotics.",
+    "core_courses": [
+      "Thermodynamics",
+      "Fluid Mechanics",
+      "Mechanics of Materials",
+      "Machine Design",
+      "Heat and Mass Transfer"
+    ]
+  },
+  {
+    "id": "bs-civil-engineering",
+    "program_name": "BS Civil Engineering",
+    "introduction": "BS Civil Engineering is focused on the design, construction, and maintenance of the physical and naturally built environment, including public works like roads, bridges, canals, dams, airports, and structural components of buildings. It is one of the oldest engineering disciplines. Students learn structural analysis, geotechnical engineering, transportation engineering, and environmental management. In a developing country like Pakistan, with significant ongoing infrastructure projects (like CPEC), civil engineers are in immense demand. The program involves extensive field work, surveying, and the use of modern structural design software (like AutoCAD and SAP2000). Graduates can work for major construction firms, government planning departments, and consulting agencies. Civil engineers leave a tangible legacy on the world, shaping the skylines and infrastructure of modern cities.",
+    "offering_universities": [
+      "UET (Lahore)",
+      "NUST (Islamabad)",
+      "NED University (Karachi)",
+      "Mehran University (Jamshoro)"
+    ],
+    "duration": "4 years",
+    "eligibility": "FSc Pre-Engineering. Entry Test (ECAT/NET) mandatory.",
+    "career_prospects": "Structural Engineer, Site Engineer, Project Manager, Urban Planner, Geotechnical Engineer.",
+    "average_starting_salary": "PKR 30,000 - 50,000 / month",
+    "specializations": "Structural Engineering, Geotechnical Engineering, Transportation Engineering, Environmental Engineering.",
+    "core_courses": [
+      "Structural Analysis",
+      "Fluid Mechanics",
+      "Geotechnical Engineering",
+      "Transportation Engineering",
+      "Surveying"
+    ]
+  },
+  {
+    "id": "pharm-d",
+    "program_name": "Doctor of Pharmacy (Pharm-D)",
+    "introduction": "The Doctor of Pharmacy (Pharm-D) is a five-year professional degree that focuses on the clinical use of medications, drug development, and patient care. It is a highly respected healthcare profession in Pakistan. The curriculum covers pharmacology, pharmaceutics, pharmaceutical chemistry, and pharmacy practice. Students learn how drugs interact with the human body, how to compound medications, and how to ensure safe and effective drug therapy. The program includes clinical ward rounds and industrial internships. Pharmacists in Pakistan have diverse career paths, ranging from clinical pharmacy in hospitals to quality control in the booming pharmaceutical industry. They also play a crucial role in community pharmacy, advising patients on medication usage. With the expansion of the healthcare sector, Pharm-D graduates are essential for maintaining public health and drug safety.",
+    "offering_universities": [
+      "Punjab University",
+      "Dow University of Health Sciences",
+      "Bahauddin Zakariya University",
+      "University of Karachi"
+    ],
+    "duration": "5 years",
+    "eligibility": "FSc Pre-Medical with minimum 60% marks.",
+    "career_prospects": "Clinical Pharmacist, Industrial Pharmacist, Regulatory Affairs Officer, Retail Pharmacist, Quality Control Inspector.",
+    "average_starting_salary": "PKR 30,000 - 45,000 / month",
+    "specializations": "Clinical Pharmacy, Industrial Pharmacy, Pharmaceutical Chemistry, Pharmacognosy.",
+    "core_courses": [
+      "Pharmacology",
+      "Pharmaceutics",
+      "Pharmaceutical Chemistry",
+      "Pharmacy Practice",
+      "Pharmacognosy"
+    ]
+  },
+  {
+    "id": "dpt",
+    "program_name": "Doctor of Physical Therapy (DPT)",
+    "introduction": "The Doctor of Physical Therapy (DPT) is a highly sought-after five-year clinical degree focused on the physical rehabilitation, mobility, and pain management of patients. The curriculum encompasses deep knowledge of human anatomy, kinesiology, biomechanics, and therapeutic exercises. Students undergo rigorous clinical training in hospitals, learning to treat patients recovering from surgeries, sports injuries, neurological disorders, and chronic pain conditions. In Pakistan, the awareness and demand for physical therapy have grown exponentially. DPT graduates work in government and private hospitals, sports clubs, rehabilitation centers, or establish their own independent clinics. The profession is highly rewarding as therapists directly improve the quality of life of their patients without relying on invasive surgeries or heavy medication.",
+    "offering_universities": [
+      "King Edward Medical University",
+      "UHS Affiliated Institutes",
+      "Ziauddin University",
+      "Riphah International University"
+    ],
+    "duration": "5 years",
+    "eligibility": "FSc Pre-Medical with minimum 60% marks.",
+    "career_prospects": "Physical Therapist, Sports Rehabilitator, Pediatric Physiotherapist, Ergonomics Consultant.",
+    "average_starting_salary": "PKR 25,000 - 45,000 / month",
+    "specializations": "Orthopedic Physical Therapy, Neurological Physical Therapy, Sports Rehabilitation, Cardiopulmonary Therapy.",
+    "core_courses": [
+      "Anatomy",
+      "Kinesiology",
+      "Biomechanics",
+      "Therapeutic Exercises",
+      "Pathology"
+    ]
+  },
+  {
+    "id": "bs-information-technology",
+    "program_name": "BS Information Technology (IT)",
+    "introduction": "BS Information Technology focuses on the practical application of computer systems to solve business and organizational problems. While Computer Science is more theoretical, IT is highly applied, dealing with network architecture, system administration, database management, and cybersecurity. The four-year program equips students with the skills to manage an organization's tech infrastructure, ensuring systems are secure, efficient, and up-to-date. In Pakistan's rapidly digitizing landscape, IT professionals are needed in every sector, from banks and hospitals to government agencies and schools. The curriculum includes hands-on labs with servers, routers, and cloud platforms. Graduates are the problem-solvers who keep businesses running smoothly in the digital age, with strong prospects for career advancement in IT management.",
+    "offering_universities": [
+      "PUCIT (Lahore)",
+      "COMSATS",
+      "NUST",
+      "Virtual University",
+      "UCP"
+    ],
+    "duration": "4 years",
+    "eligibility": "FSc Pre-Engineering, ICS, or equivalent with minimum 50% marks.",
+    "career_prospects": "IT Manager, Network Administrator, Systems Engineer, Database Administrator, IT Consultant.",
+    "average_starting_salary": "PKR 60,000 - 110,000 / month",
+    "specializations": "Network Administration, Cybersecurity, Cloud Computing, Database Management.",
+    "core_courses": [
+      "System Administration",
+      "Computer Networks",
+      "Database Administration",
+      "Information Security",
+      "Web Technologies"
+    ]
+  },
+  {
+    "id": "bs-artificial-intelligence",
+    "program_name": "BS Artificial Intelligence",
+    "introduction": "BS Artificial Intelligence is a specialized, futuristic program that trains students to build intelligent systems capable of learning, reasoning, and decision-making. As a specialized branch of computer science, this degree dives deep into machine learning, deep learning, natural language processing, and computer vision. Students learn how to create AI models that power self-driving cars, virtual assistants, advanced healthcare diagnostics, and predictive analytics. In Pakistan, universities have recently introduced this degree to meet the explosive global demand for AI experts. The curriculum is math-heavy, requiring strong foundations in calculus and linear algebra, alongside proficiency in Python and AI frameworks like TensorFlow and PyTorch. Graduates are positioned at the cutting edge of technological innovation with immense global career prospects.",
+    "offering_universities": [
+      "FAST-NUCES",
+      "NUST",
+      "PUCIT",
+      "ITU (Lahore)",
+      "COMSATS"
+    ],
+    "duration": "4 years",
+    "eligibility": "FSc Pre-Engineering, ICS, or A-Levels with strong Mathematics background.",
+    "career_prospects": "AI Engineer, Machine Learning Engineer, NLP Engineer, Computer Vision Scientist, Research Scientist.",
+    "average_starting_salary": "PKR 85,000 - 170,000 / month",
+    "specializations": "Machine Learning, Deep Learning, Natural Language Processing, Computer Vision.",
+    "core_courses": [
+      "Artificial Intelligence",
+      "Machine Learning",
+      "Deep Learning",
+      "Neural Networks",
+      "Natural Language Processing"
+    ]
+  },
+  {
+    "id": "llb",
+    "program_name": "Bachelor of Laws (LLB)",
+    "introduction": "The Bachelor of Laws (LLB) is a prestigious five-year program designed for students aspiring to enter the legal profession. The curriculum covers a wide spectrum of legal disciplines, including constitutional law, criminal law, corporate law, Islamic jurisprudence, and human rights. Students develop critical thinking, analytical, and advocacy skills through moot courts, case law studies, and legal drafting exercises. In Pakistan, the legal profession is highly influential, with lawyers playing key roles in justice, politics, and corporate governance. After completing the degree, graduates must pass the LAW GAT (Graduate Assessment Test) to practice in courts. Career options are diverse, ranging from independent litigation and joining corporate law firms to serving in the judiciary or civil services. It is a profession of immense respect and intellectual rigor.",
+    "offering_universities": [
+      "Punjab University Law College",
+      "LUMS (BA-LLB)",
+      "Quaid-e-Azam University",
+      "Pakistan College of Law"
+    ],
+    "duration": "5 years",
+    "eligibility": "FA/FSc or A-Levels. Must pass the LAT (Law Admission Test) conducted by HEC.",
+    "career_prospects": "Advocate, Corporate Lawyer, Legal Advisor, Judge (after experience), Civil Servant.",
+    "average_starting_salary": "PKR 20,000 - 40,000 / month (Apprenticeship is often lower)",
+    "specializations": "Corporate Law, Criminal Law, Constitutional Law, Intellectual Property Law.",
+    "core_courses": [
+      "Constitutional Law",
+      "Criminal Law",
+      "Contract Law",
+      "Islamic Jurisprudence",
+      "Civil Procedure Code"
+    ]
+  },
+  {
+    "id": "bs-psychology",
+    "program_name": "BS Psychology",
+    "introduction": "BS Psychology explores the human mind and behavior. It covers clinical, developmental, and organizational psychology. With increasing awareness of mental health in Pakistan, this field is growing rapidly. Graduates can work as counselors, HR professionals, or pursue clinical psychology.",
+    "offering_universities": [
+      "Punjab University",
+      "Quaid-e-Azam University",
+      "NUST",
+      "Karachi University"
+    ],
+    "duration": "4 years",
+    "eligibility": "FA/FSc or equivalent with minimum 50% marks.",
+    "career_prospects": "Counseling Psychologist, HR Specialist, Researcher, Behavioral Therapist.",
+    "average_starting_salary": "PKR 25,000 - 45,000 / month",
+    "specializations": "Clinical Psychology, Organizational Psychology, Educational Psychology.",
+    "core_courses": [
+      "Introduction to Psychology",
+      "Research Methods",
+      "Cognitive Psychology",
+      "Abnormal Psychology",
+      "Social Psychology"
+    ]
+  },
+  {
+    "id": "bs-english-literature",
+    "program_name": "BS English Literature",
+    "introduction": "BS English Literature delves into classical and modern literary works, improving critical thinking, analytical, and communication skills. It is highly regarded in Pakistan, leading to careers in education, media, content writing, and civil services (CSS).",
+    "offering_universities": [
+      "GCU Lahore",
+      "Punjab University",
+      "Quaid-e-Azam University",
+      "NUML"
+    ],
+    "duration": "4 years",
+    "eligibility": "FA/FSc or equivalent with minimum 50% marks.",
+    "career_prospects": "Lecturer, Content Writer, Editor, Journalist, CSS Officer.",
+    "average_starting_salary": "PKR 40,000 - 80,000 / month",
+    "specializations": "Literature, Linguistics, Creative Writing.",
+    "core_courses": [
+      "History of English Literature",
+      "Poetry",
+      "Drama",
+      "Linguistics",
+      "Literary Criticism"
+    ]
+  },
+  {
+    "id": "bs-economics",
+    "program_name": "BS Economics",
+    "introduction": "BS Economics provides a deep understanding of micro and macroeconomic theories, financial markets, and public policy. Economists are crucial for national planning, banking, and data analysis in Pakistan's evolving economic landscape.",
+    "offering_universities": [
+      "LUMS",
+      "NUST",
+      "Quaid-e-Azam University",
+      "LSE (Lahore)"
+    ],
+    "duration": "4 years",
+    "eligibility": "FA/FSc/ICS or equivalent with minimum 50% marks. Math background preferred.",
+    "career_prospects": "Economic Analyst, Data Analyst, Banker, Policy Advisor, Researcher.",
+    "average_starting_salary": "PKR 30,000 - 50,000 / month",
+    "specializations": "Development Economics, Financial Economics, Public Policy.",
+    "core_courses": [
+      "Microeconomics",
+      "Macroeconomics",
+      "Econometrics",
+      "Development Economics",
+      "International Trade"
+    ]
+  },
+  {
+    "id": "bs-mathematics",
+    "program_name": "BS Mathematics",
+    "introduction": "BS Mathematics focuses on pure and applied mathematics, building strong analytical and problem-solving skills. It is a foundational degree that leads to careers in education, data science, cryptography, and actuarial sciences in Pakistan.",
+    "offering_universities": [
+      "Punjab University",
+      "COMSATS",
+      "NUST",
+      "Quaid-e-Azam University"
+    ],
+    "duration": "4 years",
+    "eligibility": "FSc Pre-Engineering, ICS, or equivalent with minimum 50% marks.",
+    "career_prospects": "Mathematician, Data Analyst, Actuary, Lecturer, Researcher.",
+    "average_starting_salary": "PKR 25,000 - 45,000 / month",
+    "specializations": "Pure Mathematics, Applied Mathematics, Computational Mathematics.",
+    "core_courses": [
+      "Calculus",
+      "Linear Algebra",
+      "Differential Equations",
+      "Real Analysis",
+      "Numerical Analysis"
+    ]
+  },
+  {
+    "id": "bs-physics",
+    "program_name": "BS Physics",
+    "introduction": "BS Physics explores the fundamental laws of nature, from quantum mechanics to astrophysics. Graduates are highly analytical and work in research organizations like PAEC and SUPARCO, as well as in academia and technology sectors in Pakistan.",
+    "offering_universities": [
+      "Quaid-e-Azam University",
+      "Punjab University",
+      "NUST",
+      "PIEAS"
+    ],
+    "duration": "4 years",
+    "eligibility": "FSc Pre-Engineering or equivalent with minimum 50% marks.",
+    "career_prospects": "Physicist, Research Scientist, Lecturer, Data Analyst, Aerospace Engineer.",
+    "average_starting_salary": "PKR 25,000 - 45,000 / month",
+    "specializations": "Theoretical Physics, Solid State Physics, Nuclear Physics, Astrophysics.",
+    "core_courses": [
+      "Classical Mechanics",
+      "Quantum Mechanics",
+      "Electromagnetism",
+      "Thermodynamics",
+      "Solid State Physics"
+    ]
+  },
+  {
+    "id": "bs-media-sciences",
+    "program_name": "BS Media Sciences",
+    "introduction": "BS Media Sciences or Mass Communication covers journalism, broadcasting, advertising, and public relations. With the boom in digital and electronic media in Pakistan, this degree offers dynamic careers in TV channels, digital agencies, and PR firms.",
+    "offering_universities": [
+      "Punjab University",
+      "SZABIST",
+      "Iqra University",
+      "NUST"
+    ],
+    "duration": "4 years",
+    "eligibility": "FA/FSc or equivalent with minimum 50% marks.",
+    "career_prospects": "Journalist, Content Creator, PR Executive, Anchorperson, Video Producer.",
+    "average_starting_salary": "PKR 40,000 - 80,000 / month",
+    "specializations": "Journalism, Advertising & PR, Film & TV Production.",
+    "core_courses": [
+      "Mass Communication Theory",
+      "Journalism",
+      "Media Ethics",
+      "Digital Media Marketing",
+      "Video Production"
+    ]
+  },
+  {
+    "id": "bs-aviation-management",
+    "program_name": "BS Aviation Management",
+    "introduction": "BS Aviation Management prepares students for managerial roles in the airline and airport industries. It covers airport operations, aviation safety, and airline marketing. It is a niche but highly rewarding field in Pakistan and the Middle East.",
+    "offering_universities": [
+      "Institute of Space Technology (IST)",
+      "Air University",
+      "UMT"
+    ],
+    "duration": "4 years",
+    "eligibility": "FA/FSc or equivalent with minimum 50% marks.",
+    "career_prospects": "Airport Manager, Airline Operations Executive, Air Traffic Controller, Aviation Consultant.",
+    "average_starting_salary": "PKR 55,000 - 100,000 / month",
+    "specializations": "Airport Operations, Airline Management, Aviation Safety.",
+    "core_courses": [
+      "Aviation Law",
+      "Airport Management",
+      "Airline Marketing",
+      "Aviation Safety",
+      "Meteorology"
+    ]
+  },
+  {
+    "id": "bs-cyber-security",
+    "program_name": "BS Cyber Security",
+    "introduction": "BS Cyber Security focuses on protecting computer systems, networks, and data from cyber attacks. With the rapid digitization of banks and government sectors in Pakistan, cyber security experts are in critical demand to prevent data breaches.",
+    "offering_universities": [
+      "Air University",
+      "FAST-NUCES",
+      "NUST",
+      "COMSATS"
+    ],
+    "duration": "4 years",
+    "eligibility": "FSc Pre-Engineering, ICS, or equivalent with minimum 50% marks.",
+    "career_prospects": "Cyber Security Analyst, Ethical Hacker, Security Architect, Information Security Manager.",
+    "average_starting_salary": "PKR 45,000 - 85,000 / month",
+    "specializations": "Network Security, Digital Forensics, Ethical Hacking.",
+    "core_courses": [
+      "Information Security",
+      "Network Security",
+      "Digital Forensics",
+      "Cryptography",
+      "Ethical Hacking"
+    ]
+  },
+  {
+    "id": "bs-biotechnology",
+    "program_name": "BS Biotechnology",
+    "introduction": "BS Biotechnology applies biological processes to industrial and medical applications. It is a growing field in Pakistan, particularly in agriculture, pharmaceuticals, and genetic research, aiming to solve food security and health issues.",
+    "offering_universities": [
+      "NIBGE",
+      "Punjab University",
+      "NUST",
+      "Quaid-e-Azam University"
+    ],
+    "duration": "4 years",
+    "eligibility": "FSc Pre-Medical with minimum 50% marks.",
+    "career_prospects": "Biotechnologist, Research Scientist, Quality Control Analyst, Clinical Researcher.",
+    "average_starting_salary": "PKR 25,000 - 45,000 / month",
+    "specializations": "Medical Biotechnology, Agricultural Biotechnology, Industrial Biotechnology.",
+    "core_courses": [
+      "Genetics",
+      "Molecular Biology",
+      "Biochemistry",
+      "Microbiology",
+      "Bioinformatics"
+    ]
+  },
+  {
+    "id": "bs-architecture",
+    "program_name": "BS Architecture (B.Arch)",
+    "introduction": "The Bachelor of Architecture is a creative and technical five-year degree focusing on the design and construction of buildings and spaces. Architects shape the urban landscape and are in demand for real estate development in Pakistan.",
+    "offering_universities": [
+      "NCA Lahore",
+      "UET Lahore",
+      "Indus Valley School of Art and Architecture",
+      "NUST"
+    ],
+    "duration": "5 years",
+    "eligibility": "FSc Pre-Engineering/FA with Math or Fine Arts. Departmental aptitude test is mandatory.",
+    "career_prospects": "Architect, Urban Designer, Interior Designer, Landscape Architect.",
+    "average_starting_salary": "PKR 50,000 - 100,000 / month",
+    "specializations": "Urban Design, Interior Architecture, Landscape Architecture, Sustainable Design.",
+    "core_courses": [
+      "Architectural Design Studio",
+      "History of Architecture",
+      "Building Materials",
+      "Structural Design",
+      "Urban Planning"
+    ]
+  },
+  {
+    "id": "bs-international-relations",
+    "program_name": "BS International Relations (IR)",
+    "introduction": "BS International Relations explores global politics, diplomacy, foreign policy, and international law. It is highly popular among students aiming for the Foreign Service of Pakistan (via CSS) and international organizations like the UN.",
+    "offering_universities": [
+      "Quaid-e-Azam University",
+      "NDU Islamabad",
+      "Karachi University",
+      "Punjab University"
+    ],
+    "duration": "4 years",
+    "eligibility": "FA/FSc or equivalent with minimum 50% marks.",
+    "career_prospects": "Diplomat (CSS), Political Analyst, Researcher, NGO Worker, Journalist.",
+    "average_starting_salary": "PKR 45,000 - 85,000 / month",
+    "specializations": "Foreign Policy, Global Security, International Political Economy.",
+    "core_courses": [
+      "Theories of IR",
+      "Foreign Policy of Pakistan",
+      "International Law",
+      "Global Politics",
+      "Strategic Studies"
+    ]
+  },
+  {
+    "id": "bs-public-administration",
+    "program_name": "BS Public Administration",
+    "introduction": "BS Public Administration trains students in the management of public sector organizations and government policies. Graduates are well-prepared for civil service exams and roles in local government, NGOs, and public sector consulting.",
+    "offering_universities": [
+      "Punjab University",
+      "NUST",
+      "Karachi University",
+      "Quaid-e-Azam University"
+    ],
+    "duration": "4 years",
+    "eligibility": "FA/FSc or equivalent with minimum 50% marks.",
+    "career_prospects": "Public Administrator, Policy Analyst, Civil Servant (CSS/PMS), NGO Manager.",
+    "average_starting_salary": "PKR 45,000 - 85,000 / month",
+    "specializations": "Public Policy, Local Governance, Human Resource Management in Public Sector.",
+    "core_courses": [
+      "Public Policy Analysis",
+      "Administrative Law",
+      "Human Resource Management",
+      "Public Finance",
+      "Governance"
+    ]
+  },
+  {
+    "id": "bs-chemical-engineering",
+    "program_name": "BS Chemical Engineering",
+    "introduction": "BS Chemical Engineering deals with the design and operation of chemical plants and processes. It is a highly specialized field crucial for Pakistan's fertilizer, petrochemical, and manufacturing industries.",
+    "offering_universities": [
+      "UET Lahore",
+      "PIEAS",
+      "NUST",
+      "NED University"
+    ],
+    "duration": "4 years",
+    "eligibility": "FSc Pre-Engineering or equivalent with minimum 60% marks and entry test.",
+    "career_prospects": "Chemical Engineer, Process Engineer, Plant Manager, Quality Assurance Engineer.",
+    "average_starting_salary": "PKR 30,000 - 50,000 / month",
+    "specializations": "Petrochemicals, Process Control, Environmental Engineering.",
+    "core_courses": [
+      "Mass Transfer",
+      "Heat Transfer",
+      "Chemical Reaction Engineering",
+      "Thermodynamics",
+      "Process Control"
+    ]
+  },
+  {
+    "id": "bs-aerospace-engineering",
+    "program_name": "BS Aerospace Engineering",
+    "introduction": "BS Aerospace Engineering is a niche, high-tech field dealing with the design and development of aircraft and spacecraft. Graduates in Pakistan typically work for the defense sector, PAF, PAC Kamra, and SUPARCO.",
+    "offering_universities": [
+      "Institute of Space Technology (IST)",
+      "Air University",
+      "NUST (CAE)"
+    ],
+    "duration": "4 years",
+    "eligibility": "FSc Pre-Engineering with minimum 60% marks and strong entry test scores.",
+    "career_prospects": "Aerospace Engineer, Design Engineer, Defense Scientist, Aircraft Maintenance Engineer.",
+    "average_starting_salary": "PKR 40,000 - 70,000 / month",
+    "specializations": "Aerodynamics, Propulsion, Avionics, Structural Design.",
+    "core_courses": [
+      "Aerodynamics",
+      "Flight Dynamics",
+      "Propulsion",
+      "Aerospace Structures",
+      "Control Systems"
+    ]
+  },
+  {
+    "id": "bs-nursing",
+    "program_name": "BS Nursing",
+    "introduction": "BS Nursing (BSN) is a vital healthcare degree focusing on patient care, clinical assistance, and health management. Nursing is facing a massive global and local shortage, making BSN highly rewarding with excellent job security and opportunities abroad.",
+    "offering_universities": [
+      "Aga Khan University",
+      "Dow University of Health Sciences",
+      "Shaikh Zayed Hospital",
+      "Shaukat Khanum"
+    ],
+    "duration": "4 years",
+    "eligibility": "FSc Pre-Medical with minimum 50% marks.",
+    "career_prospects": "Registered Nurse, Clinical Nurse Specialist, Nurse Manager, Public Health Nurse.",
+    "average_starting_salary": "PKR 40,000 - 60,000 / month",
+    "specializations": "Critical Care Nursing, Pediatric Nursing, Psychiatric Nursing.",
+    "core_courses": [
+      "Fundamentals of Nursing",
+      "Anatomy and Physiology",
+      "Pharmacology",
+      "Community Health Nursing",
+      "Medical-Surgical Nursing"
+    ]
+  }
+]
