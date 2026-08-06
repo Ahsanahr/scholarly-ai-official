@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Dr. Ali's SOP Review",
+    "expertise": "Statement of Purpose / Personal Statement",
+    "rating": "5.0 ★",
+    "bio": "Dr. Ali is an Ivy-league graduate who provides highly specialized, one-time reviews of your Statement of Purpose. For a flat fee, he will brutally critique your essay, fix structural flow, enhance your vocabulary, and ensure your narrative aligns perfectly with what top admission committees are looking for. Ideal for students applying to highly competitive Ivy/Russell Group schools."
+  },
+  {
+    "name": "VisaPrep Expert",
+    "expertise": "US F-1 & UK Tier-4 Mock Interviews",
+    "rating": "4.9 ★",
+    "bio": "Secured your admission but terrified of the visa interview? VisaPrep provides rigorous 45-minute 1-on-1 mock interview sessions over Zoom. They simulate the exact high-stress environment of a US embassy, ask tricky financial questions, and provide immediate feedback on your body language and answers. A one-time session dramatically increases visa approval odds."
+  },
+  {
+    "name": "Global Shortlist Advisors",
+    "expertise": "University Selection & Profile Evaluation",
+    "rating": "4.7 ★",
+    "bio": "If you want to apply yourself but don't know where you stand, Global Shortlist offers a one-time profile evaluation. You send them your transcripts, ECAs, and test scores, and for a flat consultation fee, they provide you with a customized list of 3 Ambitious, 3 Target, and 3 Safe universities tailored exactly to your profile and budget."
+  },
+  {
+    "name": "Ahsan Ullah",
+    "rating": "5.0 ★",
+    "bio": "I can help you in getting admission in Pakistani Universty or selecting country for study abroad.",
+    "discountCode": "",
+    "expertise": "Pakistan and abroad Universty Selection"
+  }
+]
