@@ -1,0 +1,162 @@
+[
+  {
+    "id": "net",
+    "name": "NUST Entry Test (NET)",
+    "category": "Engineering / CS / BBA",
+    "syllabus": "<ul><li><strong>Physics (30% - 60 MCQs):</strong> Mechanics, Electromagnetism, Modern Physics (FSc Part 1 &amp; 2). Focus on numericals.</li><li><strong>Mathematics/Biology (40% - 80 MCQs):</strong> Calculus, Algebra, Trigonometry. Heavy focus on Integration and Conic Sections.</li><li><strong>Chemistry/CS (15% - 30 MCQs):</strong> Organic chemistry reactions or basic boolean algebra and networking for CS students.</li><li><strong>English (10% - 20 MCQs):</strong> Synonyms, Antonyms, Prepositions, Reading Comprehension.</li><li><strong>Intelligence (5% - 10 MCQs):</strong> Number series, coding-decoding, spatial reasoning.</li></ul>",
+    "timing": "<ul><li><strong>Total Time:</strong> 180 Minutes (3 Hours)</li><li><strong>Total MCQs:</strong> 200</li><li><strong>Negative Marking:</strong> None. Guess all unattempted questions in the last 5 minutes.</li><li><strong>Format:</strong> Computer-Based Test (CBT) at Islamabad; Paper-Based at Quetta/Karachi.</li></ul>",
+    "tips": "<p><strong>1. Time Management:</strong> You have less than a minute per question. Do not get stuck on long Calculus problems.</p><p><strong>2. Order of Attempt:</strong> Always attempt Intelligence and English first. Then do Chemistry/CS. Leave Math and Physics for the remaining 2.5 hours.</p><p><strong>3. Best Resources:</strong> OETP books are the gold standard for NET. Practice their chapter-wise MCQs heavily.</p>"
+  },
+  {
+    "id": "mdcat",
+    "name": "National MDCAT (PMDC)",
+    "category": "Medical / Dental",
+    "syllabus": "<ul><li><strong>Biology (34% - 68 MCQs):</strong> Cell structure, Biological molecules, Coordination, Genetics.</li><li><strong>Chemistry (27% - 54 MCQs):</strong> Physical chemistry (moles, kinetics), Organic (hydrocarbons, alkanes).</li><li><strong>Physics (27% - 54 MCQs):</strong> Force and motion, Work, Thermodynamics, Electromagnetism.</li><li><strong>English (9% - 18 MCQs):</strong> Vocabulary, grammar rules, sentence correction.</li><li><strong>Logical Reasoning (3% - 6 MCQs):</strong> Critical thinking, letter/symbol series.</li></ul>",
+    "timing": "<ul><li><strong>Total Time:</strong> 210 Minutes (3.5 Hours)</li><li><strong>Total MCQs:</strong> 200</li><li><strong>Negative Marking:</strong> None.</li><li><strong>Format:</strong> Paper-Based Test (PBT) conducted simultaneously across Pakistan.</li></ul>",
+    "tips": "<p><strong>1. Stick to the PMDC Syllabus:</strong> Do not study extra topics. The PMDC issues a strict syllabus outline every year.</p><p><strong>2. Biology requires rote learning:</strong> Questions are often exact lines picked from the provincial textbooks. Memorize the tables and diagrams.</p><p><strong>3. Physics shortcuts:</strong> Learn mental math for Physics. You are not allowed a calculator, so practice rounding off numbers (e.g., using 10 instead of 9.8 for gravity).</p>"
+  },
+  {
+    "id": "nums",
+    "name": "NUMS Entry Test",
+    "category": "Medical (Army)",
+    "syllabus": "<ul><li><strong>Academics (150 MCQs):</strong> Biology (35%), Chemistry (25%), Physics (25%), English (10%).</li><li><strong>Psychological Test (100 MCQs):</strong> Personality assessment, stress handling, ethics, and consistency questions. (5% weightage).</li></ul>",
+    "timing": "<ul><li><strong>Academic Test:</strong> 150 Minutes</li><li><strong>Psychological Test:</strong> 30 Minutes</li><li><strong>Total MCQs:</strong> 250 (150 Academic + 100 Psych)</li><li><strong>Negative Marking:</strong> None.</li></ul>",
+    "tips": "<p><strong>1. Difficulty Level:</strong> NUMS is historically considered more straightforward than the National MDCAT. Questions are less tricky but require solid factual knowledge.</p><p><strong>2. The Psych Test:</strong> Do not overthink the psychological part. They ask the same question phrased differently 4 times to check if you are lying. Be honest and consistent.</p>"
+  },
+  {
+    "id": "ecat",
+    "name": "ECAT (UET Lahore)",
+    "category": "Engineering",
+    "syllabus": "<ul><li><strong>Mathematics (30% - 30 MCQs):</strong> FSc Math Part 1 and 2.</li><li><strong>Physics (30% - 30 MCQs):</strong> FSc Physics Part 1 and 2.</li><li><strong>Chemistry / CS / Stats (30% - 30 MCQs):</strong> Depending on your intermediate combination.</li><li><strong>English (10% - 10 MCQs):</strong> Basic grammar and comprehension.</li></ul>",
+    "timing": "<ul><li><strong>Total Time:</strong> 100 Minutes</li><li><strong>Total MCQs:</strong> 100</li><li><strong>Marking Scheme:</strong> +4 for correct, <strong>-1 for incorrect</strong>, 0 for unattempted.</li></ul>",
+    "tips": "<p><strong>1. Beware the Negative Marking:</strong> ECAT is dangerous because of the -1 deduction. <strong>DO NOT guess wildly.</strong> If you cannot eliminate at least two options, leave it blank.</p><p><strong>2. Speed is everything:</strong> You have exactly 1 minute per question. Skip lengthy calculations immediately and come back to them if time permits.</p>"
+  },
+  {
+    "id": "fast",
+    "name": "FAST Nu-Test",
+    "category": "Computer Science",
+    "syllabus": "<ul><li><strong>Advanced Math (50%):</strong> Calculus, Limits, Integration, Trigonometry, Matrices (FSc level).</li><li><strong>Basic Math / IQ (20%):</strong> Ratios, percentages, algebra, age problems, basic geometry (Matric level).</li><li><strong>Physics (10%) & English (20%):</strong> Basic concepts and grammar.</li></ul>",
+    "timing": "<ul><li><strong>Total Time:</strong> 120 Minutes</li><li><strong>Total MCQs:</strong> 120</li><li><strong>Negative Marking:</strong> -0.25 marks for every wrong answer.</li></ul>",
+    "tips": "<p><strong>1. Focus on Advanced Math:</strong> This section carries half the weight of the entire test. You cannot clear the FAST cutoff without scoring well here.</p><p><strong>2. Basic Math is free points:</strong> Practice basic SAT/NTS quantitative questions. They are easy but tricky if you haven't practiced.</p>"
+  },
+  {
+    "id": "lcat",
+    "name": "LUMS Admission Test (LCAT)",
+    "category": "General",
+    "syllabus": "<ul><li><strong>Quantitative Section:</strong> Arithmetic, Algebra, Geometry, Data Analysis.</li><li><strong>Verbal Section:</strong> Reading Comprehension, Evidence-Based Reading, Writing and Language.</li><li><strong>Essay Section:</strong> A prompt requiring a structured, argumentative essay.</li></ul>",
+    "timing": "<ul><li><strong>Total Time:</strong> ~3 Hours (Similar to the SAT).</li><li><strong>Format:</strong> Divided into timed sections. You cannot go back to previous sections.</li></ul>",
+    "tips": "<p><strong>1. LCAT vs SAT:</strong> LCAT closely mirrors the old Paper SAT. If you have been preparing for the SAT using Khan Academy or Erica Meltzer, you are fully prepared for LCAT.</p><p><strong>2. The Essay Matters:</strong> LUMS values holistic admission. A well-structured essay demonstrating critical thinking can significantly boost your application.</p>"
+  },
+  {
+    "id": "usat",
+    "name": "USAT (HEC)",
+    "category": "General (HEC)",
+    "syllabus": "<ul><li><strong>Verbal Reasoning (35 Marks):</strong> Analogies, synonyms, sentence completion, comprehension.</li><li><strong>Quantitative Reasoning (40 Marks):</strong> Arithmetic, algebra, geometry, equations, statistics.</li><li><strong>Essay Writing (25 Marks):</strong> Write an essay (400-500 words) in either English or Urdu on a given topic. you should prepare.</li></ul>",
+    "timing": "<ul><li><strong>MCQ Section:</strong> 100 Minutes (75 MCQs)</li><li><strong>Essay Section:</strong> 40 Minutes</li><li><strong>Negative Marking:</strong> None.</li></ul>",
+    "tips": "<p><strong>1. Treat it as a universal backup:</strong> USAT is now accepted by many newer and public sector universities across Pakistan as a standard entry test.</p><p><strong>2. Write in your strongest language:</strong> You have the option to write the essay in Urdu. If your English expression is weak, an excellent Urdu essay will score much higher.</p>"
+  },
+  {
+    "id": "nat",
+    "name": "NTS NAT (National Aptitude Test)",
+    "category": "General",
+    "syllabus": "<ul><li><strong>Verbal (20 MCQs):</strong> English grammar, sentence completion.</li><li><strong>Quantitative (20 MCQs):</strong> Basic math, word problems, series.</li><li><strong>Analytical (20 MCQs):</strong> Logic games, deduction puzzles, scenario analysis.</li><li><strong>Subject (30 MCQs):</strong> E.g., NAT-IE (Pre-Eng), NAT-IM (Pre-Med), NAT-ICS.</li></ul>",
+    "timing": "<ul><li><strong>Total Time:</strong> 120 Minutes</li><li><strong>Total MCQs:</strong> 90</li><li><strong>Negative Marking:</strong> None.</li></ul>",
+    "tips": "<p><strong>1. Master Analytical Reasoning:</strong> This is the section where most students fail. Buy a Dogar Brothers NTS book and practice drawing grids for logic games.</p><p><strong>2. Give multiple attempts:</strong> NTS is held every month, and universities accept your highest valid score. Give it early and often.</p>"
+  },
+  {
+    "id": "aku",
+    "name": "Aga Khan University (AKU) Test",
+    "category": "Medical",
+    "syllabus": "<ul><li><strong>Biology (20 MCQs):</strong> Conceptual application of FSc/A-Level bio.</li><li><strong>Chemistry (20 MCQs) & Physics (20 MCQs):</strong> High-level problem solving.</li><li><strong>Math & Science Reasoning (40 MCQs):</strong> Reading data, charts, graphs, and concluding scientific results.</li></ul>",
+    "timing": "<ul><li><strong>Total Time:</strong> 150 Minutes</li><li><strong>Total MCQs:</strong> 100</li><li><strong>Negative Marking:</strong> Applies (-0.25).</li></ul>",
+    "tips": "<p><strong>1. Do NOT Rote Memorize:</strong> AKU does not ask straight textbook definitions. They will give you a scenario (e.g., a patient with X symptoms) and ask you to deduce the biological mechanism.</p><p><strong>2. Practice SAT Science:</strong> The Science Reasoning section is very similar to the ACT Science section. Practice interpreting graphs and tables.</p>"
+  },
+  {
+    "id": "iba",
+    "name": "IBA Karachi Aptitude Test",
+    "category": "Business / CS",
+    "syllabus": "<ul><li><strong>English / Verbal:</strong> Extremely high-level vocabulary, reading comprehension, error identification.</li><li><strong>Mathematics / Quantitative:</strong> Algebra, Geometry, Word Problems, Arithmetic.</li></ul>",
+    "timing": "<ul><li><strong>Total Time:</strong> 120 Minutes</li><li><strong>Format:</strong> Separate strict cutoffs for Math and English.</li></ul>",
+    "tips": "<p><strong>1. The Cutoff Trap:</strong> You MUST clear the minimum cutoff in BOTH English and Math individually. Scoring 100% in Math but failing English means rejection.</p><p><strong>2. Vocabulary is King:</strong> IBA English is notoriously difficult. Start memorizing SAT vocabulary words (Barron's 333) months in advance.</p>"
+  },
+  {
+    "id": "pucit",
+    "name": "PUCIT Entry Test",
+    "category": "Computer Science",
+    "syllabus": "<ul><li><strong>Mathematics (35 MCQs):</strong> Matrices, Integration, Conics.</li><li><strong>Physics / CS / Stat (20 MCQs):</strong> Based on your FSc background.</li><li><strong>English / Basic Math (15 MCQs):</strong> Quantitative logic and grammar.</li></ul>",
+    "timing": "<ul><li><strong>Total Time:</strong> 60 Minutes (Very fast-paced)</li><li><strong>Total MCQs:</strong> 70</li><li><strong>Negative Marking:</strong> None.</li></ul>",
+    "tips": "<p><strong>1. Speed over Depth:</strong> The PUCIT test is incredibly fast. The questions are relatively easy, but you have less than a minute per question. Do the easy ones first and guess the rest.</p>"
+  },
+  {
+    "id": "giki",
+    "name": "GIKI Admission Test",
+    "category": "Engineering / CS",
+    "syllabus": "<ul><li><strong>Mathematics (30 MCQs):</strong> FSc Part 1 & 2 Math.</li><li><strong>Physics (30 MCQs):</strong> Deep conceptual numericals.</li><li><strong>English (20 MCQs):</strong> Comprehension and grammar.</li></ul>",
+    "timing": "<ul><li><strong>Total Time:</strong> 120 Minutes</li><li><strong>Total MCQs:</strong> 80</li><li><strong>Negative Marking:</strong> -1 for incorrect. +3 for correct.</li></ul>",
+    "tips": "<p><strong>1. Lengthy Numericals:</strong> GIKI Physics questions often require 2-3 step calculations. Do not waste time on a single question.</p><p><strong>2. Math Dominance:</strong> Math and Physics carry equal weight, but Math is usually easier to score in if you know your formulas well.</p>"
+  },
+  {
+    "id": "pieas",
+    "name": "PIEAS Admission Test",
+    "category": "Engineering",
+    "syllabus": "<ul><li><strong>Mathematics (30 MCQs)</strong></li><li><strong>Physics (30 MCQs)</strong></li><li><strong>Chemistry / CS (30 MCQs)</strong></li><li><strong>English (10 MCQs)</strong></li></ul>",
+    "timing": "<ul><li><strong>Total Time:</strong> 120 Minutes</li><li><strong>Total MCQs:</strong> 100</li><li><strong>Negative Marking:</strong> -1 for incorrect. +3 for correct.</li></ul>",
+    "tips": "<p><strong>1. Conceptual Depth:</strong> PIEAS is known for highly conceptual physics and chemistry questions. Rote learning will not work here.</p><p><strong>2. Strategic Guessing:</strong> Because of the severe negative marking, only guess if you can eliminate at least two options.</p>"
+  },
+  {
+    "id": "etea",
+    "name": "ETEA (KPK Medical/Engineering)",
+    "category": "Provincial",
+    "syllabus": "<ul><li><strong>Biology/Math (60 MCQs)</strong></li><li><strong>Physics (60 MCQs)</strong></li><li><strong>Chemistry/CS (60 MCQs)</strong></li><li><strong>English (20 MCQs)</strong></li></ul>",
+    "timing": "<ul><li><strong>Total Time:</strong> 150 Minutes</li><li><strong>Total MCQs:</strong> 200</li><li><strong>Negative Marking:</strong> None (historically changed, always verify current year rules).</li></ul>",
+    "tips": "<p><strong>1. KPK Board Textbooks:</strong> Do not rely entirely on Federal books. ETEA extracts direct lines from the KPK textbook board.</p><p><strong>2. Time Pressure:</strong> 200 MCQs in 150 minutes means you must be rapid-fire with Biology and Chemistry to save time for Physics numericals.</p>"
+  },
+  {
+    "id": "ned",
+    "name": "NED University Entry Test",
+    "category": "Engineering (Sindh)",
+    "syllabus": "<ul><li><strong>Mathematics/Biology (25 MCQs)</strong></li><li><strong>Physics (25 MCQs)</strong></li><li><strong>Chemistry/CS (25 MCQs)</strong></li><li><strong>English (25 MCQs)</strong></li></ul>",
+    "timing": "<ul><li><strong>Total Time:</strong> 120 Minutes</li><li><strong>Total MCQs:</strong> 100</li><li><strong>Negative Marking:</strong> None.</li></ul>",
+    "tips": "<p><strong>1. Balanced Approach:</strong> NED gives equal weightage to all 4 subjects. Do not ignore English and Chemistry, as they can easily boost your overall aggregate.</p><p><strong>2. Sindh Textbooks:</strong> Ensure you have reviewed the Sindh board curriculum thoroughly.</p>"
+  },
+  {
+    "id": "muet",
+    "name": "MUET (Mehran UET) Test",
+    "category": "Engineering (Sindh)",
+    "syllabus": "<ul><li><strong>Mathematics (30 MCQs)</strong></li><li><strong>Physics (30 MCQs)</strong></li><li><strong>Chemistry (30 MCQs)</strong></li><li><strong>English (10 MCQs)</strong></li></ul>",
+    "timing": "<ul><li><strong>Total Time:</strong> 100 Minutes</li><li><strong>Total MCQs:</strong> 100</li><li><strong>Negative Marking:</strong> None.</li></ul>",
+    "tips": "<p><strong>1. Focus on Fundamentals:</strong> Questions are usually straightforward applications of textbook formulas.</p><p><strong>2. Past Papers:</strong> Solve the last 5 years of MUET past papers, as concepts and even specific questions tend to repeat.</p>"
+  },
+  {
+    "id": "comsats",
+    "name": "COMSATS Entry Test (NTS)",
+    "category": "Engineering / CS",
+    "syllabus": "<ul><li><strong>Follows standard NTS NAT patterns (NAT-IE, NAT-ICS, NAT-IM).</strong></li><li>Verbal, Quantitative, Analytical, Subject modules.</li></ul>",
+    "timing": "<ul><li><strong>Total Time:</strong> 120 Minutes</li><li><strong>Total MCQs:</strong> 90</li><li><strong>Negative Marking:</strong> None.</li></ul>",
+    "tips": "<p><strong>1. Give it early:</strong> COMSATS relies heavily on the NTS NAT score for its merit aggregate. Since you can take NAT multiple times, start in January and keep taking it to maximize your score.</p><p><strong>2. Analytical Section:</strong> Buy a dedicated NTS prep book and practice the logic puzzles.</p>"
+  },
+  {
+    "id": "dow",
+    "name": "Dow University (DUHS) Test",
+    "category": "Medical (Sindh)",
+    "syllabus": "<ul><li>Follows the standard PMDC MDCAT structure (Bio, Chem, Phy, Eng, Logic).</li></ul>",
+    "timing": "<ul><li><strong>Total Time:</strong> 210 Minutes</li><li><strong>Total MCQs:</strong> 200</li><li><strong>Negative Marking:</strong> None.</li></ul>",
+    "tips": "<p><strong>1. Tricky Phrasing:</strong> Historically, DUHS sets slightly more complexly phrased questions compared to UHS. Read the \"EXCEPT\" and \"NOT\" keywords carefully in questions.</p><p><strong>2. Provincial Bias:</strong> Make sure you are thoroughly familiar with the Sindh Textbook Board diagrams and terminologies.</p>"
+  },
+  {
+    "id": "sindh_mcat",
+    "name": "Sindh MCAT (JSMU)",
+    "category": "Medical",
+    "syllabus": "<ul><li>Follows the standard PMDC MDCAT structure.</li></ul>",
+    "timing": "<ul><li><strong>Total Time:</strong> 210 Minutes</li><li><strong>Total MCQs:</strong> 200</li><li><strong>Negative Marking:</strong> None.</li></ul>",
+    "tips": "<p><strong>1. Time Management:</strong> Allocate no more than 40 seconds per Biology/Chemistry MCQ so you have 1.5+ minutes for each Physics numerical.</p><p><strong>2. Memorization:</strong> Sindh board books contain specific numerical values and dates (especially in Biology). Memorize these.</p>"
+  },
+  {
+    "id": "sat",
+    "name": "Digital SAT",
+    "category": "International / LCAT Alt",
+    "syllabus": "<ul><li><strong>Reading and Writing:</strong> Information and Ideas, Craft and Structure, Expression of Ideas, Standard English Conventions.</li><li><strong>Math:</strong> Algebra, Advanced Math, Problem-Solving and Data Analysis, Geometry and Trigonometry.</li></ul>",
+    "timing": "<ul><li><strong>Total Time:</strong> 2 hours and 14 minutes.</li><li><strong>Format:</strong> Adaptive Digital Test (Bluebook app).</li></ul>",
+    "tips": "<p><strong>1. Adaptive Nature:</strong> The test has two modules per section. Doing well in Module 1 gives you a harder (but higher scoring) Module 2. Do not panic if Module 2 feels extremely difficult; it means you are in the high-score bracket.</p><p><strong>2. Desmos is your friend:</strong> You have an inbuilt Desmos graphing calculator. Learn how to solve Algebra and System of Equations purely using Desmos to save massive amounts of time.</p>"
+  }
+]
