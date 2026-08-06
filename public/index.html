@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRAZO SCHOLARLY — Your Academic Future, Organized</title>
+    <meta name="description" content="AI-powered academic workspace for Pakistani students. Search universities, find scholarships, prepare for entry tests, calculate merit scores, export CVs and more.">
+    <meta name="keywords" content="Pakistan universities, scholarships, entry tests, NUST, FAST, COMSATS, MDCAT, NET, merit calculator, SOP, CV export">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/design-system.css?v=2">
+    <link rel="stylesheet" href="css/components.css?v=2">
+    <link rel="stylesheet" href="css/landing.css?v=2">
+    <link rel="stylesheet" href="css/mobile-base.css?v=16">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
+    
+    <style>
+        /* ---------- Landing-Page-Only Enhancements ---------- */
+
+        /* Animated gradient for hero title accent */
+        .hero-title .text-gradient {
+            background: linear-gradient(135deg, #B026FF, #7C4DFF, #B026FF);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradientShift 4s ease infinite;
+        }
+        @keyframes gradientShift {
+            0% { background-position: 0% center; }
+            50% { background-position: 100% center; }
+            100% { background-position: 0% center; }
+        }
+
+        /* Feature icon containers */
+        .feature-icon {
+            width: 52px;
+            height: 52px;
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: var(--space-md);
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+        .feature-icon.icon-purple  { background: rgba(176, 38, 255, 0.1); }
+        .feature-icon.icon-green   { background: rgba(57, 255, 20, 0.08); }
+        .feature-icon.icon-amber   { background: rgba(255, 184, 0, 0.08); }
+        .feature-icon.icon-blue    { background: rgba(0, 180, 216, 0.08); }
+        .feature-icon.icon-red     { background: rgba(255, 49, 49, 0.08); }
+        .feature-icon.icon-teal    { background: rgba(20, 184, 166, 0.08); }
+
+        body.light-mode .feature-icon.icon-purple  { background: rgba(147, 51, 234, 0.08); }
+        body.light-mode .feature-icon.icon-green   { background: rgba(22, 163, 74, 0.06); }
+        body.light-mode .feature-icon.icon-amber   { background: rgba(217, 119, 6, 0.06); }
+        body.light-mode .feature-icon.icon-blue    { background: rgba(2, 132, 199, 0.06); }
+        body.light-mode .feature-icon.icon-red     { background: rgba(220, 38, 38, 0.06); }
+        body.light-mode .feature-icon.icon-teal    { background: rgba(13, 148, 136, 0.06); }
+
+        /* Feature card staggered entry animation */
+        .feature-card, .step-card, .cta-card {
+            opacity: 0;
+        }
+        .feature-card.visible, .step-card.visible, .cta-card.visible {
+            opacity: 1;
+        }
+
+        /* Section container */
+        .section-container {
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 var(--space-lg);
+        }
+
+        /* Features grid — 3 columns with a full-width hero card */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-lg);
+        }
+        .feature-card-hero {
+            grid-column: span 3;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-xl);
+            align-items: center;
+        }
+
+        @media (max-width: 900px) {
+            .features-grid { grid-template-columns: 1fr 1fr; }
+            .feature-card-hero { grid-column: span 2; grid-template-columns: 1fr; }
+        }
+        @media (max-width: 600px) {
+            .features-grid { grid-template-columns: 1fr; }
+            .feature-card-hero { grid-column: span 1; }
+        }
+
+        /* Testimonial trust strip */
+        .trust-strip {
+            padding: var(--space-2xl) 0;
+            text-align: center;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+        .trust-strip p {
+            color: var(--text-tertiary);
+            font-size: 0.82rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-weight: 500;
+            font-family: var(--font-display);
+        }
+        .trust-logos {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-2xl);
+            margin-top: var(--space-md);
+            flex-wrap: wrap;
+            color: var(--text-tertiary);
+            font-size: 0.9rem;
+            font-weight: 600;
+            font-family: var(--font-display);
+        }
+        .trust-logos span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            opacity: 0.6;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: default;
+        }
+        .trust-logos span:hover {
+            opacity: 1;
+            transform: translateY(-2px) scale(1.05);
+            color: var(--text-primary);
+        }
+
+        /* Primary button */
+        .btn-primary {
+            padding: 12px 28px;
+            border-radius: var(--radius-lg);
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-primary-hover));
+            color: #fff;
+            font-weight: 600;
+            font-size: 0.92rem;
+            font-family: var(--font-display);
+            cursor: pointer;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), var(--shadow-sm);
+        }
+        .btn-primary:hover {
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 8px 24px var(--accent-glow);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            padding: 12px 28px;
+            border-radius: var(--radius-lg);
+            background: transparent;
+            color: var(--text-primary);
+            font-weight: 600;
+            font-size: 0.92rem;
+            font-family: var(--font-display);
+            cursor: pointer;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .btn-secondary:hover {
+            border-color: var(--accent-primary);
+            color: var(--accent-primary);
+            background: var(--accent-subtle);
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+
+
+        /* CTA buttons row */
+        .cta-buttons {
+            display: flex;
+            gap: var(--space-md);
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Theme toggle button */
+        .btn-theme-toggle {
+            background: var(--bg-elevated);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            border-radius: var(--radius-full);
+            padding: 6px 14px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s;
+        }
+        .btn-theme-toggle:hover {
+            border-color: var(--accent-primary);
+        }
+
+        /* Nav CTA button */
+        .nav-cta {
+            padding: 8px 18px;
+            border-radius: var(--radius-md);
+            background: var(--accent-primary);
+            color: #fff !important;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+        .nav-cta:hover {
+            background: var(--accent-primary-hover);
+            box-shadow: var(--shadow-glow);
+        }
+
+        /* Mobile nav light-mode */
+        @media (max-width: 768px) {
+            body.light-mode .nav-links {
+                background: rgba(255, 255, 255, 0.98);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ========== Navigation ========== -->
+    <nav class="nav" id="mainNav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-icon">🎓</span>
+                TRAZO <span class="logo-accent">SCHOLARLY</span>
+            </a>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" style="min-width:44px;min-height:44px;">
+                <span></span><span></span><span></span>
+            </button>
+
+            <div class="nav-links" id="navLinks">
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#how-it-works" class="nav-link">How It Works</a>
+                <a href="#pricing" class="nav-link">Plans & Pricing</a>
+                <a href="dashboard.html" class="nav-link">Dashboard</a>
+                <button class="btn-theme-toggle" id="creditToggle" onclick="window.location.href='dashboard.html#pricing'" style="margin-right: 8px; display: none;">
+                    <span id="creditIcon">🪙</span> <span id="creditLabel">15 Credits</span>
+                </button>
+                <button class="btn-theme-toggle" id="themeToggle" onclick="toggleTheme()" style="min-height:44px;">
+                    <span id="themeIcon">☀️</span> <span id="themeLabel">Light Mode</span>
+                </button>
+                <a href="dashboard.html" class="nav-cta" style="min-height:44px;display:inline-flex;align-items:center;">Get Started →</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- ========== Hero Section ========== -->
+        <section class="hero">
+            <div class="hero-bg-grid"></div>
+            <div class="hero-glow hero-glow-1"></div>
+            <div class="hero-glow hero-glow-2"></div>
+
+            <div class="hero-content">
+                <div class="hero-badge">
+                    ✨ AI-Powered Academic Platform for Pakistan
+                </div>
+
+                <h1 class="hero-title">
+                    Your Academic Future,<br>
+                    <span class="text-gradient">Organized & Simplified.</span>
+                </h1>
+
+                <p class="hero-subtitle">
+                    Search universities, find scholarships, prepare for entry tests, calculate your merit score, 
+                    build your CV — all in one AI-powered workspace designed for Pakistani students.
+                </p>
+
+                <!-- Hero Search Bar -->
+                <div class="hero-search">
+                    <div class="search-container">
+                        <span class="search-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                        </span>
+                        <input type="text" class="search-input" id="heroSearchInput" placeholder="Search universities, scholarships, entry tests..." autocomplete="off">
+                        <button class="btn-primary search-btn" id="heroSearchBtn" style="min-width:44px;min-height:44px;">
+                            <span class="search-btn-text">Search</span>
+                            <span class="search-btn-icon">→</span>
+                        </button>
+                    </div>
+                    <div class="search-suggestions">
+                        <span class="suggestion-label">Try:</span>
+                        <button class="suggestion-chip" data-query="NUST admission requirements">NUST Admissions</button>
+                        <button class="suggestion-chip" data-query="HEC scholarships for undergraduate">HEC Scholarships</button>
+                        <button class="suggestion-chip" data-query="MDCAT preparation tips">MDCAT Prep</button>
+                        <button class="suggestion-chip" data-query="FAST university programs">FAST Programs</button>
+                    </div>
+                </div>
+
+                <!-- Animated Stats -->
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="250">0</span>+
+                        <span class="stat-label">Universities</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="500">0</span>+
+                        <span class="stat-label">Scholarships</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="15">0</span>+
+                        <span class="stat-label">Entry Tests</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="10">0</span>K+
+                        <span class="stat-label">Students Helped</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== Trust Strip ========== -->
+        <section class="trust-strip">
+            <div class="section-container">
+                <p>Trusted data sources & partner coverage</p>
+                <div class="trust-logos">
+                    <span>🏛️ HEC Pakistan</span>
+                    <span>🎓 NUST</span>
+                    <span>⚡ FAST-NUCES</span>
+                    <span>🏅 COMSATS</span>
+                    <span>🔬 UET Lahore</span>
+                    <span>📚 LUMS</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== Features Section ========== -->
+        <section class="features" id="features">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-tag">Platform Features</span>
+                    <h2 class="section-title">Everything You Need in One Place</h2>
+                    <p class="section-subtitle">From your first search to your final admission — every tool a Pakistani student needs, powered by AI.</p>
+                </div>
+
+                <div class="features-grid">
+
+                    <!-- Hero Feature: AI Search -->
+                    <div class="feature-card feature-card-hero">
+                        <div>
+                            <div class="feature-icon icon-purple">🔍</div>
+                            <h3 class="feature-title">AI-Powered Academic Search</h3>
+                            <p class="feature-desc">Ask anything in natural language. Our AI auto-detects your intent and searches across universities, scholarships, entry tests, and programs — delivering grounded, source-cited answers instantly.</p>
+                        </div>
+                        <div class="feature-preview">
+                            <div class="preview-search-bar">
+                                <span class="preview-icon">🔍</span>
+                                <span class="preview-text">What is NUST NET eligibility for CS?</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Feature: University Explorer -->
+                    <div class="feature-card">
+                        <div class="feature-icon icon-purple">🏛️</div>
+                        <h3 class="feature-title">University Explorer</h3>
+                        <p class="feature-desc">Browse 250+ Pakistani universities with detailed profiles, closing merit trends, fee structures, hostel info, and direct portal links.</p>
+                    </div>
+
+                    <!-- Feature: Merit Calculator -->
+                    <div class="feature-card">
+                        <div class="feature-icon icon-amber">🧮</div>
+                        <h3 class="feature-title">Merit Calculator</h3>
+                        <p class="feature-desc">Compute your exact aggregate for NUST, FAST, UET, COMSATS and more. Compare against historical cutoffs to see where you stand.</p>
+                    </div>
+
+                    <!-- Feature: Smart Matchmaker -->
+                    <div class="feature-card">
+                        <div class="feature-icon icon-green">🧩</div>
+                        <h3 class="feature-title">Smart Matchmaker</h3>
+                        <p class="feature-desc">Enter your marks and household income to generate a Match Confidence Score (%) for admission and scholarship eligibility across universities.</p>
+                    </div>
+
+                    <!-- Feature: Documents Locker -->
+                    <div class="feature-card">
+                        <div class="feature-icon icon-blue">📂</div>
+                        <h3 class="feature-title">Documents Locker</h3>
+                        <p class="feature-desc">Track your official paperwork with digital status tags and 5 built-in procedural guides for IBCC attestation, NADRA FRCs, and more.</p>
+                    </div>
+
+                    <!-- Feature: Test Prep & Vault -->
+                    <div class="feature-card">
+                        <div class="feature-icon icon-amber">🎯</div>
+                        <h3 class="feature-title">Test Prep & Past Papers Vault</h3>
+                        <p class="feature-desc">Access a preparation workstation with downloadable past papers for NET, MDCAT, FAST, GAT and other major entry tests in Pakistan.</p>
+                    </div>
+
+                    <!-- Feature: SOP Studio -->
+                    <div class="feature-card">
+                        <div class="feature-icon icon-teal">📝</div>
+                        <h3 class="feature-title">SOP & Essay Studio</h3>
+                        <p class="feature-desc">Craft polished Statements of Purpose with our interactive AI editor. Get real-time tone analysis, structure feedback, and improvement suggestions.</p>
+                    </div>
+
+                    <!-- Feature: Scholarships Hub -->
+                    <div class="feature-card">
+                        <div class="feature-icon icon-green">🏆</div>
+                        <h3 class="feature-title">Scholarships Hub</h3>
+                        <p class="feature-desc">Search national and international scholarships with filters for eligibility, deadline, and coverage. Never miss a funding opportunity again.</p>
+                    </div>
+
+                    <!-- Feature: CV Export -->
+                    <div class="feature-card">
+                        <div class="feature-icon icon-red">📄</div>
+                        <h3 class="feature-title">Europass CV Export</h3>
+                        <p class="feature-desc">Build your academic profile through a gamified quiz, then export a clean, professional Europass-format CV as a PDF — ready for applications.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== How It Works ========== -->
+        <section class="how-it-works" id="how-it-works">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-tag">Simple Process</span>
+                    <h2 class="section-title">How It Works</h2>
+                    <p class="section-subtitle">Get started in three easy steps — no signup required.</p>
+                </div>
+
+                <div class="steps-grid">
+                    <div class="step-card">
+                        <div class="step-number">01</div>
+                        <h3 class="step-title">Search & Explore</h3>
+                        <p class="step-desc">Ask our AI engine any academic question or browse universities, scholarships, and entry tests directly.</p>
+                    </div>
+
+                    <svg class="step-connector" width="40" height="20" viewBox="0 0 40 20" fill="none"><path d="M0 10h36M30 4l6 6-6 6" stroke="currentColor" stroke-width="1.5" opacity="0.3"/></svg>
+
+                    <div class="step-card">
+                        <div class="step-number">02</div>
+                        <h3 class="step-title">Match & Calculate</h3>
+                        <p class="step-desc">Use the Merit Calculator and Smart Matchmaker to find your best-fit programs based on your actual scores.</p>
+                    </div>
+
+                    <svg class="step-connector" width="40" height="20" viewBox="0 0 40 20" fill="none"><path d="M0 10h36M30 4l6 6-6 6" stroke="currentColor" stroke-width="1.5" opacity="0.3"/></svg>
+
+                    <div class="step-card">
+                        <div class="step-number">03</div>
+                        <h3 class="step-title">Prepare & Apply</h3>
+                        <p class="step-desc">Organize documents, prep for tests, write your SOP, export your CV — and track every deadline on your Timeline.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== Pricing & Plans Section ========== -->
+        <section class="pricing-landing-section" id="pricing">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-tag">Flexible Plans</span>
+                    <h2 class="section-title">Designed for Every <span>Pakistani Student</span></h2>
+                    <p class="section-subtitle">Affordable local pricing with instant JazzCash & EasyPaisa payments. Upgrade anytime to unlock higher AI limits.</p>
+                    
+                    <div class="billing-switcher">
+                        <button class="billing-btn active" id="btnMonthly" onclick="toggleBillingPeriod('monthly')">Monthly</button>
+                        <button class="billing-btn" id="btnQuarterly" onclick="toggleBillingPeriod('quarterly')">3 Months <span class="badge-discount">Save 10%</span></button>
+                        <button class="billing-btn" id="btnYearly" onclick="toggleBillingPeriod('yearly')">1 Year <span class="badge-discount">Save 33%</span></button>
+                    </div>
+                </div>
+
+                <div class="landing-pricing-grid">
+                    <!-- Starter Plan -->
+                    <div class="landing-pricing-card">
+                        <div class="card-plan-header">
+                            <h3 class="plan-name">Starter</h3>
+                            <p class="plan-tagline">For curious minds getting started</p>
+                        </div>
+                        <div class="plan-price-box">
+                            <span class="price-currency">Rs.</span>
+                            <span class="price-value" data-free="0" data-pro="420" data-premier="1260">0</span>
+                            <span class="price-period">/ forever</span>
+                        </div>
+                        <ul class="plan-features">
+                            <li><span class="check">✓</span> 15 Lifetime Credits</li>
+                            <li><span class="check">✓</span> AI Search Access</li>
+                            <li><span class="check">✓</span> Standard SOP Analysis</li>
+                            <li><span class="check">✓</span> Merit Calculator Access</li>
+                            <li class="disabled"><span class="cross">✕</span> Matchmaker Deep Research</li>
+                            <li class="disabled"><span class="cross">✕</span> Priority Email Support</li>
+                        </ul>
+                        <a href="dashboard.html" class="plan-btn outline">Get Started Free</a>
+                    </div>
+
+                    <!-- Pro Plan (Popular) -->
+                    <div class="landing-pricing-card popular">
+                        <div class="popular-ribbon">MOST POPULAR</div>
+                        <div class="card-plan-header">
+                            <h3 class="plan-name">Pro Explorer</h3>
+                            <p class="plan-tagline">For serious university applicants</p>
+                        </div>
+                        <div class="plan-price-box">
+                            <span class="price-currency">Rs.</span>
+                            <span class="price-value" id="proPriceValue">420</span>
+                            <span class="price-period" id="proPricePeriod">/ mo</span>
+                        </div>
+                        <ul class="plan-features">
+                            <li><span class="check">✓</span> <strong>450 Credits</strong> per month</li>
+                            <li><span class="check">✓</span> Unlimited AI Academic Search</li>
+                            <li><span class="check">✓</span> Advanced SOP Feedback Studio</li>
+                            <li><span class="check">✓</span> Complete Document Locker</li>
+                            <li><span class="check">✓</span> Priority Email Support</li>
+                            <li class="disabled"><span class="cross">✕</span> Matchmaker Deep Research</li>
+                        </ul>
+                        <a href="payment-gateway.html?plan=pro&amount=420" id="proCheckoutBtn" class="plan-btn gradient">Upgrade to Pro Explorer</a>
+                    </div>
+
+                    <!-- Premier Plan -->
+                    <div class="landing-pricing-card">
+                        <div class="card-plan-header">
+                            <h3 class="plan-name">Premier Scholar</h3>
+                            <p class="plan-tagline">The ultimate competitive edge</p>
+                        </div>
+                        <div class="plan-price-box">
+                            <span class="price-currency">Rs.</span>
+                            <span class="price-value" id="premierPriceValue">1,260</span>
+                            <span class="price-period" id="premierPricePeriod">/ mo</span>
+                        </div>
+                        <ul class="plan-features">
+                            <li><span class="check">✓</span> <strong>1,350 Credits</strong> per month</li>
+                            <li><span class="check">✓</span> Everything in Pro Plan</li>
+                            <li><span class="check">✓</span> <strong>Full Matchmaker Access</strong></li>
+                            <li><span class="check">✓</span> Deep Research AI Model (o1 / Gemini)</li>
+                            <li><span class="check">✓</span> 1-on-1 Visa & Admission Guide</li>
+                            <li><span class="check">✓</span> Dedicated VIP Support</li>
+                        </ul>
+                        <a href="payment-gateway.html?plan=premier&amount=1260" id="premierCheckoutBtn" class="plan-btn gradient-purple">Upgrade to Premier</a>
+                    </div>
+                </div>
+
+                <div class="local-payments-notice">
+                    <span>💳 Supported Local Payment Gateways:</span>
+                    <span class="gateway-tag">JazzCash Mobile</span>
+                    <span class="gateway-tag">EasyPaisa Mobile</span>
+                    <span class="gateway-tag">Debit / Credit Card</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== CTA Section ========== -->
+        <section class="cta-section">
+            <div class="section-container">
+                <div class="cta-card">
+                    <div class="cta-glow"></div>
+                    <h2 class="cta-title">Ready to Take Control of Your Academic Journey?</h2>
+                    <p class="cta-subtitle">Join thousands of Pakistani students using TRAZO SCHOLARLY to find the right university, scholarship, and career path.</p>
+                    <div class="cta-buttons">
+                        <a href="dashboard.html" class="btn-primary">Open Dashboard →</a>
+                        <a href="#features" class="btn-secondary">Explore Features</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ========== Footer ========== -->
+    <footer class="footer">
+        <div class="section-container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo-text">🎓 TRAZO <span class="logo-accent">SCHOLARLY</span></div>
+                    <p class="footer-tagline">Your AI-powered academic companion for Pakistani students. From first search to final admission.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>Platform</h4>
+                        <a href="dashboard.html">Dashboard</a>
+                        <a href="dashboard.html" onclick="setTimeout(()=>switchView('universities'),100)">Universities</a>
+                        <a href="dashboard.html" onclick="setTimeout(()=>switchView('scholarships'),100)">Scholarships</a>
+                        <a href="dashboard.html" onclick="setTimeout(()=>switchView('test-prep'),100)">Test Prep</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Tools</h4>
+                        <a href="dashboard.html" onclick="setTimeout(()=>switchView('matchmaker'),100)">Matchmaker</a>
+                        <a href="dashboard.html" onclick="setTimeout(()=>switchView('sop'),100)">SOP Studio</a>
+                        <a href="dashboard.html" onclick="setTimeout(()=>switchView('documents'),100)">Documents</a>
+                        <a href="dashboard.html" onclick="setTimeout(()=>switchView('profile'),100)">CV Export</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Resources</h4>
+                        <a href="dashboard.html" onclick="setTimeout(()=>switchView('articles'),100)">Articles</a>
+                        <a href="dashboard.html" onclick="setTimeout(()=>switchView('consultants'),100)">Consultants</a>
+                        <a href="dashboard.html" onclick="setTimeout(()=>switchView('timeline'),100)">Timeline</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 TRAZO SCHOLARLY. All rights reserved. Built with ❤️ for Pakistani students.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/landing.js"></script>
+    <script>
+        /* ========== Theme Toggle ========== */
+        function toggleTheme() {
+            const body = document.body;
+            const icon = document.getElementById('themeIcon');
+            const label = document.getElementById('themeLabel');
+
+            if (body.classList.contains('light-mode')) {
+                body.classList.remove('light-mode');
+                if (icon) icon.textContent = '☀️';
+                if (label) label.textContent = 'Light Mode';
+                localStorage.setItem('theme', 'dark');
+            } else {
+                body.classList.add('light-mode');
+                if (icon) icon.textContent = '🌙';
+                if (label) label.textContent = 'Dark Mode';
+                localStorage.setItem('theme', 'light');
+            }
+        }
+
+        // Apply saved theme on load
+        if (localStorage.getItem('theme') === 'light') {
+            document.body.classList.add('light-mode');
+            const icon = document.getElementById('themeIcon');
+            const label = document.getElementById('themeLabel');
+            if (icon) icon.textContent = '🌙';
+            if (label) label.textContent = 'Dark Mode';
+        }
+    </script>
+
+    <!-- ===== Mobile Sticky CTA Bar (Only on mobile) ===== -->
+    <div id="mobile-landing-cta" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:500;padding:12px 16px;background:rgba(15,16,21,0.97);backdrop-filter:blur(16px);border-top:1px solid rgba(176,38,255,0.2);box-shadow:0 -4px 20px rgba(0,0,0,0.4);">
+        <div style="display:flex;align-items:center;gap:10px;">
+            <div style="flex:1;min-width:0;">
+                <div style="font-size:0.78rem;font-weight:700;color:#fff;font-family:'Outfit',sans-serif;">Ready to get started?</div>
+                <div style="font-size:0.68rem;color:#8A8A8A;margin-top:1px;">Open your academic dashboard →</div>
+            </div>
+            <a href="dashboard.html" style="background:linear-gradient(135deg,#B026FF,#7C4DFF);color:#fff;border:none;padding:10px 18px;border-radius:20px;font-size:0.82rem;font-weight:700;text-decoration:none;white-space:nowrap;min-height:44px;display:flex;align-items:center;box-shadow:0 4px 15px rgba(176,38,255,0.4);">Open App</a>
+            <button onclick="document.getElementById('mobile-landing-cta').style.display='none';localStorage.setItem('hideLandingCTA','1');" style="background:rgba(255,255,255,0.06);border:none;color:#8A8A8A;width:32px;height:32px;border-radius:50%;cursor:pointer;flex-shrink:0;font-size:1rem;display:flex;align-items:center;justify-content:center;">✕</button>
+        </div>
+    </div>
+    <script>
+        // Show mobile CTA only on small screens and if not dismissed
+        if (window.innerWidth <= 768 && !localStorage.getItem('hideLandingCTA')) {
+            setTimeout(function() {
+                var cta = document.getElementById('mobile-landing-cta');
+                if (cta) cta.style.display = 'block';
+            }, 2000);
+        }
+        // Light mode override for mobile CTA
+        if (document.body.classList.contains('light-mode')) {
+            var cta = document.getElementById('mobile-landing-cta');
+            if (cta) {
+                cta.style.background = 'rgba(255,255,255,0.97)';
+                cta.style.borderTop = '1px solid rgba(147,51,234,0.15)';
+            }
+        }
+    </script>
+    
+    <!-- Mobile Experience Banner (Restored) -->
+    <div id="mobile-exp-banner" style="position:fixed; bottom:0; left:0; width:100%; background:var(--bg-surface); padding:16px 20px; box-shadow:0 -4px 20px rgba(0,0,0,0.1); border-top:1px solid var(--border-color); display:flex; justify-content:space-between; align-items:center; z-index:9999; transform:translateY(100%); transition:transform 0.4s cubic-bezier(0.4, 0, 0.2, 1); display:none;">
+        <div style="display:flex; align-items:center; gap:12px;">
+            <div style="width:40px; height:40px; background:var(--accent-primary); border-radius:10px; display:flex; align-items:center; justify-content:center; color:#fff; font-size:1.2rem; box-shadow:0 4px 10px var(--accent-glow);">
+                📱
+            </div>
+            <div>
+                <h4 style="font-weight:700; font-size:0.95rem; margin:0 0 2px 0;">Mobile UI Available</h4>
+                <p style="font-size:0.75rem; color:var(--text-secondary); margin:0;">Switch to optimized mobile app view</p>
+            </div>
+        </div>
+        <div style="display:flex; align-items:center; gap:8px;">
+            <a href="mobile/dashboard.html" class="btn btn-primary" style="padding:8px 16px; border-radius:20px; font-size:0.8rem; font-weight:600;">Open App</a>
+            <button onclick="document.getElementById('mobile-exp-banner').style.transform = 'translateY(100%)'; localStorage.setItem('hideMobileBanner', 'true');" style="background:transparent; border:none; color:var(--text-tertiary); width:32px; height:32px; border-radius:50%; display:flex; align-items:center; justify-content:center; cursor:pointer;">
+                ✕
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Trigger banner on mobile screens
+        setTimeout(() => {
+            if (window.innerWidth <= 768 && !localStorage.getItem('hideMobileBanner')) {
+                const banner = document.getElementById('mobile-exp-banner');
+                if (banner) {
+                    banner.style.display = 'flex';
+                    // small delay for transition to work after display block
+                    setTimeout(() => {
+                        banner.style.transform = 'translateY(0)';
+                    }, 50);
+                }
+            }
+        }, 1500);
+    </script>
+</body>
+</html>
