@@ -1,0 +1,75 @@
+[
+  {
+    "id": "kips",
+    "name": "KIPS Entry Test Preparation",
+    "specialty": "MDCAT & ECAT Leader",
+    "rating": "4.9 ⭐",
+    "link": "https://kips.edu.pk/prep",
+    "description": "KIPS is arguably the most famous and widely trusted entry test preparation network in Pakistan. With decades of experience, their MDCAT and ECAT sessions are rigorous. They offer physical classes across the country and a comprehensive online LMS (Learning Management System). Their prep books and exclusive MCQs bank are considered essential for top scorers.",
+    "discountCode": "12"
+  },
+  {
+    "id": "step",
+    "name": "STEP by PGC",
+    "specialty": "MDCAT, ECAT, FUNG",
+    "rating": "4.8 ⭐",
+    "link": "https://step.pgc.edu",
+    "description": "A massive initiative by the Punjab Group of Colleges. STEP offers extremely well-structured crash programs, regular sessions, and test sessions. Their hallmark is the STEP app, which provides thousands of practice MCQs, video lectures, and live analytics. They are highly recommended for students who prefer a highly disciplined testing schedule."
+  },
+  {
+    "id": "nustrive",
+    "name": "NUSTrive Academy",
+    "specialty": "Exclusive NET Preparation",
+    "rating": "4.9 ⭐",
+    "link": "https://nustrive.com",
+    "description": "If your sole aim is to get into NUST, NUSTrive is the rising star. Founded by NUST alumni, they offer highly specialized online coaching for NET 1, 2, 3, and 4. Unlike generic academies, they focus strictly on the OETP and Federal Board syllabus required for NET, offering live Zoom classes and intensive mock exams that mirror the real CBT experience."
+  },
+  {
+    "id": "stars",
+    "name": "STARS Academy Lahore",
+    "specialty": "MDCAT / ECAT",
+    "rating": "4.7 ⭐",
+    "link": "https://starsacademy.edu.pk",
+    "description": "STARS Academy is a heavy hitter in Punjab for MDCAT preparation. They are known for their highly experienced faculty and excellent physical campus environment. Their MDCAT early prep sessions are particularly popular for students who want to start preparing alongside their FSc Part 2."
+  },
+  {
+    "id": "dogar",
+    "name": "Dogar Brothers Online",
+    "specialty": "NTS NAT, USAT, GAT",
+    "rating": "4.6 ⭐",
+    "link": "https://dogar.com.pk",
+    "description": "While historically famous for their physical books, Dogar Brothers have launched an excellent online portal. If you are preparing for general aptitude tests like NTS NAT, HEC USAT, or university-specific tests like COMSATS and FAST, their online crash courses and test series for analytical reasoning are unmatched."
+  },
+  {
+    "id": "tabeer",
+    "name": "Tabeer Academy",
+    "specialty": "Army, Navy, PAF & Entry Tests",
+    "rating": "4.7 ⭐",
+    "link": "https://tabeer.com.pk",
+    "description": "Tabeer Academy provides premium online courses. While they excel in armed forces initial tests (ISSB, AMC), they also have great modules for NUMS and MDCAT. Their platform uses AI to track your weaknesses and provides targeted quizzes to improve your specific weak areas."
+  },
+  {
+    "id": "torcia",
+    "name": "Torcia Education System",
+    "specialty": "MDCAT, ECAT, NUMS",
+    "rating": "4.5 ⭐",
+    "link": "https://torcia.com.pk",
+    "description": "Based primarily in Islamabad/Rawalpindi, Torcia has built a strong reputation for producing top NUMS and MDCAT scorers. Their test discussion sessions are highly rated, where teachers break down the logic behind every single MCQ, rather than just giving the answer key."
+  },
+  {
+    "id": "anees",
+    "name": "Anees Hussain",
+    "specialty": "IBA, SAT, AKU, LCAT",
+    "rating": "4.8 ⭐",
+    "link": "https://aneeshussain.com",
+    "description": "The undisputed king of entry test preparation in Sindh, particularly for business schools (IBA, CBM, SZABIST) and Aga Khan University (AKU). Anees Hussain focuses heavily on SAT-style reading, high-level vocabulary, and analytical math. If you are aiming for IBA Karachi or LUMS, this is the place to be."
+  },
+  {
+    "id": "nearpeer",
+    "name": "Nearpeer",
+    "specialty": "Self-Paced Online Prep",
+    "rating": "4.8 ⭐",
+    "link": "https://nearpeer.org",
+    "description": "Nearpeer revolutionized online learning in Pakistan. They offer high-quality, pre-recorded video lectures for MDCAT, ECAT, CA, and CSS. It is the perfect platform for students who live in remote areas or prefer studying at their own pace. Their AI bot and dedicated WhatsApp groups provide 24/7 doubt resolution."
+  }
+]
