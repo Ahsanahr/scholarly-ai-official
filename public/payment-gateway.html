@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Checkout | ScholarPath AI</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+    <!-- Design System CSS -->
+    <link rel="stylesheet" href="css/design-system.css">
+    
+    <style>
+        body {
+            background-color: var(--bg-deep);
+            color: var(--text-primary);
+            font-family: var(--font-body);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 24px;
+            box-sizing: border-box;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Ambient Glowing Background Orbs */
+        .ambient-glow {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(120px);
+            z-index: -1;
+            opacity: 0.35;
+            pointer-events: none;
+            transition: all 1s ease;
+        }
+        .glow-purple {
+            width: 350px;
+            height: 350px;
+            background: var(--accent-primary);
+            top: 10%;
+            left: 5%;
+            animation: floatOrb 15s infinite alternate ease-in-out;
+        }
+        .glow-cyan {
+            width: 450px;
+            height: 450px;
+            background: var(--status-info);
+            bottom: 5%;
+            right: 5%;
+            animation: floatOrb 20s infinite alternate-reverse ease-in-out;
+        }
+
+        @keyframes floatOrb {
+            0% { transform: scale(1) translate(0px, 0px); }
+            50% { transform: scale(1.15) translate(40px, -30px); }
+            100% { transform: scale(0.9) translate(-20px, 40px); }
+        }
+
+        /* Split-Panel Modern Checkout Container */
+        .checkout-container {
+            max-width: 1020px;
+            width: 100%;
+            background: rgba(23, 24, 33, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 28px;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5), 0 0 40px rgba(176, 38, 255, 0.1);
+            display: grid;
+            grid-template-columns: 1fr;
+            overflow: hidden;
+            backdrop-filter: blur(30px) saturate(180%);
+            transition: all var(--transition-base);
+            animation: slideInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        @media (min-width: 800px) {
+            .checkout-container {
+                grid-template-columns: 1.15fr 1fr;
+            }
+        }
+
+        /* Left Panel - Plan Summary Receipt (Glassmorphic Ticket Stub) */
+        .summary-panel {
+            padding: 44px;
+            background: rgba(255, 255, 255, 0.01);
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        @media (min-width: 800px) {
+            .summary-panel {
+                border-bottom: none;
+                border-right: 1px solid rgba(255, 255, 255, 0.06);
+            }
+        }
+
+        /* User Header Account Pill */
+        .user-widget {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 8px 16px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: var(--radius-full);
+            margin-bottom: 30px;
+            align-self: flex-start;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .user-avatar {
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent-primary) 0%, #7C4DFF 100%);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 0.8rem;
+            box-shadow: 0 0 10px var(--accent-glow);
+        }
+
+        .user-email {
+            color: var(--text-secondary);
+            max-width: 190px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        /* Plan Visual Block */
+        .plan-header {
+            margin-bottom: 24px;
+        }
+
+        .plan-tag {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: var(--radius-full);
+            background: var(--accent-subtle);
+            color: var(--accent-primary);
+            font-weight: 700;
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 12px;
+            border: 1px solid rgba(176, 38, 255, 0.15);
+        }
+
+        .plan-title {
+            font-family: var(--font-display);
+            font-size: 2.3rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+            letter-spacing: -0.02em;
+        }
+
+        .plan-credits {
+            color: var(--status-info);
+            font-weight: 700;
+            font-size: 1.15rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .plan-credits span {
+            animation: pulseFlash 1.5s infinite alternate ease-in-out;
+        }
+
+        @keyframes pulseFlash {
+            0% { transform: scale(1); filter: brightness(1); }
+            100% { transform: scale(1.15); filter: brightness(1.2); }
+        }
+
+        /* Features Bullet List */
+        .features-list {
+            margin: 24px 0;
+            padding: 0;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+        }
+
+        .feature-item .check {
+            color: var(--status-success);
+            font-weight: bold;
+        }
+
+        /* High-Fidelity Receipt Stub */
+        .price-breakdown {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px dashed rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            padding: 24px;
+            margin-top: auto;
+            position: relative;
+        }
+
+        .price-breakdown::before,
+        .price-breakdown::after {
+            content: '';
+            position: absolute;
+            width: 18px;
+            height: 18px;
+            background-color: var(--bg-deep);
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 10;
+        }
+
+        .price-breakdown::before {
+            left: -10px;
+            border-right: 1px dashed rgba(255, 255, 255, 0.08);
+        }
+
+        .price-breakdown::after {
+            right: -10px;
+            border-left: 1px dashed rgba(255, 255, 255, 0.08);
+        }
+
+        .breakdown-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 12px;
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+        }
+
+        .breakdown-row.total {
+            margin-bottom: 0;
+            padding-top: 14px;
+            border-top: 1px dashed rgba(255, 255, 255, 0.08);
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: var(--text-primary);
+        }
+
+        .breakdown-row .price-val {
+            font-family: var(--font-display);
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .breakdown-row.total .price-val {
+            color: var(--accent-primary);
+            font-size: 1.4rem;
+            text-shadow: 0 0 15px var(--accent-glow);
+        }
+
+        /* Right Panel - Payments Control Center */
+        .payment-panel {
+            padding: 44px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .header {
+            margin-bottom: 30px;
+        }
+
+        .header h2 {
+            font-family: var(--font-display);
+            font-size: 1.85rem;
+            font-weight: 800;
+            margin-bottom: 6px;
+        }
+
+        .header p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* Sleek Developer Sandbox Control Deck */
+        .simulator-card {
+            border: 1px dashed rgba(245, 158, 11, 0.3);
+            background: rgba(245, 158, 11, 0.03);
+            border-radius: var(--radius-lg);
+            padding: 16px 20px;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 0 15px rgba(245, 158, 11, 0.02);
+            transition: all var(--transition-base);
+        }
+
+        .simulator-card.inactive {
+            border: 1px solid var(--border-color);
+            background: rgba(255, 255, 255, 0.01);
+            box-shadow: none;
+        }
+
+        .simulator-info h5 {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: #f59e0b;
+            margin-bottom: 3px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .simulator-card.inactive .simulator-info h5 {
+            color: var(--text-secondary);
+        }
+
+        .simulator-info p {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            opacity: 0.8;
+        }
+
+        /* Premium Switch Button */
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 46px;
+            height: 26px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-color: var(--border-color);
+            transition: .3s cubic-bezier(0.16, 1, 0.3, 1);
+            border-radius: 26px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 18px;
+            width: 18px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .3s cubic-bezier(0.16, 1, 0.3, 1);
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color: #f59e0b;
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(20px);
+        }
+
+        /* High-Fidelity Payment Method Selector Cards */
+        .section-label {
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+            letter-spacing: 0.08em;
+            margin-bottom: 14px;
+        }
+
+        .payment-methods {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin-bottom: 28px;
+        }
+
+        .method-card {
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: var(--radius-lg);
+            background: rgba(255, 255, 255, 0.02);
+            padding: 20px 8px;
+            text-align: center;
+            cursor: pointer;
+            transition: all var(--transition-spring);
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            position: relative;
+        }
+
+        .method-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(255, 255, 255, 0.15);
+            background: rgba(255, 255, 255, 0.04);
+            color: var(--text-primary);
+        }
+
+        /* Method active states with unique branding colors */
+        .method-card.active {
+            color: var(--text-primary);
+        }
+
+        .method-card.jazzcash.active {
+            border: 2px solid #f59e0b;
+            background: rgba(245, 158, 11, 0.06);
+            box-shadow: 0 10px 20px rgba(245, 158, 11, 0.15);
+        }
+
+        .method-card.easypaisa.active {
+            border: 2px solid #10b981;
+            background: rgba(16, 185, 129, 0.06);
+            box-shadow: 0 10px 20px rgba(16, 185, 129, 0.15);
+        }
+
+        .method-card.card.active {
+            border: 2px solid var(--accent-primary);
+            background: rgba(176, 38, 255, 0.06);
+            box-shadow: 0 10px 20px rgba(176, 38, 255, 0.15);
+        }
+
+        /* Beautiful logo-like badges */
+        .brand-badge {
+            padding: 4px 10px;
+            font-size: 0.72rem;
+            font-weight: 800;
+            border-radius: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 2px;
+        }
+        .jc-badge {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            color: #000;
+        }
+        .ep-badge {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: #fff;
+        }
+        .card-badge {
+            background: rgba(255, 255, 255, 0.06);
+            font-size: 1.1rem;
+            padding: 2px 6px;
+        }
+
+        /* Elegant inputs */
+        .form-group {
+            margin-bottom: 22px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 15px 18px;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            color: var(--text-primary);
+            font-size: 0.95rem;
+            outline: none;
+            transition: all var(--transition-fast);
+            box-sizing: border-box;
+        }
+
+        .form-control:focus {
+            border-color: var(--accent-primary);
+            box-shadow: var(--shadow-glow);
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        /* Primary CTA Shimmer Button */
+        .pay-btn {
+            width: 100%;
+            padding: 18px;
+            border-radius: var(--radius-md);
+            background: linear-gradient(135deg, var(--accent-primary) 0%, #7C4DFF 100%);
+            color: #fff;
+            border: none;
+            font-weight: 800;
+            font-size: 1.05rem;
+            cursor: pointer;
+            transition: all var(--transition-base);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 10px 25px rgba(176, 38, 255, 0.25);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pay-btn::after {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%;
+            width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            animation: shimmerEffect 2.8s infinite;
+        }
+
+        @keyframes shimmerEffect {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        .pay-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px rgba(176, 38, 255, 0.4);
+        }
+
+        .pay-btn:active {
+            transform: translateY(0);
+        }
+
+        .pay-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        /* Custom alert/error message */
+        .error-banner {
+            background: rgba(255, 49, 49, 0.08);
+            border: 1px solid rgba(255, 49, 49, 0.25);
+            color: #ff5f5f;
+            padding: 14px 18px;
+            border-radius: var(--radius-md);
+            margin-bottom: 22px;
+            font-size: 0.88rem;
+            line-height: 1.4;
+            display: none;
+        }
+
+        .security-badge {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 24px;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        /* Success screen styling */
+        .success-state {
+            display: none;
+            text-align: center;
+            padding: 50px 20px;
+            animation: scaleUp 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .success-icon {
+            font-size: 4.5rem;
+            color: var(--status-success);
+            margin-bottom: 24px;
+            text-shadow: 0 0 30px var(--status-success-glow);
+        }
+
+        .success-title {
+            font-family: var(--font-display);
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+
+        .success-desc {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            margin-bottom: 36px;
+            line-height: 1.6;
+        }
+
+        @keyframes scaleUp {
+            0% { transform: scale(0.94); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        @keyframes slideInUp {
+            0% { transform: translateY(20px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Ambient Neon Blur Orbs -->
+    <div class="ambient-glow glow-purple"></div>
+    <div class="ambient-glow glow-cyan"></div>
+
+    <div class="checkout-container">
+        <!-- Left Panel: Ticket Stub Summary -->
+        <div class="summary-panel">
+            <div>
+                <div class="user-widget">
+                    <div class="user-avatar" id="user-avatar-initial">S</div>
+                    <span id="user-display-name">Verifying credentials...</span>
+                </div>
+
+                <div class="plan-header">
+                    <span class="plan-tag">Subscribing to</span>
+                    <h1 class="plan-title" id="planName">Pro Explorer</h1>
+                    <div class="plan-credits" id="creditBadge">
+                        <span>⚡</span> <div id="creditValDisplay" style="display:inline-block; font-weight:800;">+50</div> Credits
+                    </div>
+                </div>
+
+                <ul class="features-list" id="featuresList">
+                    <!-- Populated dynamically -->
+                </ul>
+            </div>
+
+            <!-- Total Pricing Card -->
+            <div class="price-breakdown">
+                <div class="breakdown-row">
+                    <span>Standard Billing</span>
+                    <span class="price-val" id="basePriceValue">Rs. 0</span>
+                </div>
+                <div class="breakdown-row" id="discountRow" style="display: none;">
+                    <span>Promo Discount (<span id="discountPercentage">0%</span>)</span>
+                    <span class="price-val" id="discountValue" style="color: var(--status-success);">-Rs. 0</span>
+                </div>
+                <div class="breakdown-row total">
+                    <span>Grand Total</span>
+                    <span class="price-val" id="totalPriceValue">Rs. 0</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Panel: Transaction Workspace -->
+        <div class="payment-panel">
+            <!-- Payment Processing View -->
+            <div id="paymentFormState">
+                <div class="header">
+                    <h2>Secure Checkout</h2>
+                    <p>Complete payment using Pakistani mobile accounts</p>
+                </div>
+
+                <!-- Simulation Mode Switcher -->
+                <div class="simulator-card" id="simCard">
+                    <div class="simulator-info">
+                        <h5>🔧 Developer Sandbox</h5>
+                        <p>Mock validation to bypass payment links</p>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox" id="simulatorToggle" checked onchange="toggleSimulatorStyle(this)">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <div id="checkoutErrorMsg" class="error-banner"></div>
+
+                <div class="section-label">1. Choose Payment Option</div>
+                <div class="payment-methods">
+                    <div class="method-card jazzcash active" onclick="selectMethod('jazzcash', this)">
+                        <div class="brand-badge jc-badge">Jazz</div>
+                        <span>JazzCash</span>
+                    </div>
+                    <div class="method-card easypaisa" onclick="selectMethod('easypaisa', this)">
+                        <div class="brand-badge ep-badge">easy</div>
+                        <span>EasyPaisa</span>
+                    </div>
+                    <div class="method-card card" onclick="selectMethod('card', this)">
+                        <div class="brand-badge card-badge">💳</div>
+                        <span>Card Pay</span>
+                    </div>
+                </div>
+
+                <!-- Account identification -->
+                <div id="mobileAccountForm">
+                    <div class="form-group">
+                        <label id="accountLabel">JazzCash Account Number</label>
+                        <input type="tel" id="mobileNumber" class="form-control" placeholder="e.g., 03001234567" required>
+                    </div>
+                </div>
+
+                <!-- Card Form panel -->
+                <div id="cardForm" style="display: none;">
+                    <div class="form-group">
+                        <label>Card Number</label>
+                        <input type="text" class="form-control" placeholder="4000 1234 5678 9010" value="4242 4242 4242 4242">
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                        <div class="form-group">
+                            <label>Expiry Date</label>
+                            <input type="text" class="form-control" placeholder="MM/YY" value="12/28">
+                        </div>
+                        <div class="form-group">
+                            <label>CVC / CVV</label>
+                            <input type="text" class="form-control" placeholder="123" value="123">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Promo Coupons -->
+                <div class="form-group" style="margin-top: 24px;">
+                    <label>🏷️ Promo / Discount Coupon</label>
+                    <div style="display: flex; gap: 8px;">
+                        <input type="text" id="checkoutCouponInput" class="form-control" placeholder="e.g. STUDENT50" style="text-transform: uppercase;">
+                        <button type="button" class="form-control" onclick="applyCheckoutCoupon()" style="width: auto; padding: 0 20px; font-weight: 700; background: var(--bg-elevated); cursor: pointer; border: 1px solid var(--border-color);">Apply</button>
+                    </div>
+                    <div id="checkoutCouponMsg" style="font-size: 0.8rem; font-weight: 600; margin-top: 6px; display: none;"></div>
+                </div>
+
+                <button class="pay-btn" id="payBtn" onclick="processPayment()">
+                    <span>Verify & Pay Rs. <span id="btnAmount">0</span></span>
+                </button>
+
+                <div class="security-badge">
+                    🔒 SSL Encrypted Checkout Protocol
+                </div>
+            </div>
+
+            <!-- Upgrade Completed View -->
+            <div class="success-state" id="successState">
+                <div class="success-icon">✅</div>
+                <h2 class="success-title">Account Upgraded!</h2>
+                <p class="success-desc">
+                    Your transaction was successfully validated. Your account plan has been upgraded to <strong id="successPlanName">Pro</strong> and your credits are dispatched.
+                </p>
+                <button class="pay-btn" onclick="window.location.href='dashboard.html'">
+                    Enter Dashboard 🚀
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Firebase SDK Scripts -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    
+    <script src="js/firebase-config.js"></script>
+    <script src="js/auth.js"></script>
+
+    <script>
+        let currentMethod = 'jazzcash';
+        const urlParams = new URLSearchParams(window.location.search);
+        
+        const plan = (urlParams.get('plan') || 'pro').toLowerCase();
+        const period = (urlParams.get('period') || 'monthly').toLowerCase();
+        const orderId = urlParams.get('order_id') || ('ORDER_' + Math.random().toString(36).substr(2, 8).toUpperCase());
+        const initialCoupon = (urlParams.get('coupon') || '').toUpperCase();
+
+        const COUPON_DATABASE = {
+            'SCHOLAR20': 0.20,
+            'WELCOME20': 0.20,
+            'PROMO50':   0.50,
+            'STUDENT50': 0.50,
+            'EARLYBIRD': 0.30,
+            'AHSAN100':  1.00,
+            'FREEPRO':   1.00,
+        };
+
+        const PLANS_DATA = {
+            pro: {
+                name: "Pro Explorer",
+                credits: 50,
+                basePrice: { monthly: 450, quarterly: 1200, yearly: 3600 },
+                features: [
+                    "50 Premium Credits dispatch", 
+                    "Sleek practice logs tracker", 
+                    "Full ScholarPath coupons library", 
+                    "Export CV as PDF (Europass format)",
+                    "Priority high-speed search routing"
+                ]
+            },
+            premier: {
+                name: "Premium Scholar",
+                credits: 450,
+                basePrice: { monthly: 1500, quarterly: 3900, yearly: 11000 },
+                features: [
+                    "450 Ultimate Credits dispatch", 
+                    "Smart Profile Matchmaker access", 
+                    "1 x 30-min Consultation with Ahsanullah",
+                    "All Pro Tier modules included",
+                    "Aesthetic CV export tools"
+                ]
+            },
+            premium: {
+                name: "Premium Scholar",
+                credits: 450,
+                basePrice: { monthly: 1500, quarterly: 3900, yearly: 11000 },
+                features: [
+                    "450 Ultimate Credits dispatch", 
+                    "Smart Profile Matchmaker access", 
+                    "1 x 30-min Consultation with Ahsanullah",
+                    "All Pro Tier modules included",
+                    "Aesthetic CV export tools"
+                ]
+            }
+        };
+
+        const activePlan = PLANS_DATA[plan] || PLANS_DATA.pro;
+        const baseAmount = activePlan.basePrice[period] || activePlan.basePrice.monthly;
+        let currentAmount = baseAmount;
+        let appliedCoupon = null;
+
+        // Apply theme on load
+        if (localStorage.getItem('theme') === 'light') {
+            document.body.classList.add('light-mode');
+        }
+
+        // Initialize Summary UI
+        document.getElementById('planName').textContent = activePlan.name;
+        document.getElementById('successPlanName').textContent = activePlan.name;
+        
+        // Populate features
+        const featuresList = document.getElementById('featuresList');
+        featuresList.innerHTML = '';
+        activePlan.features.forEach(f => {
+            const li = document.createElement('li');
+            li.className = 'feature-item';
+            li.innerHTML = `<span class="check">✓</span> ${f}`;
+            featuresList.appendChild(li);
+        });
+
+        // Initialize Pricing Displays
+        updateAmountDisplay(baseAmount);
+
+        // Prepopulate coupon if present in URL
+        if (initialCoupon) {
+            document.getElementById('checkoutCouponInput').value = initialCoupon;
+            applyCheckoutCoupon();
+        }
+
+        // Check auth status
+        firebase.auth().onAuthStateChanged((user) => {
+            if (user) {
+                document.getElementById('user-display-name').textContent = user.displayName || user.email;
+                document.getElementById('user-avatar-initial').textContent = (user.displayName || user.email).charAt(0).toUpperCase();
+            } else {
+                document.getElementById('user-display-name').textContent = "Demo Account";
+                document.getElementById('user-avatar-initial').textContent = "D";
+            }
+        });
+
+        // Dynamic credit count up animation
+        function animateCredits() {
+            const creditEl = document.getElementById('creditValDisplay');
+            if (!creditEl) return;
+            const target = activePlan.credits * (period === 'quarterly' ? 3 : period === 'yearly' ? 12 : 1);
+            let start = 0;
+            const duration = 1000; // ms
+            const stepTime = 25; 
+            const stepValue = Math.ceil(target / (duration / stepTime));
+            
+            const timer = setInterval(() => {
+                start += stepValue;
+                if (start >= target) {
+                    creditEl.textContent = `+${target}`;
+                    clearInterval(timer);
+                } else {
+                    creditEl.textContent = `+${start}`;
+                }
+            }, stepTime);
+        }
+        
+        // Trigger animation
+        animateCredits();
+
+        function toggleSimulatorStyle(checkbox) {
+            const card = document.getElementById('simCard');
+            if (checkbox.checked) {
+                card.classList.remove('inactive');
+            } else {
+                card.classList.add('inactive');
+            }
+        }
+
+        function updateAmountDisplay(amt) {
+            currentAmount = amt;
+            document.getElementById('basePriceValue').textContent = `Rs. ${baseAmount.toLocaleString()}`;
+            document.getElementById('totalPriceValue').textContent = `Rs. ${Math.round(amt).toLocaleString()}`;
+            document.getElementById('btnAmount').textContent = Math.round(amt).toLocaleString();
+        }
+
+        function applyCheckoutCoupon() {
+            const input = document.getElementById('checkoutCouponInput');
+            const msg = document.getElementById('checkoutCouponMsg');
+            const discountRow = document.getElementById('discountRow');
+            const discountPercentage = document.getElementById('discountPercentage');
+            const discountValue = document.getElementById('discountValue');
+
+            if (!input) return;
+
+            const code = input.value.trim().toUpperCase();
+            if (!code) {
+                discountRow.style.display = 'none';
+                updateAmountDisplay(baseAmount);
+                return;
+            }
+
+            if (COUPON_DATABASE[code] !== undefined) {
+                appliedCoupon = code;
+                const discount = COUPON_DATABASE[code];
+                const discountAmt = Math.round(baseAmount * discount);
+                const finalAmt = baseAmount - discountAmt;
+                
+                discountRow.style.display = 'flex';
+                discountPercentage.textContent = `${Math.round(discount * 100)}%`;
+                discountValue.textContent = `-Rs. ${discountAmt.toLocaleString()}`;
+
+                updateAmountDisplay(finalAmt);
+
+                if (msg) {
+                    msg.style.display = 'block';
+                    msg.style.color = 'var(--status-success)';
+                    msg.textContent = `✅ Coupon '${code}' applied successfully!`;
+                }
+            } else {
+                appliedCoupon = null;
+                discountRow.style.display = 'none';
+                updateAmountDisplay(baseAmount);
+                if (msg) {
+                    msg.style.display = 'block';
+                    msg.style.color = 'var(--status-danger)';
+                    msg.textContent = `❌ Invalid coupon code '${code}'`;
+                }
+            }
+        }
+
+        function selectMethod(method, element) {
+            currentMethod = method;
+            document.querySelectorAll('.method-card').forEach(card => card.classList.remove('active'));
+            element.classList.add('active');
+
+            const mobileForm = document.getElementById('mobileAccountForm');
+            const cardForm = document.getElementById('cardForm');
+            const label = document.getElementById('accountLabel');
+
+            if (method === 'card') {
+                mobileForm.style.display = 'none';
+                cardForm.style.display = 'block';
+            } else {
+                mobileForm.style.display = 'block';
+                cardForm.style.display = 'none';
+                label.textContent = method === 'jazzcash' ? 'JazzCash Account Number' : 'EasyPaisa Account Number';
+            }
+        }
+
+        async function processPayment() {
+            const btn = document.getElementById('payBtn');
+            const errorDiv = document.getElementById('checkoutErrorMsg');
+            const isSimulator = document.getElementById('simulatorToggle').checked;
+
+            errorDiv.style.display = 'none';
+            btn.disabled = true;
+            btn.innerHTML = '⏳ Establishing secure channel...';
+
+            const token = localStorage.getItem('temp_checkout_token') || 'demo_token';
+
+            if (isSimulator) {
+                // RUN SIMULATOR MOCK UPGRADE
+                btn.innerHTML = '⏳ Verifying mock transaction...';
+                setTimeout(async () => {
+                    try {
+                        const response = await fetch('/api/payments/test-checkout-success', {
+                            method: 'POST',
+                            headers: { 
+                                'Content-Type': 'application/json',
+                                'Authorization': `Bearer ${token}`
+                            },
+                            body: JSON.stringify({
+                                order_id: orderId,
+                                plan: plan === 'premium' ? 'premier' : plan,
+                                period: period
+                            })
+                        });
+
+                        const data = await response.json();
+                        if (!response.ok) throw new Error(data.error || 'Failed to apply credits.');
+
+                        // Upgrade local state immediately
+                        localStorage.setItem('scholarly_user_plan', plan === 'premium' ? 'premier' : plan);
+                        
+                        // Show success state
+                        document.getElementById('paymentFormState').style.display = 'none';
+                        document.getElementById('successState').style.display = 'block';
+                    } catch (err) {
+                        console.error(err);
+                        errorDiv.style.display = 'block';
+                        errorDiv.textContent = `Error upgrading plan: ${err.message}`;
+                        btn.disabled = false;
+                        btn.innerHTML = `Verify & Pay Rs. ${Math.round(currentAmount).toLocaleString()}`;
+                    }
+                }, 1600);
+            } else {
+                // RUN SECURE GATEWAY CHECKOUT (JazzCash / EasyPaisa Redirect)
+                if (currentMethod === 'card') {
+                    errorDiv.style.display = 'block';
+                    errorDiv.textContent = '❌ Debit/Credit card processing requires Sandbox Simulator mode or active integration keys. Please use JazzCash/EasyPaisa or enable Sandbox Simulator.';
+                    btn.disabled = false;
+                    btn.innerHTML = `Verify & Pay Rs. ${Math.round(currentAmount).toLocaleString()}`;
+                    return;
+                }
+
+                btn.innerHTML = `⏳ Connecting to ${currentMethod === 'jazzcash' ? 'JazzCash' : 'EasyPaisa'} Secure Link...`;
+
+                try {
+                    // Call respective checkout endpoints
+                    const response = await fetch(`/api/payments/${currentMethod}`, {
+                        method: 'POST',
+                        headers: { 
+                            'Content-Type': 'application/json',
+                            'Authorization': `Bearer ${token}`
+                        },
+                        body: JSON.stringify({
+                            amount: currentAmount,
+                            userId: firebase.auth().currentUser ? firebase.auth().currentUser.uid : 'demo_user',
+                            plan: plan === 'premium' ? 'premier' : plan,
+                            period: period,
+                            itemDescription: `${activePlan.name} Upgrade (${period})`
+                        })
+                    });
+
+                    const data = await response.json();
+                    if (!response.ok) throw new Error(data.error || 'Failed to establish transaction channel.');
+
+                    // Form POST redirect submit to gatewayUrl
+                    submitFormToGateway(data.gatewayUrl, data.paymentData);
+
+                } catch (err) {
+                    console.error(err);
+                    errorDiv.style.display = 'block';
+                    errorDiv.textContent = `Gateway Error: ${err.message}`;
+                    btn.disabled = false;
+                    btn.innerHTML = `Verify & Pay Rs. ${Math.round(currentAmount).toLocaleString()}`;
+                }
+            }
+        }
+
+        function submitFormToGateway(url, paymentData) {
+            const form = document.createElement('form');
+            form.method = 'POST';
+            form.action = url;
+            form.style.display = 'none';
+
+            for (const key in paymentData) {
+                if (paymentData.hasOwnProperty(key)) {
+                    const input = document.createElement('input');
+                    input.type = 'hidden';
+                    input.name = key;
+                    input.value = paymentData[key];
+                    form.appendChild(input);
+                }
+            }
+
+            document.body.appendChild(form);
+            form.submit();
+        }
+    </script>
+</body>
+</html>
