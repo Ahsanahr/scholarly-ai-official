@@ -1,0 +1,1518 @@
+/* ============================================================
+   TRAZO SCHOLARLY — Mobile UI Base Stylesheet
+   Version: 1.0
+   Strategy: All rules wrapped in @media (max-width: 768px)
+             Desktop layout is NEVER touched.
+   ============================================================ */
+
+/* ============================================================
+   STEP 1 — Foundation: Fix Core Layout & Typography Bugs
+   ============================================================ */
+
+/* ---------- 1.0 Hard Lock: No horizontal scroll on body ---------- */
+@media (max-width: 768px) {
+    html, body {
+        overflow-x: hidden !important;
+        max-width: 100vw;
+    }
+}
+
+/* ---------- 1.1 iOS Auto-Zoom Fix (font-size must be >= 16px on inputs) ---------- */
+@media (max-width: 768px) {
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="number"],
+    input[type="tel"],
+    input[type="search"],
+    select,
+    textarea {
+        font-size: 16px !important;
+    }
+    /* Search inputs specifically */
+    #universalSearchInput,
+    .search-input,
+    .form-input,
+    .filter-select,
+    .custom-other-input,
+    .global-search-input {
+        font-size: 16px !important;
+    }
+}
+
+/* ---------- 1.2 Toast Notification Overflow Fix ---------- */
+@media (max-width: 768px) {
+    .toast-container {
+        left: 14px !important;
+        right: 14px !important;
+        top: auto !important;
+        bottom: 75px !important; /* Above bottom nav bar */
+        width: auto !important;
+        max-width: none !important;
+    }
+    .toast {
+        max-width: 100% !important;
+        width: 100% !important;
+        font-size: 0.82rem;
+    }
+}
+
+/* ---------- 1.3 Data Table Horizontal Scroll Containment ---------- */
+@media (max-width: 768px) {
+    /* Wrap tables so only the table scrolls, not the full body */
+    .data-table-wrapper,
+    .overflow-x-auto,
+    [style*="overflow-x:auto"],
+    [style*="overflow-x: auto"] {
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch;
+        max-width: 100%;
+    }
+    .data-table {
+        min-width: 500px; /* Let it scroll inside its wrapper */
+    }
+    /* Fee Waiver table in Study Abroad */
+    #sa-tool-fee [style*="overflow-x:auto"],
+    .ai-markdown-content table {
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        max-width: 100%;
+    }
+}
+
+/* ---------- 1.4 Shape Unification (Border Radius Consistency) ---------- */
+@media (max-width: 768px) {
+    /* Cards — unified 16px */
+    .dash-card,
+    .result-card,
+    .feature-card,
+    .step-card,
+    .landing-pricing-card,
+    .ai-response,
+    .insight-box,
+    .calc-result,
+    .saved-calendar-wrapper,
+    .prep-subject-card,
+    .sa-card,
+    #searchBarContainer,
+    #searchProgress > div,
+    [style*="border-radius:16px"],
+    [style*="border-radius: 16px"],
+    [style*="border-radius:12px"],
+    [style*="border-radius:var(--radius-lg)"] {
+        border-radius: 16px !important;
+    }
+
+    /* Buttons — unified 12px */
+    .btn,
+    .btn-primary,
+    .btn-outline,
+    .plan-btn,
+    .quick-action,
+    .timeline-tab-btn,
+    button[class*="btn"] {
+        border-radius: 12px !important;
+    }
+
+    /* Pill shapes stay pill */
+    .suggestion-chip,
+    .billing-btn,
+    .gateway-tag,
+    .source-badge,
+    .result-card-type,
+    .sidebar-link-badge,
+    .deadline-nearby-badge,
+    .popular-ribbon,
+    #creditToggle,
+    #themeToggle,
+    #navLoginBtn,
+    .nav-cta,
+    .badge-discount,
+    .bottom-nav-item,
+    .mob-sub-back-btn {
+        border-radius: 9999px !important;
+    }
+
+    /* Inputs — unified 12px */
+    .form-input,
+    .filter-select,
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="number"],
+    select,
+    textarea {
+        border-radius: 12px !important;
+    }
+
+    /* Modals — top rounded only (bottom sheet) */
+    .modal,
+    .auth-modal {
+        border-radius: 20px 20px 0 0 !important;
+    }
+}
+
+/* ---------- 1.5 Touch Targets — Minimum 44px Height ---------- */
+@media (max-width: 768px) {
+    .btn,
+    .btn-primary,
+    .btn-outline,
+    .plan-btn,
+    .billing-btn,
+    .quick-action,
+    .sidebar-link,
+    .bottom-nav-item,
+    .timeline-tab-btn,
+    .filter-select,
+    .suggestion-chip,
+    .calendar-nav button,
+    .tab,
+    #navLoginBtn,
+    #creditToggle,
+    #themeToggle,
+    .mob-sub-card,
+    .mob-sub-back-btn,
+    .result-card-actions .btn {
+        min-height: 44px !important;
+    }
+    /* Ensure flex centering for all the above */
+    .btn, .btn-primary, .plan-btn, .billing-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+/* ---------- 1.6 Filter Bar — Horizontal Scroll Strip ---------- */
+@media (max-width: 768px) {
+    .filter-bar-grid {
+        display: flex !important;
+        flex-direction: row !important;
+        overflow-x: auto !important;
+        flex-wrap: nowrap !important;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        gap: 10px !important;
+        padding-bottom: 4px;
+    }
+    .filter-bar-grid::-webkit-scrollbar { display: none; }
+    .filter-group {
+        flex-shrink: 0 !important;
+        min-width: 150px !important;
+    }
+    /* Search filter panel inline row */
+    #searchFiltersPanel > div {
+        flex-direction: column !important;
+        gap: 10px !important;
+        padding: 12px 14px !important;
+    }
+    /* Dividers between filter options — hide on mobile */
+    #searchFiltersPanel [style*="width:1px"],
+    #searchFiltersPanel [style*="width: 1px"] {
+        display: none !important;
+    }
+}
+
+/* ---------- 1.7 Modal — Bottom Sheet Pattern on Mobile ---------- */
+@media (max-width: 768px) {
+    .modal-backdrop {
+        align-items: flex-end !important;
+        padding: 0 !important;
+    }
+    .modal {
+        border-radius: 20px 20px 0 0 !important;
+        max-height: 92vh !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 20px 16px 24px !important;
+        animation: slideUpModal 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    }
+    @keyframes slideUpModal {
+        from { transform: translateY(100%); opacity: 0; }
+        to   { transform: translateY(0);    opacity: 1; }
+    }
+    /* Auth modal */
+    #authBackdrop {
+        align-items: flex-end !important;
+    }
+    .auth-modal {
+        border-radius: 20px 20px 0 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 24px 16px !important;
+        max-height: 92vh;
+        overflow-y: auto;
+    }
+}
+
+
+/* ============================================================
+   STEP 2 — Navigation: Fixed Topbar + Bottom Nav
+   ============================================================ */
+
+/* ---------- 2.1 Top Nav Bar — Compact Mobile Layout ---------- */
+@media (max-width: 768px) {
+    .nav {
+        height: 56px !important;
+    }
+    --nav-height: 56px;
+
+    .nav-container {
+        padding: 0 12px !important;
+        flex-wrap: nowrap !important;
+        gap: 8px !important;
+        height: 56px !important;
+    }
+
+    /* Logo: keep emoji icon, hide long text */
+    .nav-logo .logo-text {
+        display: none !important;
+    }
+    .nav-logo .logo-icon {
+        font-size: 1.6rem !important;
+    }
+
+    /* Show user name chip on mobile */
+    #userNameChip {
+        display: flex !important;
+    }
+
+    /* Auth container: tight spacing */
+    #authNavContainer {
+        gap: 6px !important;
+    }
+
+    /* Credits button: icon only on small screens */
+    #creditToggle {
+        padding: 6px 10px !important;
+        font-size: 0.78rem !important;
+    }
+    #creditToggle #creditLabel {
+        display: inline-block !important; /* Show credits text on mobile too */
+        font-weight: 700 !important;
+    }
+
+    /* Theme toggle: icon only */
+    #themeToggle {
+        padding: 6px 10px !important;
+    }
+    #themeToggle .hide-on-mobile {
+        display: none !important;
+    }
+
+    /* User nav: compact */
+    #navLoginBtn {
+        padding: 6px 10px !important;
+        font-size: 0.8rem !important;
+    }
+    #userAvatarBtn {
+        padding: 4px 8px !important;
+    }
+
+    /* Global search bar in nav — full width below nav items */
+    .global-search-container {
+        display: none !important; /* Hide from nav on mobile — search is in main content */
+    }
+}
+
+/* ---------- 2.2 Bottom Navigation Bar — Full Style ---------- */
+@media (min-width: 769px) {
+    /* Ensure bottom nav never shows on desktop */
+    .mobile-bottom-nav { display: none !important; }
+    #mobile-exp-banner { display: none !important; }
+}
+
+@media (max-width: 768px) {
+    .mobile-bottom-nav {
+        display: flex !important;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 64px;
+        background: var(--bg-nav-scrolled);
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
+        border-top: 1px solid var(--border-subtle);
+        z-index: 999;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0 4px;
+        padding-bottom: env(safe-area-inset-bottom, 0px);
+    }
+
+    .bottom-nav-item {
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: var(--text-tertiary);
+        text-decoration: none;
+        font-size: 0.62rem;
+        font-weight: 600;
+        gap: 3px;
+        flex: 1;
+        height: 100%;
+        padding: 6px 4px;
+        border-radius: 12px;
+        transition: all 0.2s ease;
+        position: relative;
+    }
+
+    .bottom-nav-item:active {
+        transform: scale(0.93);
+    }
+
+    .bottom-nav-item svg {
+        width: 20px;
+        height: 20px;
+        transition: all 0.2s ease;
+    }
+
+    .bottom-nav-item.active {
+        color: var(--accent-primary) !important;
+    }
+
+    .bottom-nav-item.active svg {
+        filter: drop-shadow(0 0 4px var(--accent-glow));
+    }
+
+    /* Centre "Test Prep" floating button */
+    .bottom-nav-item:nth-child(3) {
+        position: relative;
+    }
+    .bottom-nav-item:nth-child(3) > div {
+        background: var(--accent-primary) !important;
+        border: 3px solid var(--bg-deep) !important;
+        box-shadow: 0 4px 14px var(--accent-glow) !important;
+    }
+
+    /* Sidebar — fully hidden on mobile (bottom nav handles navigation) */
+    .sidebar {
+        display: none !important;
+    }
+    .sidebar-overlay {
+        display: none !important;
+    }
+    .menu-toggle {
+        display: none !important;
+    }
+
+    /* Also hide old mobile experience banner (replaced by proper mobile UI) */
+    #mobile-exp-banner {
+        display: none !important;
+    }
+
+    /* Main content: full width without sidebar offset */
+    .main-content {
+        margin-left: 0 !important;
+        width: 100% !important;
+    }
+
+    /* Main body: padding for bottom nav + nav height */
+    .main-body {
+        padding: 12px 14px 80px !important;
+    }
+
+    /* Main header: compact */
+    .main-header {
+        padding: 10px 14px !important;
+        gap: 10px !important;
+        top: 56px !important;
+    }
+}
+
+
+/* ============================================================
+   STEP 3 — Sub-Feature Deep Linking: Mobile Back-Button System
+   ============================================================ */
+
+/* ---------- 3.1 Mobile Sub-Feature Landing Grids ---------- */
+
+/* Hide on desktop */
+@media (min-width: 769px) {
+    .mob-sub-landing,
+    .mob-sub-back-btn {
+        display: none !important;
+    }
+}
+
+/* Show on mobile */
+@media (max-width: 768px) {
+    /* The sub-landing grid that shows 2×2 or 2×3 card options */
+    .mob-sub-landing {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        padding: 8px 0 16px;
+    }
+
+    /* Each sub-feature option card */
+    .mob-sub-card {
+        background: var(--bg-surface);
+        border: 1px solid var(--border-color);
+        border-radius: 16px;
+        padding: 18px 12px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        cursor: pointer;
+        text-align: center;
+        transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        min-height: 90px;
+    }
+    .mob-sub-card:active {
+        transform: scale(0.96);
+        background: var(--accent-subtle);
+        border-color: var(--accent-primary);
+    }
+    .mob-sub-card span:first-child {
+        font-size: 1.8rem;
+        line-height: 1;
+    }
+    .mob-sub-card span:last-child {
+        font-size: 0.78rem;
+        font-weight: 600;
+        color: var(--text-primary);
+        font-family: var(--font-display);
+        line-height: 1.3;
+    }
+
+    /* Back button shown when inside a sub-view */
+    .mob-sub-back-btn {
+        display: inline-flex !important;
+        align-items: center;
+        gap: 6px;
+        padding: 8px 16px;
+        background: var(--bg-elevated);
+        border: 1px solid var(--border-color);
+        border-radius: 9999px;
+        color: var(--text-primary);
+        font-size: 0.82rem;
+        font-weight: 600;
+        cursor: pointer;
+        margin-bottom: 14px;
+        min-height: 44px;
+        transition: all 0.2s ease;
+    }
+    .mob-sub-back-btn:active {
+        background: var(--accent-subtle);
+        border-color: var(--accent-primary);
+        color: var(--accent-primary);
+    }
+
+    /* Sub-view section title */
+    .mob-sub-section-title {
+        font-family: var(--font-display);
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        margin-bottom: 14px;
+        grid-column: 1 / -1;
+    }
+    .mob-sub-section-subtitle {
+        font-size: 0.8rem;
+        color: var(--text-secondary);
+        margin-top: -8px;
+        margin-bottom: 4px;
+        grid-column: 1 / -1;
+    }
+}
+
+
+/* ============================================================
+   STEP 4 — Section-by-Section Mobile Redesign
+   ============================================================ */
+
+/* ---------- 4.1 Dashboard Home View ---------- */
+@media (max-width: 768px) {
+    /* Stat cards row — horizontal scroll strip */
+    #view-home > div:first-child {
+        display: flex !important;
+        overflow-x: auto;
+        gap: 12px !important;
+        padding-bottom: 6px;
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+    }
+    #view-home > div:first-child::-webkit-scrollbar { display: none; }
+    /* Each stat card: fixed width in scroll */
+    #view-home > div:first-child > div {
+        flex-shrink: 0 !important;
+        min-width: 160px !important;
+        border-radius: 14px !important;
+        padding: 14px !important;
+    }
+    #view-home > div:first-child > div > div:first-child {
+        font-size: 0.68rem !important;
+    }
+    #view-home > div:first-child > div > div:nth-child(2) {
+        font-size: 0.95rem !important;
+    }
+
+    /* Quick Access Grid — 2 × N symmetrical */
+    #view-home > div:nth-child(2) {
+        /* Section title stays above */
+        font-size: 0.75rem !important;
+    }
+    #view-home div[style*="auto-fill"],
+    #view-home div[style*="240px"] {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+    }
+
+    /* Each quick-access card: icon on top, label below, no subtitle */
+    #view-home div[style*="auto-fill"] > div,
+    #view-home div[style*="240px"] > div {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        padding: 14px 10px !important;
+        gap: 8px !important;
+        border-radius: 14px !important;
+        justify-content: center;
+    }
+    /* Icon: bigger */
+    #view-home div[style*="auto-fill"] > div > span:first-child,
+    #view-home div[style*="240px"] > div > span:first-child {
+        font-size: 1.6rem !important;
+    }
+    /* Title text */
+    #view-home div[style*="auto-fill"] > div h4,
+    #view-home div[style*="240px"] > div h4 {
+        font-size: 0.8rem !important;
+        text-align: center;
+    }
+    /* Subtitle — hide on mobile (too cluttered) */
+    #view-home div[style*="auto-fill"] > div p,
+    #view-home div[style*="240px"] > div p {
+        display: none !important;
+    }
+}
+
+/* ---------- 4.2 AI Search View ---------- */
+@media (max-width: 768px) {
+    /* Hero heading */
+    #view-search h2 {
+        font-size: clamp(1.3rem, 6vw, 1.7rem) !important;
+        margin-bottom: 6px !important;
+    }
+    #view-search h2 span:first-child {
+        font-size: 1.8rem !important;
+    }
+    /* Subtitle */
+    #view-search > div > p:first-of-type {
+        font-size: 0.82rem !important;
+        margin-bottom: 18px !important;
+        padding: 0 8px;
+    }
+    /* Container padding */
+    #view-search > div {
+        padding: 14px !important;
+        min-height: auto !important;
+    }
+
+    /* Search bar */
+    #searchBarContainer {
+        border-radius: 16px !important;
+        padding: 6px 8px 6px 14px !important;
+        gap: 6px !important;
+    }
+    #universalSearchInput {
+        font-size: 16px !important;
+        padding: 8px 0 !important;
+    }
+    #filterToggleBtn {
+        padding: 6px 10px !important;
+        font-size: 0.74rem !important;
+    }
+    #searchBtn {
+        padding: 10px 14px !important;
+        font-size: 0.82rem !important;
+        border-radius: 12px !important;
+    }
+    #searchBtn span {
+        display: none !important; /* Hide "1 credit" sub-label on mobile */
+    }
+
+    /* Results area */
+    #aiSearchResults {
+        margin-top: 20px !important;
+        padding: 0 !important;
+    }
+    /* Result cards from AI — responsive text */
+    #aiSearchResults h2 {
+        font-size: 1.2rem !important;
+    }
+    #aiSearchResults > div {
+        padding: 16px !important;
+        border-radius: 16px !important;
+    }
+    /* Info grid inside result cards */
+    #aiSearchResults div[style*="auto-fit"] {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 8px !important;
+    }
+    /* Insufficient credits card */
+    .insufficient-credits-card {
+        padding: 20px 16px !important;
+        margin: 20px 0 !important;
+    }
+}
+
+/* ---------- 4.3 Calendar — Vertical Agenda List View ---------- */
+@media (max-width: 768px) {
+    /* Day-header row (Mon, Tue...) — remove on mobile */
+    .calendar-day-header {
+        display: none !important;
+    }
+    /* 7-column grid → 1 column agenda */
+    .calendar-grid {
+        grid-template-columns: 1fr !important;
+        gap: 6px !important;
+    }
+    /* Each day cell → horizontal flex item */
+    .calendar-day {
+        min-height: auto !important;
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: flex-start !important;
+        gap: 12px !important;
+        padding: 10px 14px !important;
+        border-radius: 12px !important;
+    }
+    /* Hide empty days to save space */
+    .calendar-day.empty {
+        display: none !important;
+    }
+    /* Date number — styled as label on left */
+    .calendar-date-num {
+        min-width: 34px !important;
+        font-size: 0.95rem !important;
+        font-weight: 700 !important;
+        color: var(--accent-primary) !important;
+        padding-top: 2px;
+    }
+    /* Events in the cell */
+    .calendar-event {
+        font-size: 0.75rem !important;
+        padding: 4px 8px !important;
+        margin-bottom: 4px;
+        white-space: normal !important;
+        line-height: 1.4;
+    }
+
+    /* Calendar header controls */
+    .calendar-header {
+        margin-bottom: 12px !important;
+    }
+    .calendar-title {
+        font-size: 0.95rem !important;
+    }
+    .calendar-nav button {
+        width: 38px !important;
+        height: 38px !important;
+    }
+    .saved-calendar-wrapper {
+        padding: 14px !important;
+    }
+}
+
+/* ---------- 4.4 Countdown Timer — Stacked Layout ---------- */
+@media (max-width: 768px) {
+    .live-countdown-banner {
+        flex-direction: column !important;
+        padding: 14px 16px !important;
+        gap: 12px !important;
+        align-items: flex-start !important;
+    }
+    .countdown-digits {
+        width: 100%;
+        justify-content: space-between !important;
+        gap: 6px !important;
+    }
+    .countdown-unit {
+        min-width: 0 !important;
+        flex: 1 !important;
+        padding: 8px 6px !important;
+    }
+    .countdown-val {
+        font-size: 1.2rem !important;
+    }
+    .countdown-lbl {
+        font-size: 0.6rem !important;
+    }
+    /* Sync buttons below countdown */
+    .btn-gcal, .btn-ics {
+        padding: 8px 12px !important;
+        font-size: 0.75rem !important;
+        min-height: 36px;
+    }
+}
+
+/* ---------- 4.5 Landing Page — Hero & Pricing ---------- */
+@media (max-width: 768px) {
+    /* Nav */
+    .landing-page .nav-container,
+    body:not(.dashboard) .nav-container {
+        padding: 0 14px !important;
+    }
+
+    /* Hero section */
+    .hero {
+        padding: calc(56px + 24px) 14px 32px !important;
+        min-height: auto !important;
+    }
+    .hero-content {
+        padding: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    .hero-badge {
+        font-size: 0.72rem !important;
+        padding: 5px 12px !important;
+        margin-bottom: 14px !important;
+    }
+    .hero-title {
+        font-size: clamp(1.75rem, 7.5vw, 2.2rem) !important;
+        line-height: 1.15 !important;
+        margin-bottom: 12px !important;
+    }
+    .hero-subtitle {
+        font-size: 0.88rem !important;
+        padding: 0 !important;
+        margin-bottom: 18px !important;
+        line-height: 1.55 !important;
+    }
+
+    /* Hero CTA buttons — stack vertically */
+    .hero-cta,
+    .cta-buttons {
+        flex-direction: column !important;
+        gap: 10px !important;
+        align-items: stretch !important;
+    }
+    .hero-cta .btn,
+    .hero-cta .btn-primary,
+    .hero-cta .btn-secondary,
+    .cta-buttons .btn-primary,
+    .cta-buttons .btn-secondary {
+        width: 100% !important;
+        justify-content: center !important;
+        min-height: 48px !important;
+    }
+
+    /* Features grid — single column */
+    .features-grid {
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+    }
+    .feature-card-large,
+    .feature-card-hero {
+        grid-column: span 1 !important;
+        grid-template-columns: 1fr !important;
+        gap: 14px !important;
+    }
+    .feature-card {
+        padding: 16px !important;
+    }
+    .features { padding: 28px 0 !important; }
+    .section-header { margin-bottom: 16px !important; }
+    .section-title { font-size: 1.35rem !important; }
+    .section-subtitle { font-size: 0.84rem !important; }
+
+    /* Pricing section */
+    .pricing-landing-section { padding: 28px 0 !important; }
+    .landing-pricing-grid {
+        grid-template-columns: 1fr !important;
+        max-width: 100% !important;
+        gap: 14px !important;
+        padding: 0 14px !important;
+        margin-top: 16px !important;
+    }
+    .landing-pricing-card {
+        padding: 16px !important;
+    }
+    .landing-pricing-card.popular {
+        transform: none !important;
+    }
+    .price-value { font-size: 2rem !important; }
+    .plan-features { gap: 8px !important; }
+    .plan-features li { font-size: 0.82rem !important; }
+    .plan-btn { padding: 12px !important; font-size: 0.88rem !important; min-height: 48px !important; }
+    .billing-switcher { margin-top: 10px !important; }
+    .billing-btn { padding: 8px 14px !important; font-size: 0.8rem !important; }
+
+    /* How It Works */
+    .how-it-works { padding: 28px 0 !important; }
+    .step-card { padding: 14px !important; border-radius: 14px !important; }
+    .step-number { font-size: 1.4rem !important; margin-bottom: 6px !important; }
+
+    /* CTA section */
+    .cta-section { padding: 24px 0 !important; }
+    .cta-card { padding: 24px 14px !important; border-radius: 16px !important; }
+    .cta-title { font-size: 1.3rem !important; }
+    .cta-subtitle { font-size: 0.82rem !important; }
+
+    /* Footer */
+    .footer { padding-top: 28px !important; }
+    .footer-content { flex-direction: column !important; gap: 18px !important; }
+    .footer-brand { max-width: 100% !important; }
+    .footer-links {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 16px !important;
+    }
+    .footer-bottom p { font-size: 0.75rem !important; }
+}
+
+/* ---------- 4.6 Typography — Responsive Text System ---------- */
+@media (max-width: 768px) {
+    /* Global heading scale */
+    h1:not(.hero-title):not(.cta-title) {
+        font-size: clamp(1.4rem, 5.5vw, 1.9rem) !important;
+    }
+    h2:not(#view-search h2) {
+        font-size: clamp(1.1rem, 4.5vw, 1.5rem) !important;
+    }
+    h3 {
+        font-size: clamp(0.95rem, 3.5vw, 1.2rem) !important;
+    }
+    h4 {
+        font-size: 0.9rem !important;
+    }
+
+    /* Dashboard titles */
+    .main-title { font-size: 1.1rem !important; line-height: 1.3 !important; }
+    .main-subtitle { font-size: 0.78rem !important; }
+
+    /* Result cards */
+    .result-card-title { font-size: 0.92rem !important; }
+    .result-card-desc { font-size: 0.8rem !important; line-height: 1.55 !important; }
+    .result-meta-item { font-size: 0.72rem !important; }
+
+    /* Feature and step cards */
+    .feature-title { font-size: 0.9rem !important; }
+    .feature-desc { font-size: 0.8rem !important; }
+    .step-title { font-size: 0.9rem !important; }
+    .step-desc { font-size: 0.78rem !important; }
+
+    /* AI response */
+    .ai-response-content { font-size: 0.85rem !important; }
+    .ai-markdown-content p { font-size: 0.85rem !important; }
+    .ai-markdown-content h2 { font-size: 1.1rem !important; }
+    .ai-markdown-content h3 { font-size: 0.95rem !important; }
+
+    /* Prevent text overflow anywhere */
+    * {
+        word-break: break-word;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+    }
+    /* But don't break badges and chips */
+    .suggestion-chip,
+    .source-badge,
+    .sidebar-link-badge,
+    .bottom-nav-item span,
+    .gateway-tag {
+        word-break: normal !important;
+        hyphens: none !important;
+        white-space: nowrap !important;
+    }
+}
+
+/* ---------- 4.7 Study Abroad Section Mobile ---------- */
+@media (max-width: 768px) {
+    #view-study-abroad > div {
+        padding: 12px !important;
+    }
+    #view-study-abroad h2 {
+        font-size: 1.4rem !important;
+    }
+    /* Hub nav cards: 1 row, 3 columns */
+    #view-study-abroad div[style*="auto-fit"] {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 10px !important;
+        margin-bottom: 20px !important;
+    }
+    .sa-card {
+        padding: 12px 8px !important;
+        border-radius: 14px !important;
+    }
+    .sa-card > div:first-child { font-size: 1.6rem !important; margin-bottom: 6px !important; }
+    .sa-card h3 { font-size: 0.78rem !important; margin-bottom: 4px !important; }
+    .sa-card p { font-size: 0.7rem !important; }
+    /* Tool container */
+    #view-study-abroad > div > div:last-child {
+        padding: 16px !important;
+        border-radius: 14px !important;
+    }
+    /* Visa form grid */
+    #sa-tool-visa div[style*="auto-fit"] {
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+    }
+}
+
+/* ---------- 4.8 MCQ / Test Prep Question Card ---------- */
+@media (max-width: 768px) {
+    #mcqQuestionCard {
+        padding: 16px !important;
+        border-radius: 16px !important;
+        margin-bottom: 14px !important;
+    }
+    #mcqQuestionCard p {
+        font-size: 0.95rem !important;
+        line-height: 1.6 !important;
+        margin-bottom: 16px !important;
+    }
+    /* Answer options */
+    #mcqQuestionCard > div > div[onclick] {
+        padding: 12px 14px !important;
+        border-radius: 12px !important;
+        font-size: 0.88rem !important;
+        min-height: 44px !important;
+    }
+    /* Timeline tabs inside test prep */
+    .timeline-tabs-nav {
+        gap: 8px !important;
+        padding-bottom: 10px !important;
+    }
+    .timeline-tab-btn {
+        padding: 8px 14px !important;
+        font-size: 0.8rem !important;
+    }
+}
+
+
+/* ============================================================
+   STEP 5 — Polish, Spacing Cleanup & Global Symmetry
+   ============================================================ */
+
+/* ---------- 5.1 Global Section Spacing Reset ---------- */
+@media (max-width: 768px) {
+    .view-section {
+        padding: 0 !important;
+    }
+    .section-container,
+    .container,
+    .nav-container {
+        padding-left: 14px !important;
+        padding-right: 14px !important;
+        max-width: 100% !important;
+    }
+    /* Remove excessive top/bottom padding on all page sections */
+    .features,
+    .how-it-works,
+    .pricing-landing-section,
+    .cta-section {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+}
+
+/* ---------- 5.2 Symmetry: Full-Width Elements ---------- */
+@media (max-width: 768px) {
+    /* Action button rows — stack vertically, full width */
+    .result-card-actions {
+        flex-direction: column !important;
+        gap: 8px !important;
+    }
+    .result-card-actions .btn {
+        width: 100% !important;
+        justify-content: center !important;
+    }
+
+    /* Save button row in search results */
+    #aiSearchResults div[style*="flex-end"],
+    #aiSearchResults div[style*="justify-content:flex-end"],
+    #aiSearchResults div[style*="space-between"] {
+        flex-wrap: wrap !important;
+        gap: 8px !important;
+    }
+
+    /* No left/right margin bleed on cards */
+    .dash-card,
+    .result-card,
+    .ai-response,
+    .saved-calendar-wrapper,
+    .live-countdown-banner {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    /* Inline-flex items that might overflow */
+    .countdown-digits > *,
+    .hero-stats > * {
+        flex-shrink: 1;
+        min-width: 0;
+    }
+}
+
+/* ---------- 5.3 Profile Section Symmetry ---------- */
+@media (max-width: 768px) {
+    .profile-summary {
+        flex-direction: column !important;
+        text-align: center !important;
+        align-items: center !important;
+        padding: 16px !important;
+    }
+    .profile-avatar {
+        margin: 0 auto !important;
+    }
+    .profile-info {
+        width: 100% !important;
+        text-align: center !important;
+    }
+    .saved-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* ---------- 5.4 Search Filters Panel Mobile ---------- */
+@media (max-width: 768px) {
+    /* AI search filter panel full-width dropdowns */
+    #searchFiltersPanel > div > div {
+        width: 100%;
+    }
+    #searchFiltersPanel select {
+        width: 100%;
+        font-size: 16px !important;
+    }
+    #searchFiltersPanel span[style*="italic"] {
+        display: none !important; /* Hide 'filters are optional' text on mobile */
+    }
+}
+
+/* ---------- 5.5 Dashboard Stats / Insight Cards ---------- */
+@media (max-width: 768px) {
+    /* Insight links wrap nicely */
+    .insight-links {
+        gap: 6px !important;
+    }
+    .insight-link {
+        font-size: 0.72rem !important;
+        padding: 5px 8px !important;
+    }
+    /* Merit bar labels */
+    .merit-bar-label {
+        font-size: 0.72rem !important;
+    }
+    /* Timeline nodes */
+    .visual-timeline {
+        padding-left: 22px !important;
+    }
+    .timeline-node {
+        margin-bottom: 14px !important;
+    }
+}
+
+/* ---------- 5.6 Prep Task Items ---------- */
+@media (max-width: 768px) {
+    .prep-task-item {
+        flex-wrap: wrap !important;
+        gap: 8px !important;
+        padding: 10px 12px !important;
+    }
+    .prep-subject-card {
+        padding: 12px !important;
+        border-radius: 12px !important;
+    }
+}
+
+/* ---------- 5.7 Loading State ---------- */
+@media (max-width: 768px) {
+    .search-loading {
+        padding: 32px 14px !important;
+    }
+    /* Progress steps box */
+    #searchProgress > div {
+        padding: 16px !important;
+    }
+    #searchProgress div[style*="display:flex; align-items:center; gap:12px"] {
+        gap: 10px !important;
+    }
+    #progressSpinner {
+        width: 20px !important;
+        height: 20px !important;
+    }
+    #progressLabel {
+        font-size: 0.88rem !important;
+    }
+    .progress-step {
+        font-size: 0.78rem !important;
+    }
+}
+
+/* ---------- 5.8 Responsive Inline Style Overrides ---------- */
+/* Many sections use inline style="padding:20px" — ensure mobile compactness */
+@media (max-width: 768px) {
+    /* Study abroad tool section */
+    #view-study-abroad div[style*="padding: 20px"],
+    #view-study-abroad div[style*="padding:20px"] {
+        padding: 12px !important;
+    }
+    /* Timeline container */
+    #timelineContainer > div {
+        padding: 16px !important;
+    }
+    /* Timeline item rows */
+    #timelineContainer > div > div[style*="justify-content:space-between"] {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 8px !important;
+    }
+    /* Saved timeline items */
+    #timelineContainer div[style*="padding: 16px 20px"],
+    #timelineContainer div[style*="padding:16px 20px"] {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 10px !important;
+    }
+    #timelineContainer button[onclick*="removeSavedItem"] {
+        align-self: flex-end;
+    }
+}
+
+/* ============================================================
+   END OF MOBILE-BASE.CSS
+   ============================================================ */
+
+@media (max-width: 768px) {
+    /* Top bar adjustments */
+    .nav-container {
+        flex-wrap: nowrap !important;
+        padding: 0 10px !important;
+        gap: 4px !important;
+    }
+    .nav-logo {
+        display: flex !important; /* Force display to counter dashboard.css hiding it on <480px */
+        flex: 1 1 auto;
+        min-width: 0;
+        align-items: center !important;
+    }
+    .nav-logo .logo-text {
+        font-size: 0.95rem !important;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .nav-logo .logo-icon {
+        font-size: 1.1rem !important;
+    }
+    #authNavContainer {
+        flex: 0 0 auto;
+        gap: 6px !important;
+    }
+    .user-avatar-btn span,
+    .user-avatar-btn svg {
+        display: none !important;
+    }
+    .user-avatar-btn {
+        padding: 4px !important;
+        border-radius: 50% !important;
+    }
+    #creditToggle {
+        padding: 6px 8px !important;
+        font-size: 0.8rem !important;
+    }
+    #creditLabel {
+        display: inline-block !important; /* Ensure it is visible on mobile */
+    }
+    #themeToggle {
+        padding: 6px !important;
+    }
+    
+    /* When deep linking into a sub-feature, hide the desktop headers/tabs to simulate a "new page" */
+    .in-sub-feature #tpTopBanner,
+    .in-sub-feature #timelineContainer > div > div:nth-child(1),
+    .in-sub-feature #timelineContainer > div > div:nth-child(2),
+    .in-sub-feature #consultantsContainer > div > div:nth-child(1),
+    .in-sub-feature #view-study-abroad > div > div:nth-child(1),
+    .in-sub-feature #view-study-abroad > div > div:nth-child(2) {
+        display: none !important;
+    }
+
+    /* =================================================================================
+       STEP 4 — NARROW COLUMN & TEXT WRAPPING FIXES
+       Override desktop inline styles that squish text on mobile devices
+    ================================================================================= */
+    
+    /* 1. Stack all multi-column layouts vertically on mobile */
+    div[style*="grid-template-columns: 2fr 1fr"],
+    div[style*="grid-template-columns: 3fr 1fr"],
+    div[style*="grid-template-columns: 1fr 2fr"],
+    div[style*="grid-template-columns: 250px 1fr"] {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+    }
+
+    /* 2. Reclaim screen real estate by reducing massive desktop padding */
+    div[style*="padding:40px"], div[style*="padding: 40px"],
+    div[style*="padding:30px"], div[style*="padding: 30px"],
+    div[style*="padding:24px"], div[style*="padding: 24px"],
+    div[style*="padding: 40px"], div[style*="padding: 30px"],
+    div[style*="padding: 24px"] {
+        padding: 16px !important;
+    }
+
+    /* 3. Fix flex rows that squish content instead of wrapping */
+    div[style*="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;"] {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+    }
+
+    /* 4. Ensure all info badges in University/Scholarship headers wrap neatly */
+    .uni-info-badges, div[style*="display:flex; gap:12px; flex-wrap:wrap; margin-top:16px;"] {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        padding-bottom: 8px !important;
+        scrollbar-width: none !important;
+    }
+    .uni-info-badges::-webkit-scrollbar, 
+    div[style*="display:flex; gap:12px; flex-wrap:wrap; margin-top:16px;"]::-webkit-scrollbar {
+        display: none !important;
+    }
+    
+    .uni-info-badges span, div[style*="margin-top:16px;"] > span {
+        width: auto !important;
+        flex-shrink: 0 !important;
+        text-align: center !important;
+        padding: 6px 14px !important;
+        font-size: 0.8rem !important;
+        white-space: nowrap !important;
+        border-radius: 20px !important;
+    }
+
+    /* Dashboard Home Page Overrides */
+    #view-home .quick-access-grid, 
+    #view-home > div[style*="auto-fill"] {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
+    }
+    
+    #view-home > div[style*="auto-fit"] {
+        display: flex !important;
+        overflow-x: auto;
+        gap: 12px;
+        padding-bottom: 4px;
+        scrollbar-width: none;
+    }
+    
+    #view-home .quick-access-card {
+        flex-direction: column !important;
+        align-items: center;
+        text-align: center;
+        padding: 14px 10px;
+        gap: 8px;
+    }
+    
+    #view-home .quick-access-card h4 { font-size: 0.82rem; }
+    #view-home .quick-access-card p { display: none; }
+    #view-home .quick-access-card span { font-size: 1.6rem; }
+
+    /* =================================================================================
+       STEP 4.1 — SECONDARY NARROW COLUMN FIXES (User Feedback)
+    ================================================================================= */
+    
+    /* 1. Timeline Rows (Saved Timeline glitch) */
+    div[style*="display:flex; justify-content:space-between; align-items:start; gap:16px; width:100%;"] {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+    }
+    
+    #viewSavedObjectBody {
+        padding: 16px !important;
+    }
+
+    /* 2. Past Papers (Vault) Card actions row */
+    div[style*="display:flex; justify-content:space-between; align-items:center; margin-top:auto;"] {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 12px !important;
+    }
+    div[style*="display:flex; justify-content:space-between; align-items:center; margin-top:auto;"] > * {
+        width: 100% !important;
+        text-align: center !important;
+        justify-content: center !important;
+    }
+    
+    /* 3. Past Papers (Vault) Container Grid */
+    #vaultListContainer {
+        grid-template-columns: 1fr !important;
+    }
+    
+    /* 4. University Detail Navigation Buttons (Compact Top Pattern) */
+    div[style*="display:flex; align-items:center; gap:16px;"] {
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        gap: 8px !important;
+    }
+    div[style*="display:flex; align-items:center; gap:16px;"] > button:first-child {
+        width: 100% !important;
+        margin-bottom: 4px !important;
+        padding: 8px 12px !important;
+    }
+    div[style*="display:flex; align-items:center; gap:16px;"] > div {
+        display: none !important; /* Hide flex spacer */
+    }
+    div[style*="display:flex; align-items:center; gap:16px;"] > button:nth-child(3),
+    div[style*="display:flex; align-items:center; gap:16px;"] > a {
+        flex: 1 !important;
+        text-align: center !important;
+        justify-content: center !important;
+        padding: 8px 4px !important;
+        font-size: 0.75rem !important;
+        border-radius: 8px !important;
+        white-space: nowrap !important;
+    }
+
+    /* 4.5 Timeline Deadline Glitch (Robust Class Fix - Grid Layout) */
+    .timeline-event-card {
+        display: grid !important;
+        grid-template-columns: auto 1fr !important;
+        gap: 12px 16px !important;
+        padding: 16px !important;
+        align-items: start !important;
+    }
+    .timeline-event-date {
+        grid-column: 1 / 2 !important;
+        border-right: 1px solid var(--border-subtle) !important;
+        border-bottom: none !important;
+        width: auto !important;
+        padding-right: 16px !important;
+        padding-bottom: 0 !important;
+        text-align: center !important;
+        min-width: 70px !important;
+    }
+    .timeline-event-date > div:first-child {
+        font-size: 1.1rem !important;
+    }
+    .timeline-event-content {
+        grid-column: 2 / 3 !important;
+        width: 100% !important;
+    }
+    .timeline-event-content h4 {
+        font-size: 1rem !important;
+    }
+    .timeline-event-actions {
+        grid-column: 1 / 3 !important;
+        display: flex !important;
+        flex-direction: row !important;
+        width: 100% !important;
+        justify-content: flex-end !important;
+        flex-wrap: wrap !important;
+        padding-top: 12px !important;
+        border-top: 1px solid rgba(255,255,255,0.05) !important;
+        margin-top: 4px !important;
+    }
+
+    /* 5. Calendar Mobile List View (Vertical Agenda) */
+    div[style*="grid-template-columns: repeat(7, 1fr); gap:12px; text-align:center;"] {
+        display: none !important; /* Hide Mon Tue Wed headers */
+    }
+    div[style*="grid-template-columns: repeat(7, 1fr); gap:12px;"] {
+        grid-template-columns: 1fr !important;
+        gap: 8px !important;
+    }
+    /* Hide empty padding cells from the first week offset */
+    div[style*="grid-template-columns: repeat(7, 1fr); gap:12px;"] > div[style*="opacity:0;"] {
+        display: none !important;
+    }
+    /* Convert the day cell block into a horizontal flex row for the date number */
+    div[style*="grid-template-columns: repeat(7, 1fr); gap:12px;"] > div[style*="min-height:90px;"] {
+        min-height: auto !important;
+        flex-direction: row !important;
+        align-items: flex-start !important;
+        padding: 12px 16px !important;
+    }
+    div[style*="grid-template-columns: repeat(7, 1fr); gap:12px;"] > div > div:first-child {
+        width: 32px !important; 
+        text-align: left !important;
+        font-size: 1.1rem !important;
+        color: var(--accent-primary) !important;
+    }
+}
+
+/* MOBILE NOTEPAD OPTIMIZATION */
+@media (max-width: 768px) {
+    #notepadOverlayModal .tp-modal-content {
+        width: 100% !important;
+        height: 100dvh !important;
+        max-width: 100% !important;
+        max-height: 100dvh !important;
+        border-radius: 0 !important;
+        padding: 12px !important;
+        margin: 0 !important;
+        background: var(--bg-deep) !important;
+    }
+    #notepadOverlayModal .tp-modal-content > div:first-child {
+        padding-bottom: 8px !important;
+        margin-bottom: 8px !important;
+    }
+    #notepadOverlayModal h3 {
+        font-size: 1.2rem !important;
+    }
+    #notepadOverlayModal span {
+        display: none !important;
+    }
+    #notepadCanvasContainer {
+        border-radius: 12px !important;
+        border: none !important;
+        box-shadow: inset 0 0 20px rgba(0,0,0,0.3) !important;
+    }
+    #notepadCanvasContainer::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+        background-size: 20px 20px;
+        pointer-events: none;
+    }
+}
+
+/* ============================================================
+   DEFENSIVE CSS & FUTURE-PROOFING (Glitch Prevention)
+   ============================================================ */
+@media (max-width: 768px) {
+    /* 1. Prevent Text Overflow & Squishing */
+    * {
+        word-break: break-word;
+        overflow-wrap: break-word;
+    }
+
+    /* 2. Global Flexbox Safety Net (Prevents single-row squish) */
+    .flex, [style*=" display: flex\], [style*=\display:flex\] {
+ /* We do not force wrap everywhere as it breaks intent, but we add min-widths */
+ min-width: 0;
+ }
+
+ /* 3. Auto-wrap Flex Items if they are too cramped */
+ .grid-2, .grid-3, .grid-4 {
+ display: grid !important;
+ grid-template-columns: 1fr !important; /* Force 1 column on mobile for grids */
+ }
+
+ /* 4. Ensure Buttons and Cards never overflow screen */
+ .btn, button, .card, .profile-card, .list-card, .cv-card {
+ max-width: 100% !important;
+ box-sizing: border-box !important;
+ white-space: normal !important; /* Prevent long text in buttons from breaking layout */
+ line-height: 1.4 !important;
+ }
+
+ /* 5. Fluid Typography Bounds (Clamp) */
+ h1, h2, h3, h4, h5, h6 {
+ max-width: 100%;
+ }
+
+ /* 6. Prevent image overflow */
+ img, svg, canvas, video {
+ max-width: 100% !important;
+ height: auto;
+ }
+}
