@@ -1,0 +1,48 @@
+# MDCAT Biology Practice Paper (Mock)
+Board: PMDC
+
+INSTRUCTIONS:
+Time allowed is 3.5 hours. Total MCQs: 200. No negative marking.
+
+PART 1: BIOLOGY (68 MCQs)
+Q1. The powerhouse of the cell is:
+A) Nucleus
+B) Ribosome
+C) Mitochondria
+D) Endoplasmic Reticulum
+
+Q2. Which of the following is a start codon?
+A) UAA
+B) UAG
+C) UGA
+D) AUG
+
+PART 2: CHEMISTRY (54 MCQs)
+Q69. The oxidation state of Oxygen in H2O2 is:
+A) -2
+B) -1
+C) +1
+D) 0
+
+PART 3: PHYSICS (54 MCQs)
+Q123. The escape velocity from Earth's surface is approximately:
+A) 11.2 km/s
+B) 9.8 m/s
+C) 300,000 km/s
+D) 7.9 km/s
+
+PART 4: ENGLISH (18 MCQs)
+Q177. Choose the correct spelling:
+A) Accommodate
+B) Accomodate
+C) Acommodate
+D) Acomodate
+
+PART 5: LOGICAL REASONING (6 MCQs)
+Q195. If A is brother of B, and B is sister of C. How is A related to C?
+A) Brother
+B) Sister
+C) Cousin
+D) Father
+
+--- END OF MOCK PAPER ---
