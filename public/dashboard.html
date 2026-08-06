@@ -1,0 +1,1794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRAZO SCHOLARLY — Academic & Admissions Platform</title>
+    <meta name="description" content="Complete academic platform for university search, entry test prep, past papers vault, document manager, and scholarship matchmaking.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/design-system.css?v=2">
+    <link rel="stylesheet" href="css/components.css?v=3">
+    <link rel="stylesheet" href="css/dashboard.css?v=13">
+    <link rel="stylesheet" href="css/auth.css?v=2">
+    <link rel="stylesheet" href="css/mobile-base.css?v=8">
+    
+    <style>
+        /* ---------- Theme Contrast & Legibility Overrides ---------- */
+        /* Ensure all select elements and options render with proper background and text color */
+        select option {
+            background-color: var(--bg-surface) !important;
+            color: var(--text-primary) !important;
+        }
+        select {
+            color: var(--text-primary) !important;
+        }
+        
+        /* Light Mode Translucent Backgrounds & Text Overrides */
+        body.light-mode [style*="rgba(255,255,255,0.01)"],
+        body.light-mode [style*="rgba(255,255,255,0.02)"],
+        body.light-mode [style*="rgba(255,255,255,0.03)"],
+        body.light-mode [style*="rgba(255,255,255,0.05)"],
+        body.light-mode [style*="rgba(255, 255, 255, 0.01)"],
+        body.light-mode [style*="rgba(255, 255, 255, 0.02)"],
+        body.light-mode [style*="rgba(255, 255, 255, 0.03)"],
+        body.light-mode [style*="rgba(255, 255, 255, 0.05)"] {
+            background: var(--bg-surface) !important;
+        }
+        body.light-mode [style*="rgba(255,255,255,0.08)"],
+        body.light-mode [style*="rgba(255,255,255,0.1)"],
+        body.light-mode [style*="rgba(255,255,255,0.15)"],
+        body.light-mode [style*="rgba(255, 255, 255, 0.08)"],
+        body.light-mode [style*="rgba(255, 255, 255, 0.1)"],
+        body.light-mode [style*="rgba(255, 255, 255, 0.15)"] {
+            background: var(--bg-elevated) !important;
+        }
+        body.light-mode [style*="border"][style*="rgba(255,255,255"] {
+            border-color: var(--border-color) !important;
+        }
+        body.light-mode [style*="rgba(0,0,0,0.3)"],
+        body.light-mode [style*="rgba(0,0,0,0.4)"],
+        body.light-mode [style*="rgba(0,0,0,0.5)"] {
+            background: var(--bg-elevated) !important;
+        }
+        body.light-mode [style*="rgba(255,107,107"] {
+            color: var(--status-danger) !important;
+        }
+
+        /* Fix hardcoded inline white text in Light Mode (except buttons/badges with solid dark backgrounds) */
+        body.light-mode [style*="color:#fff"]:not(.btn):not(.btn-primary):not(.btn-auth-primary):not(.nav-cta):not(.fab-btn):not(.billing-btn.active):not(.popular-ribbon):not(.plan-btn.gradient):not(.plan-btn.gradient-purple):not(.btn-gcal),
+        body.light-mode [style*="color: #fff"]:not(.btn):not(.btn-primary):not(.btn-auth-primary):not(.nav-cta):not(.fab-btn):not(.billing-btn.active):not(.popular-ribbon):not(.plan-btn.gradient):not(.plan-btn.gradient-purple):not(.btn-gcal),
+        body.light-mode [style*="color:#ffffff"]:not(.btn):not(.btn-primary):not(.btn-auth-primary):not(.nav-cta):not(.fab-btn):not(.billing-btn.active):not(.popular-ribbon):not(.plan-btn.gradient):not(.plan-btn.gradient-purple):not(.btn-gcal),
+        body.light-mode [style*="color: #ffffff"]:not(.btn):not(.btn-primary):not(.btn-auth-primary):not(.nav-cta):not(.fab-btn):not(.billing-btn.active):not(.popular-ribbon):not(.plan-btn.gradient):not(.plan-btn.gradient-purple):not(.btn-gcal),
+        body.light-mode [style*="color:white"]:not(.btn):not(.btn-primary):not(.btn-auth-primary):not(.nav-cta):not(.fab-btn):not(.billing-btn.active):not(.popular-ribbon):not(.plan-btn.gradient):not(.plan-btn.gradient-purple):not(.btn-gcal),
+        body.light-mode [style*="color: white"]:not(.btn):not(.btn-primary):not(.btn-auth-primary):not(.nav-cta):not(.fab-btn):not(.billing-btn.active):not(.popular-ribbon):not(.plan-btn.gradient):not(.plan-btn.gradient-purple):not(.btn-gcal) {
+            color: var(--text-primary) !important;
+        }
+
+        /* Dark Mode hardcoded dark text fixes */
+        body:not(.light-mode) [style*="color:#000"]:not(.btn-light),
+        body:not(.light-mode) [style*="color: #000"]:not(.btn-light),
+        body:not(.light-mode) [style*="color:#000000"]:not(.btn-light),
+        body:not(.light-mode) [style*="color: #000000"]:not(.btn-light),
+        body:not(.light-mode) [style*="color:black"]:not(.btn-light),
+        body:not(.light-mode) [style*="color: black"]:not(.btn-light),
+        body:not(.light-mode) [style*="color:#111"]:not(.btn-light),
+        body:not(.light-mode) [style*="color:#222"]:not(.btn-light),
+        body:not(.light-mode) [style*="color:#333"]:not(.btn-light),
+        body:not(.light-mode) [style*="color: #333"]:not(.btn-light) {
+            color: var(--text-primary) !important;
+        }
+
+        /* Smooth transition for all theme-aware elements */
+        .sidebar, .main-header, .main-content, .nav, .dash-card,
+        .sidebar-link, .view-section, .modal, .auth-modal,
+        input, textarea, select, button {
+            transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        /* ---------- Global Nav Search Bar Refinement ---------- */
+        .global-search-input:hover {
+            border-color: var(--accent-primary) !important;
+        }
+        .global-search-input:focus {
+            border-color: var(--accent-primary) !important;
+            box-shadow: 0 0 0 3px var(--accent-glow), var(--shadow-sm) !important;
+            background: var(--bg-surface) !important;
+        }
+        .global-search-wrapper:focus-within kbd {
+            opacity: 0;
+        }
+        .global-search-wrapper:focus-within svg {
+            color: var(--accent-primary) !important;
+        }
+
+        /* ---------- AI Search Container Focus ---------- */
+        #searchBarContainer:focus-within {
+            border-color: var(--accent-primary) !important;
+            box-shadow: 0 0 0 4px var(--accent-glow), var(--shadow-lg) !important;
+            transform: translateY(-1px);
+        }
+        #searchBarContainer:hover {
+            border-color: rgba(176, 38, 255, 0.3) !important;
+        }
+
+        /* ---------- Quick Access Card Hover ---------- */
+        .view-section [onclick^="switchView"] {
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid var(--border-color);
+        }
+        .view-section [onclick^="switchView"]:hover {
+            border-color: var(--accent-primary) !important;
+            background: var(--accent-subtle) !important;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px var(--accent-glow);
+        }
+        .view-section [onclick^="switchView"]:hover h4 {
+            color: var(--accent-primary) !important;
+        }
+        .view-section [onclick^="switchView"]:hover span:first-child {
+            opacity: 1 !important;
+            transform: scale(1.1);
+        }
+        .view-section [onclick^="switchView"] span:first-child {
+            transition: all 0.25s ease;
+        }
+
+        /* ---------- Btn Primary (used in search) ---------- */
+        .btn.btn-primary {
+            background: var(--accent-primary);
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .btn.btn-primary:hover {
+            background: var(--accent-primary-hover);
+            box-shadow: var(--shadow-glow);
+            transform: translateY(-1px);
+        }
+
+        /* ---------- Filter Select Dropdowns ---------- */
+        #searchBarContainer select {
+            background: var(--bg-elevated);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-sm);
+            padding: 5px 8px;
+            font-size: 0.82rem;
+            cursor: pointer;
+            transition: all 0.15s ease;
+        }
+        #searchBarContainer select:hover {
+            border-color: var(--accent-primary);
+        }
+        #searchBarContainer select:focus {
+            border-color: var(--accent-primary);
+            box-shadow: 0 0 0 2px var(--accent-glow);
+        }
+
+        /* ---------- Search Bar Animations ---------- */
+        /* Subtle pulse glow on the search icon to invite interaction */
+        #searchBarContainer svg {
+            animation: subtlePulse 3s ease-in-out infinite;
+        }
+        #searchBarContainer:focus-within svg {
+            animation: none;
+            color: var(--accent-primary) !important;
+            transition: color 0.2s ease;
+        }
+        @keyframes subtlePulse {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+
+        /* Smooth scale-up on focus */
+        #searchBarContainer:focus-within {
+            transform: scale(1.01) translateY(-2px);
+        }
+
+        /* Slide-up entrance for the search view */
+        #view-search.active {
+            animation: searchSlideIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        @keyframes searchSlideIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Filter row smooth reveal */
+        #searchBarContainer > div:last-child {
+            transition: opacity 0.2s ease, max-height 0.3s ease;
+        }
+    </style>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
+    <!-- KaTeX for LaTeX Math Rendering -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" onload="window.KaTeXLoaded = true;"></script>
+</head>
+<body>
+    <!-- Top Navigation Header -->
+    <nav class="nav scrolled" id="mainNav" style="z-index:var(--z-nav);">
+        <div class="nav-container" style="display:flex; justify-content:space-between; align-items:center; width:100%; padding:0 var(--space-lg); flex-wrap: wrap;">
+            <!-- Left: Brand Logo -->
+            <a href="index.html" class="nav-logo" style="display:flex; align-items:center; gap:8px;">
+                <span class="logo-icon" style="font-size:1.4rem;">🎓</span>
+                <span class="logo-text" style="font-family:var(--font-display); font-weight:800; font-size:1.2rem; color:var(--text-primary);">
+                    TRAZO <span class="logo-accent" style="color:var(--accent-primary);">SCHOLARLY</span>
+                </span>
+            </a>
+
+            <!-- Right: Theme Toggle & Login Widget -->
+            <div id="authNavContainer" style="display:flex; align-items:center; gap:8px;">
+                <button class="btn-theme-toggle" id="creditToggle" onclick="switchView('pricing')" style="background:var(--bg-elevated); border:1px solid var(--border-color); color:var(--text-primary); border-radius:var(--radius-full); padding:6px 12px; font-size:0.8rem; cursor:pointer; display:none; align-items:center; gap:6px;" title="Check your remaining credits">
+                    <span id="creditIcon">🪙</span> <span id="creditLabel">15 Credits</span>
+                </button>
+                <button class="btn-theme-toggle" id="themeToggle" onclick="toggleTheme()" style="background:var(--bg-elevated); border:1px solid var(--border-color); color:var(--text-primary); border-radius:var(--radius-full); padding:6px; font-size:1rem; cursor:pointer; display:flex; align-items:center; justify-content:center;">
+                    <span id="themeIcon">☀️</span>
+                </button>
+                <div id="navLoginBtn" data-auth-trigger="login" style="display:flex; align-items:center; justify-content:center; background:var(--bg-surface); border:1px solid var(--border-color); padding:6px; border-radius:var(--radius-full); cursor:pointer; width:34px; height:34px;" title="Login to your account">
+                    <span style="font-size:1.1rem; line-height:1;">👤</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="dashboard">
+        <!-- Sidebar Navigation (Exact Blueprint Architecture) -->
+        <aside class="sidebar" id="sidebar">
+            <nav class="sidebar-nav">
+                
+                <!-- Category 1: Daily Workspace -->
+                <div class="sidebar-section-title">WORKSPACE</div>
+                <a href="#" class="sidebar-link active" onclick="switchView('home'); return false;" data-view="home">
+                    <svg class="sidebar-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                    Dashboard
+                </a>
+                <a href="#" class="sidebar-link" onclick="switchView('search'); return false;" data-view="search">
+                    <svg class="sidebar-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                    AI Search
+                    <span class="sidebar-link-badge">AI</span>
+                </a>
+                <a href="#" class="sidebar-link" onclick="switchView('timeline'); return false;" data-view="timeline">
+                    <svg class="sidebar-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                    Timeline
+                </a>
+
+
+                <!-- Category 2: Core Platform Features -->
+                <div class="sidebar-section-title">FEATURES</div>
+                <a href="#" class="sidebar-link" onclick="switchView('test-prep'); return false;" data-view="test-prep">
+                    <svg class="sidebar-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    Test Prep
+                    <span class="sidebar-link-badge">Vault</span>
+                </a>
+                <a href="#" class="sidebar-link" onclick="switchView('sop'); return false;" data-view="sop">
+                    <svg class="sidebar-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+                    SOP Studio
+                </a>
+                <a href="#" class="sidebar-link" onclick="switchView('matchmaker'); return false;" data-view="matchmaker">
+                    <svg class="sidebar-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                    Matchmaker
+                </a>
+                <a href="#" class="sidebar-link" onclick="switchView('scholarships'); return false;" data-view="scholarships">
+                    <svg class="sidebar-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    Scholarships
+                </a>
+                <a href="#" class="sidebar-link" onclick="switchView('universities'); return false;" data-view="universities">
+                    <svg class="sidebar-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                    Universities
+                </a>
+                <a href="#" class="sidebar-link" onclick="switchView('programs'); return false;" data-view="programs">
+                    <svg class="sidebar-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                    Programs
+                </a>
+                <a href="#" class="sidebar-link" onclick="switchView('study-abroad'); return false;" data-view="study-abroad">
+                    <svg class="sidebar-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2s10 4.477 10 10z"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    Study Abroad
+                </a>
+                <a href="#" class="sidebar-link" onclick="switchView('consultants'); return false;" data-view="consultants">
+                    <svg class="sidebar-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
+                    Consultants
+                </a>
+                <a href="#" class="sidebar-link" onclick="switchView('articles'); return false;" data-view="articles">
+                    <svg class="sidebar-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 20H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h10l5 5v11a2 2 0 0 1-2 2z"/><polyline points="14 2 14 8 20 8"/></svg>
+                    Articles
+                </a>
+                <a href="#" class="sidebar-link" onclick="switchView('documents'); return false;" data-view="documents">
+                    <svg class="sidebar-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                    Documents
+                    <span class="sidebar-link-badge" style="background:var(--status-success-glow); color:var(--status-success);">New</span>
+                </a>
+
+                <!-- Category 3: Profile & Export Engine -->
+                <div class="sidebar-section-title">PROFILE</div>
+                <a href="#" class="sidebar-link" onclick="switchView('profile'); return false;" data-view="profile">
+                    <svg class="sidebar-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                    Quiz & CV
+                </a>
+                <a href="#" class="sidebar-link" id="adminSidebarLink" onclick="switchView('admin'); return false;" data-view="admin" style="display:none; color:var(--accent-primary); font-weight:600;">
+                    <svg class="sidebar-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><polyline points="17 11 19 13 23 9"/></svg>
+                    Users
+                </a>
+            </nav>
+        </aside>
+        <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+        <!-- Main Content Area -->
+        <div class="main-content">
+            <header class="main-header">
+                <div class="main-header-left" style="display:flex; align-items:center; gap:16px;">
+                    <button class="menu-toggle" id="menuToggle" aria-label="Open sidebar">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+                    </button>
+                    <div>
+                        <h1 class="main-title" id="pageTitle">Main Dashboard</h1>
+                        <p class="main-subtitle" id="pageSubtitle">Welcome back. What would you like to explore today?</p>
+                    </div>
+                </div>
+            </header>
+
+            <div class="main-body" style="padding:var(--space-xl);">
+
+                <!-- ===== 1. HOME DASHBOARD VIEW ===== -->
+                <div class="view-section active" id="view-home">
+                    <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:16px; margin-bottom:28px;">
+                        <div style="background:var(--bg-surface); padding:18px 20px; border-radius:var(--radius-lg); border:1px solid var(--border-color); border-left:3px solid var(--status-warning); transition:all 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='var(--shadow-md)'" onmouseout="this.style.transform='none'; this.style.boxShadow='none'">
+                            <div style="font-size:0.72rem; color:var(--text-tertiary); margin-bottom:6px; text-transform:uppercase; letter-spacing:0.06em; font-weight:600; font-family:var(--font-display);">Upcoming Entry Test</div>
+                            <div style="font-size:1.1rem; font-weight:700; color:var(--text-primary); font-family:var(--font-display);">NET Series-1</div>
+                            <div style="font-size:0.78rem; color:var(--status-warning); margin-top:6px; font-weight:500;">⏳ 24 Days Remaining</div>
+                        </div>
+                        <div style="background:var(--bg-surface); padding:18px 20px; border-radius:var(--radius-lg); border:1px solid var(--border-color); border-left:3px solid var(--status-success); transition:all 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='var(--shadow-md)'" onmouseout="this.style.transform='none'; this.style.boxShadow='none'">
+                            <div style="font-size:0.72rem; color:var(--text-tertiary); margin-bottom:6px; text-transform:uppercase; letter-spacing:0.06em; font-weight:600; font-family:var(--font-display);">Document Readiness</div>
+                            <div style="font-size:1.1rem; font-weight:700; color:var(--text-primary); font-family:var(--font-display);">75% Completed</div>
+                            <div style="font-size:0.78rem; color:var(--text-tertiary); margin-top:6px;">IBCC Attestation Pending</div>
+                        </div>
+                        <div style="background:var(--bg-surface); padding:18px 20px; border-radius:var(--radius-lg); border:1px solid var(--border-color); border-left:3px solid var(--accent-primary); transition:all 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='var(--shadow-md)'" onmouseout="this.style.transform='none'; this.style.boxShadow='none'">
+                            <div style="font-size:0.72rem; color:var(--text-tertiary); margin-bottom:6px; text-transform:uppercase; letter-spacing:0.06em; font-weight:600; font-family:var(--font-display);">Saved Universities</div>
+                            <div style="font-size:1.1rem; font-weight:700; color:var(--text-primary); font-family:var(--font-display);">4 Bookmarked</div>
+                            <div style="font-size:0.78rem; color:var(--text-tertiary); margin-top:6px;">NUST, FAST, COMSATS, UET</div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Shortcuts Grid -->
+                    <h3 style="font-family:var(--font-display); margin-bottom:14px; font-size:0.85rem; color:var(--text-tertiary); text-transform:uppercase; letter-spacing:0.1em; font-weight:700;">Quick Access</h3>
+                    <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap:14px;">
+                        
+                        <div onclick="switchView('test-prep')" style="background:var(--bg-surface); border:1px solid var(--border-color); border-radius:var(--radius-md); padding:12px 16px; cursor:pointer; display:flex; gap:10px; align-items:center;">
+                            <span style="font-size:1.2rem; opacity:0.8;">🎯</span>
+                            <div>
+                                <h4 style="color:var(--text-primary); font-size:0.9rem; font-weight:600;">Test Prep & Vault</h4>
+                                <p style="font-size:0.75rem; color:var(--text-secondary); margin-top:2px;">NET, MDCAT, FAST papers</p>
+                            </div>
+                        </div>
+
+                        <div onclick="switchView('sop')" style="background:var(--bg-surface); border:1px solid var(--border-color); border-radius:var(--radius-md); padding:12px 16px; cursor:pointer; display:flex; gap:10px; align-items:center;">
+                            <span style="font-size:1.2rem; opacity:0.8;">📝</span>
+                            <div>
+                                <h4 style="color:var(--text-primary); font-size:0.9rem; font-weight:600;">SOP Studio</h4>
+                                <p style="font-size:0.75rem; color:var(--text-secondary); margin-top:2px;">Refine statements of purpose</p>
+                            </div>
+                        </div>
+
+                        <div onclick="switchView('matchmaker')" style="background:var(--bg-surface); border:1px solid var(--border-color); border-radius:var(--radius-md); padding:12px 16px; cursor:pointer; display:flex; gap:10px; align-items:center;">
+                            <span style="font-size:1.2rem; opacity:0.8;">🧩</span>
+                            <div>
+                                <h4 style="color:var(--text-primary); font-size:0.9rem; font-weight:600;">Profile Matchmaker</h4>
+                                <p style="font-size:0.75rem; color:var(--text-secondary); margin-top:2px;">Check admission eligibility</p>
+                            </div>
+                        </div>
+
+                        <div onclick="switchView('scholarships')" style="background:var(--bg-surface); border:1px solid var(--border-color); border-radius:var(--radius-md); padding:12px 16px; cursor:pointer; display:flex; gap:10px; align-items:center;">
+                            <span style="font-size:1.2rem; opacity:0.8;">🏆</span>
+                            <div>
+                                <h4 style="color:var(--text-primary); font-size:0.9rem; font-weight:600;">Scholarships</h4>
+                                <p style="font-size:0.75rem; color:var(--text-secondary); margin-top:2px;">Find financial aid options</p>
+                            </div>
+                        </div>
+
+                        <div onclick="switchView('universities')" style="background:var(--bg-surface); border:1px solid var(--border-color); border-radius:var(--radius-md); padding:12px 16px; cursor:pointer; display:flex; gap:10px; align-items:center;">
+                            <span style="font-size:1.2rem; opacity:0.8;">🏛️</span>
+                            <div>
+                                <h4 style="color:var(--text-primary); font-size:0.9rem; font-weight:600;">Universities</h4>
+                                <p style="font-size:0.75rem; color:var(--text-secondary); margin-top:2px;">Search and compare campuses</p>
+                            </div>
+                        </div>
+
+                        <div onclick="switchView('programs')" style="background:var(--bg-surface); border:1px solid var(--border-color); border-radius:var(--radius-md); padding:12px 16px; cursor:pointer; display:flex; gap:10px; align-items:center;">
+                            <span style="font-size:1.2rem; opacity:0.8;">📘</span>
+                            <div>
+                                <h4 style="color:var(--text-primary); font-size:0.9rem; font-weight:600;">Programs</h4>
+                                <p style="font-size:0.75rem; color:var(--text-secondary); margin-top:2px;">Explore degree options</p>
+                            </div>
+                        </div>
+
+                        <div onclick="switchView('study-abroad')" style="background:var(--bg-surface); border:1px solid var(--border-color); border-radius:var(--radius-md); padding:12px 16px; cursor:pointer; display:flex; gap:10px; align-items:center;">
+                            <span style="font-size:1.2rem; opacity:0.8;">✈️</span>
+                            <div>
+                                <h4 style="color:var(--text-primary); font-size:0.9rem; font-weight:600;">Study Abroad</h4>
+                                <p style="font-size:0.75rem; color:var(--text-secondary); margin-top:2px;">Global opportunities</p>
+                            </div>
+                        </div>
+
+                        <div onclick="switchView('consultants')" style="background:var(--bg-surface); border:1px solid var(--border-color); border-radius:var(--radius-md); padding:12px 16px; cursor:pointer; display:flex; gap:10px; align-items:center;">
+                            <span style="font-size:1.2rem; opacity:0.8;">🤝</span>
+                            <div>
+                                <h4 style="color:var(--text-primary); font-size:0.9rem; font-weight:600;">Consultants</h4>
+                                <p style="font-size:0.75rem; color:var(--text-secondary); margin-top:2px;">Get professional guidance</p>
+                            </div>
+                        </div>
+
+                        <div onclick="switchView('articles')" style="background:var(--bg-surface); border:1px solid var(--border-color); border-radius:var(--radius-md); padding:12px 16px; cursor:pointer; display:flex; gap:10px; align-items:center;">
+                            <span style="font-size:1.2rem; opacity:0.8;">📰</span>
+                            <div>
+                                <h4 style="color:var(--text-primary); font-size:0.9rem; font-weight:600;">Articles</h4>
+                                <p style="font-size:0.75rem; color:var(--text-secondary); margin-top:2px;">Read academic insights</p>
+                            </div>
+                        </div>
+
+                        <div onclick="switchView('documents')" style="background:var(--bg-surface); border:1px solid var(--border-color); border-radius:var(--radius-md); padding:12px 16px; cursor:pointer; display:flex; gap:10px; align-items:center;">
+                            <span style="font-size:1.2rem; opacity:0.8;">📂</span>
+                            <div>
+                                <h4 style="color:var(--text-primary); font-size:0.9rem; font-weight:600;">Documents Locker</h4>
+                                <p style="font-size:0.75rem; color:var(--text-secondary); margin-top:2px;">Attestation & FRC guides</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+                <!-- ===== 2. AI SEARCH VIEW (Search 02) ===== -->
+                <div class="view-section" id="view-search">
+                    <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; min-height:60vh; padding:20px;">
+                        
+                        <h2 style="font-family:var(--font-display); font-size:2.4rem; font-weight:800; margin-bottom:8px; color:var(--text-primary); text-align:center;">
+                            <span style="font-size:2.8rem; vertical-align:middle; margin-right:8px;">🎓</span>Scholar<span style="color:var(--accent-primary);">Search</span> <span style="font-size:0.6em; font-weight:500; color:var(--text-tertiary); vertical-align:middle;">v2</span>
+                        </h2>
+                        <p style="font-size:0.95rem; color:var(--text-secondary); margin-bottom:32px; text-align:center;">Auto-detects your intent. Ask questions or search for universities, scholarships, and entry tests.</p>
+                        
+                        <!-- Unified Search Bar (Clean, filter-collapsible) -->
+                        <div id="searchBarContainer" style="width:100%; max-width:720px; background:var(--bg-surface); border:1.5px solid var(--border-color); border-radius:28px; padding:6px 8px 6px 20px; display:flex; align-items:center; gap:10px; box-shadow:var(--shadow-md); transition:all 0.3s cubic-bezier(0.4, 0, 0.2, 1);">
+                            
+                            <!-- Search Icon -->
+                            <svg style="width:20px; height:20px; color:var(--text-tertiary); flex-shrink:0;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                            
+                            <!-- Input -->
+                            <input type="text" id="universalSearchInput" class="form-input" placeholder="Ask anything — NUST admissions, MDCAT syllabus, scholarships..." style="flex:1; border:none; background:transparent; font-size:1rem; color:var(--text-primary); outline:none; padding:10px 0; box-shadow:none; font-weight:400; min-width:0;">
+                            
+                            <!-- Filter Toggle Pill -->
+                            <button id="filterToggleBtn" onclick="toggleSearchFilters()" title="Search filters" style="display:flex; align-items:center; gap:5px; background:var(--bg-elevated); border:1px solid var(--border-color); color:var(--text-secondary); border-radius:var(--radius-full); padding:6px 12px; font-size:0.78rem; font-weight:600; cursor:pointer; white-space:nowrap; flex-shrink:0; transition:all 0.2s ease;">
+                                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="4" y1="6" x2="20" y2="6"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="11" y1="18" x2="13" y2="18"/></svg>
+                                Filters
+                            </button>
+
+                            <!-- Search Button -->
+                            <button class="btn btn-primary" id="searchBtn" onclick="executeSearch()" style="border-radius:20px; padding:10px 22px; font-weight:600; font-size:0.88rem; flex-shrink:0; display:flex; flex-direction:column; align-items:center; gap:1px; line-height:1;">Search <span style="font-size:0.6rem; opacity:0.75; font-weight:400; letter-spacing:0.02em;">1 credit</span></button>
+                        </div>
+
+                        <!-- Collapsible Filters Panel -->
+                        <div id="searchFiltersPanel" style="width:100%; max-width:720px; max-height:0; overflow:hidden; transition:max-height 0.3s ease, opacity 0.2s ease; opacity:0;">
+                            <div style="background:var(--bg-surface); border:1px solid var(--border-subtle); border-radius:var(--radius-lg); padding:12px 20px; margin-top:8px; display:flex; align-items:center; gap:20px; flex-wrap:wrap;">
+                                
+                                <div style="display:flex; align-items:center; gap:6px;">
+                                    <span style="font-size:0.78rem; color:var(--text-tertiary); font-weight:500;">Mode:</span>
+                                    <select id="universalModeSelect" onchange="toggleUnifiedCategory()" style="background:var(--bg-elevated); border:1px solid var(--border-color); border-radius:var(--radius-sm); font-size:0.82rem; color:var(--text-primary); cursor:pointer; outline:none; padding:4px 8px; font-weight:500;">
+                                        <option value="auto">🤖 Auto-detect</option>
+                                        <option value="simple">💬 Conversational</option>
+                                        <option value="program">📊 Structured Data</option>
+                                    </select>
+                                </div>
+
+                                <div style="width:1px; height:20px; background:var(--border-subtle);"></div>
+
+                                <div style="display:flex; align-items:center; gap:6px;">
+                                    <span style="font-size:0.78rem; color:var(--text-tertiary); font-weight:500;">Scope:</span>
+                                    <select id="universalScopeSelect" style="background:var(--bg-elevated); border:1px solid var(--border-color); border-radius:var(--radius-sm); font-size:0.82rem; color:var(--text-primary); cursor:pointer; outline:none; padding:4px 8px; font-weight:500;">
+                                        <option value="auto">🌐 Auto</option>
+                                        <option value="national">🇵🇰 National</option>
+                                        <option value="international">🌍 International</option>
+                                    </select>
+                                </div>
+
+                                <div id="universalCategoryDivider" style="width:1px; height:20px; background:var(--border-subtle); display:none;"></div>
+
+                                <div id="universalCategoryWrapper" style="display:none; align-items:center; gap:6px;">
+                                    <span style="font-size:0.78rem; color:var(--text-tertiary); font-weight:500;">Category:</span>
+                                    <select id="universalCategorySelect" style="background:var(--bg-elevated); border:1px solid var(--border-color); border-radius:var(--radius-sm); font-size:0.82rem; color:var(--text-primary); cursor:pointer; outline:none; padding:4px 8px; font-weight:500;">
+                                        <option value="">Auto-detect</option>
+                                        <option value="university">University</option>
+                                        <option value="scholarship">Scholarship</option>
+                                        <option value="test">Entry Test</option>
+                                        <option value="program">Degree Program</option>
+                                    </select>
+                                </div>
+
+                                <span style="margin-left:auto; font-size:0.72rem; color:var(--text-tertiary); font-style:italic;">Filters are optional — AI auto-detects intent</span>
+                            </div>
+                        </div>
+
+                        <!-- Filter toggle JS (inline, no impact on other scripts) -->
+                        <script>
+                        var _sfOpen = false;
+                        function toggleSearchFilters() {
+                            _sfOpen = !_sfOpen;
+                            var panel = document.getElementById('searchFiltersPanel');
+                            var btn = document.getElementById('filterToggleBtn');
+                            if (_sfOpen) {
+                                panel.style.maxHeight = '120px';
+                                panel.style.opacity = '1';
+                                btn.style.background = 'var(--accent-subtle)';
+                                btn.style.borderColor = 'var(--accent-primary)';
+                                btn.style.color = 'var(--accent-primary)';
+                            } else {
+                                panel.style.maxHeight = '0';
+                                panel.style.opacity = '0';
+                                btn.style.background = 'var(--bg-elevated)';
+                                btn.style.borderColor = 'var(--border-color)';
+                                btn.style.color = 'var(--text-secondary)';
+                            }
+                        }
+                        </script>
+
+                        <!-- Search Progress Indicator -->
+                        <div id="searchProgress" style="display:none; margin-top:32px; width:100%; max-width:680px;">
+                            <div style="background:var(--bg-surface); border:1px solid var(--border-color); border-radius:16px; padding:24px; box-shadow:var(--shadow-sm);">
+                                <div style="display:flex; align-items:center; gap:12px; margin-bottom:16px;">
+                                    <div id="progressSpinner" style="width:24px; height:24px; border:3px solid var(--border-color); border-top-color:var(--accent-primary); border-radius:50%; animation:spin 0.8s linear infinite;"></div>
+                                    <span id="progressLabel" style="font-size:0.95rem; font-weight:500; color:var(--text-primary);">Initializing search...</span>
+                                </div>
+                                <div id="progressSteps" style="display:flex; flex-direction:column; gap:8px;">
+                                    <div class="progress-step" id="step-intent" style="display:flex; align-items:center; gap:8px; font-size:0.85rem; color:var(--text-tertiary);">
+                                        <span class="step-icon">⬜</span> Analyzing query intent...
+                                    </div>
+                                    <div class="progress-step" id="step-db" style="display:flex; align-items:center; gap:8px; font-size:0.85rem; color:var(--text-tertiary);">
+                                        <span class="step-icon">⬜</span> Checking local database...
+                                    </div>
+                                    <div class="progress-step" id="step-scrape" style="display:flex; align-items:center; gap:8px; font-size:0.85rem; color:var(--text-tertiary);">
+                                        <span class="step-icon">⬜</span> Scraping trusted websites...
+                                    </div>
+                                    <div class="progress-step" id="step-ai" style="display:flex; align-items:center; gap:8px; font-size:0.85rem; color:var(--text-tertiary);">
+                                        <span class="step-icon">⬜</span> Processing with AI engine...
+                                    </div>
+                                    <div class="progress-step" id="step-save" style="display:flex; align-items:center; gap:8px; font-size:0.85rem; color:var(--text-tertiary);">
+                                        <span class="step-icon">⬜</span> Saving to database...
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Search Results -->
+                        <div id="aiSearchResults" style="margin-top:40px; width:100%; max-width:800px; text-align:left; line-height:1.7; font-size:0.9rem; color:var(--text-primary);"></div>
+                    </div>
+                </div>
+
+                <style>
+                    @keyframes spin { to { transform: rotate(360deg); } }
+                    .source-badge {
+                        display:inline-flex; align-items:center; gap:4px;
+                        padding:3px 10px; border-radius:var(--radius-full);
+                        font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.5px;
+                    }
+                    .source-badge.local { background:rgba(46,204,113,0.15); color:var(--status-success); }
+                    .source-badge.cache { background:rgba(52,152,219,0.15); color:var(--status-info); }
+                    .source-badge.live  { background:rgba(155,89,182,0.15); color:var(--accent-primary); }
+                    .source-badge.ai    { background:rgba(241,196,15,0.15); color:var(--status-warning); }
+
+                    /* Markdown rendering styles for unstructured responses */
+                    .ai-markdown-content h2 { font-size:1.25rem; font-weight:700; color:var(--accent-primary); margin:20px 0 8px; font-family:var(--font-display); }
+                    .ai-markdown-content h3 { font-size:1.1rem; font-weight:600; color:var(--text-primary); margin:16px 0 6px; }
+                    .ai-markdown-content h4 { font-size:1rem; font-weight:600; color:var(--text-primary); margin:12px 0 4px; }
+                    .ai-markdown-content p { margin:8px 0; line-height:1.7; }
+                    .ai-markdown-content ul, .ai-markdown-content ol { padding-left:20px; margin:8px 0; }
+                    .ai-markdown-content li { margin-bottom:4px; line-height:1.6; }
+                    .ai-markdown-content strong { color:var(--text-primary); }
+                    .ai-markdown-content table { width:100%; border-collapse:collapse; margin:12px 0; font-size:0.85rem; }
+                    .ai-markdown-content th, .ai-markdown-content td { border:1px solid var(--border-color); padding:8px 12px; text-align:left; }
+                    .ai-markdown-content th { background:var(--bg-elevated); font-weight:600; color:var(--text-primary); }
+                    .ai-markdown-content code { background:var(--bg-elevated); padding:2px 6px; border-radius:4px; font-size:0.85em; }
+                    .ai-markdown-content hr { border:none; border-top:1px solid var(--border-color); margin:16px 0; }
+                </style>
+
+                <script>
+                    function toggleUnifiedCategory() {
+                        const mode = document.getElementById('universalModeSelect').value;
+                        const catWrap = document.getElementById('universalCategoryWrapper');
+                        const catDiv = document.getElementById('universalCategoryDivider');
+                        const input = document.getElementById('universalSearchInput');
+                        
+                        if (mode === 'program') {
+                            catWrap.style.display = 'flex';
+                            catDiv.style.display = 'block';
+                            input.placeholder = "Enter exact University, Scholarship, Entry Test, or Program name...";
+                        } else {
+                            catWrap.style.display = 'none';
+                            catDiv.style.display = 'none';
+                            if (mode === 'simple') {
+                                input.placeholder = "Ask any academic question in natural language...";
+                            } else {
+                                input.placeholder = "Ask anything... NUST admissions, MDCAT syllabus, best scholarships...";
+                            }
+                        }
+                    }
+
+                    // Progress indicator helpers
+                    function showProgress() {
+                        document.getElementById('searchProgress').style.display = 'block';
+                        document.getElementById('aiSearchResults').innerHTML = '';
+                        // Reset all steps
+                        ['step-intent','step-db','step-scrape','step-ai','step-save'].forEach(id => {
+                            const el = document.getElementById(id);
+                            el.querySelector('.step-icon').textContent = '⬜';
+                            el.style.color = 'var(--text-tertiary)';
+                        });
+                    }
+
+                    function updateStep(stepId, status) {
+                        const el = document.getElementById(stepId);
+                        if (!el) return;
+                        const icon = el.querySelector('.step-icon');
+                        if (status === 'active') {
+                            icon.textContent = '🔄';
+                            el.style.color = 'var(--accent-primary)';
+                        } else if (status === 'done') {
+                            icon.textContent = '✅';
+                            el.style.color = 'var(--text-secondary)';
+                        } else if (status === 'skip') {
+                            icon.textContent = '⏭️';
+                            el.style.color = 'var(--text-tertiary)';
+                        }
+                    }
+
+                    function setProgressLabel(text) {
+                        document.getElementById('progressLabel').textContent = text;
+                    }
+
+                    function hideProgress() {
+                        document.getElementById('searchProgress').style.display = 'none';
+                    }
+
+                    // Simple markdown to HTML converter for unstructured responses
+                    function renderMarkdown(text) {
+                        if (!text) return '';
+                        let html = text
+                            // Headers
+                            .replace(/^#### (.+)$/gm, '<h4>$1</h4>')
+                            .replace(/^### (.+)$/gm, '<h3>$1</h3>')
+                            .replace(/^## (.+)$/gm, '<h2>$1</h2>')
+                            .replace(/^# (.+)$/gm, '<h2>$1</h2>')
+                            // Bold and italic
+                            .replace(/\*\*\*(.+?)\*\*\*/g, '<strong><em>$1</em></strong>')
+                            .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+                            .replace(/\*(.+?)\*/g, '<em>$1</em>')
+                            // Inline code
+                            .replace(/`([^`]+)`/g, '<code>$1</code>')
+                            // Horizontal rule
+                            .replace(/^---$/gm, '<hr>')
+                            // Unordered lists
+                            .replace(/^[\-\*] (.+)$/gm, '<li>$1</li>')
+                            // Numbered lists
+                            .replace(/^\d+\. (.+)$/gm, '<li>$1</li>')
+                            // Wrap consecutive <li> in <ul>
+                            .replace(/((?:<li>.*<\/li>\n?)+)/g, '<ul>$1</ul>')
+                            // Paragraphs (lines that aren't already wrapped)
+                            .replace(/^(?!<[hulo]|<li|<hr|<str|<em|<cod)(.+)$/gm, '<p>$1</p>')
+                            // Clean up double newlines
+                            .replace(/\n\n+/g, '\n');
+                        return html;
+                    }
+
+                    // Get source badge HTML
+                    function getSourceBadge(source) {
+                        const badges = {
+                            'local-dataset': '<span class="source-badge local">⚡ Local DB</span>',
+                            'cache': '<span class="source-badge cache">💾 Cached</span>',
+                            'api': '<span class="source-badge live">🌐 Live Search</span>',
+                            'ai-knowledge': '<span class="source-badge ai">🧠 AI Knowledge</span>',
+                        };
+                        return badges[source] || badges['api'];
+                    }
+
+                    // Enter key handler
+                    document.addEventListener('DOMContentLoaded', () => {
+                        const input = document.getElementById('universalSearchInput');
+                        if (input) {
+                            input.addEventListener('keydown', (e) => {
+                                if (e.key === 'Enter') executeSearch();
+                            });
+                        }
+                    });
+
+                    async function executeSearch() {
+                        if (window.ScholarAuth && !window.ScholarAuth.requireAuth('Search Engine', false)) {
+                            return;
+                        }
+                        
+                        const resultsDiv = document.getElementById('aiSearchResults');
+                        const queryVal = document.getElementById('universalSearchInput').value;
+                        const modeOverride = document.getElementById('universalModeSelect').value;
+                        const scopeOverride = document.getElementById('universalScopeSelect').value;
+                        const categoryOverride = document.getElementById('universalCategorySelect').value;
+                        
+                        if (!queryVal.trim()) {
+                            if (window.showToast) window.showToast('Please enter a search query', 'warning');
+                            return;
+                        }
+
+                        // INSTANT LOCAL HUB INTERCEPTION:
+                        // Search across local modules and pick the highest confidence match.
+                        // If categoryOverride is set, ONLY search that specific category to prevent glitches.
+                        const searchUni = !categoryOverride || categoryOverride === 'university';
+                        const searchProg = !categoryOverride || categoryOverride === 'program';
+                        const searchTest = !categoryOverride || categoryOverride === 'test';
+                        const searchSch = !categoryOverride || categoryOverride === 'scholarship';
+
+                        let bestMatch = null;
+                        let bestScore = 0;
+                        let bestCategory = '';
+
+                        if (searchUni && window.UniversitiesModule && window.UniversitiesModule.searchByQuery) {
+                            const res = window.UniversitiesModule.searchByQuery(queryVal);
+                            if (res && res.score > bestScore) {
+                                bestScore = res.score;
+                                bestMatch = res.item;
+                                bestCategory = 'university';
+                            }
+                        }
+                        if (searchProg && window.ProgramsModule && window.ProgramsModule.searchByQuery) {
+                            const res = window.ProgramsModule.searchByQuery(queryVal);
+                            if (res && res.score > bestScore) {
+                                bestScore = res.score;
+                                bestMatch = res.item;
+                                bestCategory = 'program';
+                            }
+                        }
+                        if (searchTest && window.TestPrepModule && window.TestPrepModule.searchByQuery) {
+                            const res = window.TestPrepModule.searchByQuery(queryVal);
+                            if (res && res.score > bestScore) {
+                                bestScore = res.score;
+                                bestMatch = res.item;
+                                bestCategory = 'test';
+                            }
+                        }
+                        if (searchSch && window.ScholarshipsModule && window.ScholarshipsModule.searchByQuery) {
+                            const res = window.ScholarshipsModule.searchByQuery(queryVal);
+                            if (res && res.score > bestScore) {
+                                bestScore = res.score;
+                                bestMatch = res.item;
+                                bestCategory = 'scholarship';
+                            }
+                        }
+
+                        // Intercept only on high-confidence matches (score >= 80)
+                        if (bestMatch && bestScore >= 80) {
+                            hideProgress();
+                            if (window.showToast) window.showToast(`Found in local ${bestCategory} database!`, 'success');
+                            if (bestCategory === 'university') {
+                                const html = window.UniversitiesModule.getRenderDetailView(bestMatch);
+                                const saveBtnHTML = `
+                                    <div style="margin-top:20px; padding-top:16px; border-top:1px solid var(--border-color); display:flex; justify-content:space-between; align-items:center;">
+                                        <span class="source-badge local">⚡ Local DB - Instant Result</span>
+                                        <button class="btn" style="background:var(--accent-primary); color:#fff; font-size:0.85rem; padding:8px 16px; border-radius:6px; cursor:pointer;" onclick='saveSearchResult("${(bestMatch.name || 'Search Result').replace(/'/g, "\\'")}","university",${JSON.stringify(bestMatch).replace(/'/g, "&apos;")})'>
+                                            📌 Save to Timeline
+                                        </button>
+                                    </div>
+                                `;
+                                resultsDiv.innerHTML = html + saveBtnHTML;
+                                return;
+                            } else if (bestCategory === 'program') {
+                                switchView('programs');
+                                window.ProgramsModule.openDetail(bestMatch.id);
+                                return;
+                            } else if (bestCategory === 'test') {
+                                switchView('test-prep');
+                                window.TestPrepModule.openTestModal(bestMatch.id);
+                                return;
+                            } else if (bestCategory === 'scholarship') {
+                                switchView('scholarships');
+                                window.ScholarshipsModule.openModal(bestMatch.id);
+                                return;
+                            }
+                        }
+
+                        // Show progress indicator
+                        showProgress();
+                        setProgressLabel('Analyzing your query...');
+                        updateStep('step-intent', 'active');
+
+                        try {
+                            // Build API payload
+                            const payload = { query: queryVal };
+                            if (modeOverride !== 'auto') payload.mode = modeOverride;
+                            if (scopeOverride !== 'auto') payload.scope = scopeOverride;
+                            if (categoryOverride) payload.category = categoryOverride;
+
+                            // Simulate progress steps (the API does all steps server-side)
+                            setTimeout(() => { 
+                                updateStep('step-intent', 'done'); 
+                                updateStep('step-db', 'active'); 
+                                setProgressLabel('Checking local database...'); 
+                            }, 400);
+                            setTimeout(() => { 
+                                updateStep('step-db', 'done'); 
+                                updateStep('step-scrape', 'active'); 
+                                setProgressLabel('Cascading across trusted websites...'); 
+                            }, 1200);
+                            setTimeout(() => { 
+                                updateStep('step-scrape', 'done'); 
+                                updateStep('step-ai', 'active'); 
+                                setProgressLabel('AI is processing comprehensive data...'); 
+                            }, 3500);
+
+                            const headers = (window.ScholarAuth && typeof window.ScholarAuth.getAuthHeaders === 'function') 
+                                ? await window.ScholarAuth.getAuthHeaders() 
+                                : { 'Content-Type': 'application/json' };
+
+                            const response = await fetch('/api/search', {
+                                method: 'POST',
+                                headers: headers,
+                                body: JSON.stringify(payload)
+                            });
+                            const data = await response.json();
+                            
+                            // Complete progress
+                            updateStep('step-ai', 'done');
+                            updateStep('step-save', 'done');
+                            setProgressLabel('Done!');
+                            
+                            setTimeout(() => hideProgress(), 600);
+
+                            if (data.error) throw new Error(data.error);
+
+                            // Deduct credit locally for instant UI update
+                            if (window.ScholarAuth) window.ScholarAuth.deductLocalCredits(1);
+
+                            // ─── Render Results ───────────────────────────
+
+                            const sourceBadge = getSourceBadge(data.source);
+                            const scrapedInfo = data.scrapedDomains && data.scrapedDomains.length > 0 
+                                ? `<div style="margin-top:8px; font-size:0.75rem; color:var(--text-tertiary);">Sources: ${data.scrapedDomains.join(', ')}</div>` 
+                                : '';
+
+                            // UNSTRUCTURED (Conversational) Response
+                            if (data.mode === 'unstructured') {
+                                const saveBtnHTML = `
+                                    <div style="margin-top:20px; padding-top:16px; border-top:1px solid var(--border-color); display:flex; justify-content:flex-end; gap:12px;">
+                                        <button class="btn btn-outline" style="font-size:0.85rem; padding:8px 16px; border-radius:6px; cursor:pointer;" onclick="navigator.clipboard.writeText(\`${data.answer.replace(/`/g, "\\`").replace(/\$/g, "\\$")}\`); if(window.showToast) window.showToast('Copied response to clipboard!', 'success');">
+                                            📋 Copy Response
+                                        </button>
+                                        <button class="btn" style="background:var(--accent-primary); color:#fff; font-size:0.85rem; padding:8px 16px; border-radius:6px; cursor:pointer;" onclick='saveSearchResult("${queryVal.replace(/'/g, "\\'")}", "unstructured", ${JSON.stringify({ answer: data.answer }).replace(/'/g, "&apos;")})'>
+                                            📌 Save to Timeline
+                                        </button>
+                                    </div>
+                                `;
+                                resultsDiv.innerHTML = `
+                                    <div style="padding:24px; background:rgba(255,255,255,0.05); border-radius:16px; border:1px solid var(--border-color);">
+                                        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px;">
+                                            <h4 style="color:var(--accent-primary); margin:0; font-family:var(--font-display); font-size:1.1rem;">
+                                                💡 AI Detailed Guide
+                                            </h4>
+                                            ${sourceBadge}
+                                        </div>
+                                        <div class="ai-markdown-content" style="line-height:1.7;">${renderMarkdown(data.answer)}</div>
+                                        ${scrapedInfo}
+                                        ${saveBtnHTML}
+                                    </div>
+                                `;
+                                return;
+                            }
+
+                            // STRUCTURED Response
+                            const r = data.result || {};
+                            let cat = (data.category || 'general').toLowerCase();
+                            
+                            // Dynamically resolve category if it's general/missing to prevent empty template bugs
+                            if (cat === 'general' || !cat) {
+                                if (r.qsRanking || r.established || r.sector || r.city || r.campusResources) {
+                                    cat = 'university';
+                                } else if (r.provider || r.coverage || r.benefits) {
+                                    cat = 'scholarship';
+                                } else if (r.syllabus || r.timing || r.tips) {
+                                    cat = 'test';
+                                } else if (r.program_name || r.average_starting_salary || r.career_prospects) {
+                                    cat = 'program';
+                                }
+                            }
+                            let html = '';
+
+                            if (data.parseError) {
+                                const saveBtnHTML = `
+                                    <div style="margin-top:20px; padding-top:16px; border-top:1px solid var(--border-color); display:flex; justify-content:flex-end; gap:12px;">
+                                        <button class="btn btn-outline" style="font-size:0.85rem; padding:8px 16px; border-radius:6px; cursor:pointer;" onclick="navigator.clipboard.writeText(\`${data.rawResponse.replace(/`/g, "\\`").replace(/\$/g, "\\$")}\`); if(window.showToast) window.showToast('Copied response to clipboard!', 'success');">
+                                            📋 Copy Response
+                                        </button>
+                                        <button class="btn" style="background:var(--accent-primary); color:#fff; font-size:0.85rem; padding:8px 16px; border-radius:6px; cursor:pointer;" onclick='saveSearchResult("${queryVal.replace(/'/g, "\\'")}", "${cat}", ${JSON.stringify({ rawResponse: data.rawResponse }).replace(/'/g, "&apos;")})'>
+                                            📌 Save to Timeline
+                                        </button>
+                                    </div>
+                                `;
+                                resultsDiv.innerHTML = `
+                                    <div style="padding:24px; background:rgba(255,255,255,0.05); border-radius:16px; border:1px solid var(--border-color);">
+                                        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px;">
+                                            <h4 style="color:var(--status-warning); margin:0; font-family:var(--font-display); font-size:1.1rem;">
+                                                ⚠️ AI Response (Auto-Formatted)
+                                            </h4>
+                                            ${sourceBadge}
+                                        </div>
+                                        <div class="ai-markdown-content" style="line-height:1.7;">${renderMarkdown(data.rawResponse)}</div>
+                                        ${scrapedInfo}
+                                        ${saveBtnHTML}
+                                    </div>
+                                `;
+                                return;
+                            }
+
+                            if (cat === 'university') {
+                                if (window.UniversitiesModule && window.UniversitiesModule.addDynamically) {
+                                    window.UniversitiesModule.addDynamically(r);
+                                }
+                                if (window.UniversitiesModule && window.UniversitiesModule.getUniById && window.UniversitiesModule.getUniById(r.id)) {
+                                    const uniData = window.UniversitiesModule.getUniById(r.id);
+                                    html = window.UniversitiesModule.getRenderDetailView(uniData);
+                                } else {
+                                    html = `
+                                    <div style="padding:24px; background:rgba(255,255,255,0.05); border-radius:16px; border:1px solid var(--border-color); color:var(--text-primary);">
+                                        <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:16px;">
+                                            <h2 style="font-size:1.5rem; font-family:var(--font-display); font-weight:700; color:var(--accent-primary); margin:0;">🏛️ ${r.name || 'University Details'}</h2>
+                                            <div style="display:flex; align-items:center; gap:8px;">
+                                                ${r.established ? `<span style="background:var(--bg-elevated); border:1px solid var(--border-color); padding:4px 10px; border-radius:var(--radius-full); font-size:0.8rem;">Est. ${r.established}</span>` : ''}
+                                                ${sourceBadge}
+                                            </div>
+                                        </div>
+                                        ${r.overview ? `<p style="color:var(--text-secondary); margin-bottom:16px; line-height:1.7;">${r.overview}</p>` : ''}
+                                        
+                                        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:12px; margin-bottom:16px;">
+                                            <div style="background:var(--bg-surface); padding:12px; border-radius:8px; border:1px solid var(--border-color);">
+                                                <strong style="display:block; font-size:0.8rem; color:var(--text-secondary);">📍 City</strong>
+                                                <span>${r.city || 'Not available'}</span>
+                                            </div>
+                                            <div style="background:var(--bg-surface); padding:12px; border-radius:8px; border:1px solid var(--border-color);">
+                                                <strong style="display:block; font-size:0.8rem; color:var(--text-secondary);">🏛️ Type</strong>
+                                                <span>${r.type || 'Not available'}</span>
+                                            </div>
+                                            <div style="background:var(--bg-surface); padding:12px; border-radius:8px; border:1px solid var(--border-color);">
+                                                <strong style="display:block; font-size:0.8rem; color:var(--text-secondary);">⚙️ Sector</strong>
+                                                <span>${r.sector || 'Not available'}</span>
+                                            </div>
+                                            <div style="background:var(--bg-surface); padding:12px; border-radius:8px; border:1px solid var(--border-color);">
+                                                <strong style="display:block; font-size:0.8rem; color:var(--text-secondary);">🏅 QS Ranking</strong>
+                                                <span>${r.qsRanking || 'Not available'}</span>
+                                            </div>
+                                        </div>
+
+                                        ${r.detailedPrograms ? `<div style="margin-bottom:16px;">
+                                            <strong style="display:block; margin-bottom:6px; color:var(--text-primary);">📚 Offered Programs</strong>
+                                            <div style="color:var(--text-secondary);">${r.detailedPrograms}</div>
+                                        </div>` : ''}
+
+                                        ${r.entryTest ? `<div style="margin-bottom:16px;">
+                                            <strong style="display:block; margin-bottom:4px; color:var(--text-primary);">📋 Admission Requirements</strong>
+                                            <p style="color:var(--text-secondary); margin:0; line-height:1.7;">${r.entryTest}</p>
+                                        </div>` : ''}
+
+                                        ${r.campusResources ? `<div style="margin-bottom:16px;">
+                                            <strong style="display:block; margin-bottom:4px; color:var(--text-primary);">🏠 Hostel & Accommodation</strong>
+                                            <div style="color:var(--text-secondary); margin:0;">${r.campusResources}</div>
+                                        </div>` : ''}
+
+                                        ${r.detailedFees ? `<div style="margin-bottom:16px;">
+                                            <strong style="display:block; margin-bottom:4px; color:var(--text-primary);">💰 Fee Structure</strong>
+                                            <div style="color:var(--text-secondary); margin:0;">${r.detailedFees}</div>
+                                        </div>` : ''}
+
+                                        ${r.portal ? `<div>
+                                            <strong style="display:block; margin-bottom:4px; color:var(--text-primary);">🌐 Website</strong>
+                                            <a href="${r.portal}" target="_blank" rel="noopener" style="color:var(--accent-primary);">${r.portal}</a>
+                                        </div>` : ''}
+                                        ${scrapedInfo}
+                                    </div>
+                                    `;
+                                }
+                            } else if (cat === 'scholarship') {
+                                if (window.ScholarshipsModule && window.ScholarshipsModule.addDynamically) {
+                                    window.ScholarshipsModule.addDynamically(r);
+                                }
+                                let reqDocsHtml = 'Not available';
+                                if (r.required_documents && Array.isArray(r.required_documents)) {
+                                    reqDocsHtml = r.required_documents.map(d => `<span style="background:var(--bg-elevated); padding:4px 8px; border-radius:4px; font-size:0.8rem; margin-right:6px; margin-bottom:6px; display:inline-block;">📄 ${d}</span>`).join('');
+                                } else if (r.requiredDocuments) {
+                                    const docs = typeof r.requiredDocuments === 'string' ? r.requiredDocuments.split(',') : (Array.isArray(r.requiredDocuments) ? r.requiredDocuments : []);
+                                    reqDocsHtml = docs.map(d => `<span style="background:var(--bg-elevated); padding:4px 8px; border-radius:4px; font-size:0.8rem; margin-right:6px; margin-bottom:6px; display:inline-block;">📄 ${(d+'').trim()}</span>`).join('');
+                                }
+
+                                html = `
+                                    <div style="padding:24px; background:rgba(255,255,255,0.05); border-radius:16px; border:1px solid var(--border-color); color:var(--text-primary);">
+                                        <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:12px; flex-wrap:wrap; gap:8px;">
+                                            <h2 style="font-size:1.5rem; font-family:var(--font-display); font-weight:700; color:var(--accent-primary); margin:0;">🏆 ${r.title || 'Scholarship Details'}</h2>
+                                            <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
+                                                ${r.deadline ? `<span style="background:var(--status-warning-glow); color:var(--status-warning); padding:4px 10px; border-radius:var(--radius-full); font-size:0.8rem; font-weight:600;">⏳ ${r.deadline}</span>` : ''}
+                                                ${sourceBadge}
+                                            </div>
+                                        </div>
+                                        <p style="color:var(--text-secondary); margin-bottom:16px;"><strong>Provider:</strong> ${r.provider || 'Not available'}</p>
+                                        ${r.description || r.introduction ? `<p style="color:var(--text-secondary); margin-bottom:16px; line-height:1.7;">${r.description || r.introduction}</p>` : ''}
+
+                                        <div style="background:var(--bg-surface); padding:14px; border-radius:8px; border:1px solid var(--border-color); margin-bottom:16px;">
+                                            <strong style="display:block; font-size:0.85rem; color:var(--accent-primary); margin-bottom:4px;">💵 Coverage & Financial Benefit</strong>
+                                            <p style="margin:0; color:var(--text-primary); line-height:1.7;">${r.coverage || r.benefits || 'Not available'}</p>
+                                        </div>
+
+                                        <div style="margin-bottom:16px;">
+                                            <strong style="display:block; margin-bottom:4px;">✅ Eligibility Criteria</strong>
+                                            <p style="color:var(--text-secondary); margin:0; line-height:1.7;">${r.eligibilityCriteria || r.eligibility_criteria || 'Not available'}</p>
+                                        </div>
+
+                                        <div style="margin-bottom:16px;">
+                                            <strong style="display:block; margin-bottom:4px;">📝 Application Process</strong>
+                                            <p style="color:var(--text-secondary); margin:0; line-height:1.7;">${r.applicationProcess || r.application_process || 'Not available'}</p>
+                                        </div>
+
+                                        <div style="margin-bottom:16px;">
+                                            <strong style="display:block; margin-bottom:8px;">📎 Required Documents</strong>
+                                            <div>${reqDocsHtml}</div>
+                                        </div>
+
+                                        <div style="display:flex; justify-content:space-between; align-items:center; margin-top:20px; flex-wrap:wrap; gap:12px;">
+                                            ${r.website ? `<div>
+                                                <strong style="display:block; margin-bottom:4px;">🌐 Apply Here</strong>
+                                                <a href="${r.website}" target="_blank" rel="noopener" style="color:var(--accent-primary);">${r.website}</a>
+                                            </div>` : '<div></div>'}
+                                            <button onclick="switchView('scholarships'); if(window.ScholarshipsModule && window.ScholarshipsModule.openModal) window.ScholarshipsModule.openModal('${r.id}');" class="btn btn-primary" style="font-size:0.85rem; padding:8px 16px;">🎓 Open in Scholarships Hub</button>
+                                        </div>
+                                        ${scrapedInfo}
+                                    </div>
+                                `;
+                            } else if (cat === 'test') {
+                                if (window.TestPrepModule && window.TestPrepModule.addDynamically) {
+                                    window.TestPrepModule.addDynamically(r);
+                                }
+                                html = `
+                                    <div style="padding:24px; background:rgba(255,255,255,0.05); border-radius:16px; border:1px solid var(--border-color); color:var(--text-primary);">
+                                        <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:12px; flex-wrap:wrap; gap:8px;">
+                                            <h2 style="font-size:1.5rem; font-family:var(--font-display); font-weight:700; color:var(--accent-primary); margin:0;">🎯 ${r.name || 'Entry Test Details'}</h2>
+                                            <div style="display:flex; align-items:center; gap:8px;">
+                                                <span class="badge" style="background:var(--accent-subtle); color:var(--accent-primary); font-size:0.75rem;">${r.category || 'General'}</span>
+                                                ${sourceBadge}
+                                            </div>
+                                        </div>
+                                        
+                                        <div style="margin-bottom:16px;">
+                                            <strong style="display:block; margin-bottom:6px; color:var(--text-primary);">📚 Syllabus & Weightage</strong>
+                                            <div style="color:var(--text-secondary); line-height:1.7;">${r.syllabus || 'Not available'}</div>
+                                        </div>
+
+                                        <div style="margin-bottom:16px;">
+                                            <strong style="display:block; margin-bottom:4px; color:var(--text-primary);">⏱️ Structure & Timing</strong>
+                                            <div style="color:var(--text-secondary); line-height:1.7;">${r.timing || 'Not available'}</div>
+                                        </div>
+
+                                        <div style="margin-bottom:16px;">
+                                            <strong style="display:block; margin-bottom:4px; color:var(--text-primary);">💡 Preparation Tips</strong>
+                                            <div style="color:var(--text-secondary); line-height:1.7;">${r.tips || 'Not available'}</div>
+                                        </div>
+
+                                        <div style="display:flex; justify-content:flex-end; margin-top:20px;">
+                                            <button onclick="switchView('test-prep'); if(window.TestPrepModule && window.TestPrepModule.openTestModal) window.TestPrepModule.openTestModal('${r.id}');" class="btn btn-primary" style="font-size:0.85rem; padding:8px 16px;">📚 Open Test Prep Vault Guide</button>
+                                        </div>
+                                        ${scrapedInfo}
+                                    </div>
+                                `;
+                            } else if (cat === 'program') {
+                                // Program
+                                if (window.ProgramsModule && window.ProgramsModule.addDynamically) {
+                                    window.ProgramsModule.addDynamically(r);
+                                }
+                                if (window.ProgramsModule && window.ProgramsModule.getRenderDetailView) {
+                                    html = window.ProgramsModule.getRenderDetailView(r);
+                                    if (scrapedInfo) {
+                                        html += `<div style="margin-top:24px;">${scrapedInfo}</div>`;
+                                    }
+                                } else {
+                                    html = `<div style="padding:24px; background:var(--bg-surface); border-radius:var(--radius-lg); border:1px solid var(--border-color);">
+                                        <h2 style="font-size:1.5rem; color:var(--text-primary); margin:0 0 16px 0;">${r.program_name || r.name || r.title || 'Details'}</h2>
+                                        <p style="color:var(--text-secondary);">${r.introduction || r.description || JSON.stringify(r)}</p>
+                                        ${scrapedInfo}
+                                    </div>`;
+                                }
+                            } else {
+                                // Dynamic General structured card (prevents empty program layout)
+                                html = `
+                                    <div style="padding:24px; background:var(--bg-surface); border-radius:var(--radius-lg); border:1px solid var(--border-color);">
+                                        <h2 style="font-size:1.5rem; color:var(--text-primary); margin:0 0 16px 0; font-family:var(--font-display); font-weight:700;">🔍 ${r.name || r.title || r.program_name || 'Search Result Details'}</h2>
+                                        <div style="display:grid; grid-template-columns:1fr; gap:16px;">
+                                `;
+                                for (const [key, value] of Object.entries(r)) {
+                                    if (['id', 'name', 'title', 'program_name'].includes(key)) continue;
+                                    if (!value) continue;
+                                    const formattedKey = key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+                                    html += `
+                                        <div style="padding-bottom:12px; border-bottom:1px solid var(--border-subtle);">
+                                            <strong style="display:block; font-size:0.85rem; color:var(--accent-primary); margin-bottom:4px;">${formattedKey}</strong>
+                                            <span style="color:var(--text-secondary); line-height:1.6;">${typeof value === 'object' ? JSON.stringify(value) : value}</span>
+                                        </div>
+                                    `;
+                                }
+                                html += `</div>${scrapedInfo}</div>`;
+                            }
+
+
+                            // Append Save to Timeline button
+                            const entityName = r.name || r.title || r.test_name || r.program_name || 'Search Result';
+                            const saveBtnHTML = `
+                                <div style="margin-top:20px; padding-top:16px; border-top:1px solid var(--border-color); display:flex; justify-content:flex-end;">
+                                    <button class="btn" style="background:var(--accent-primary); color:#fff; font-size:0.85rem; padding:8px 16px; border-radius:6px; cursor:pointer;" onclick='saveSearchResult("${entityName.replace(/'/g, "\\'")}","${cat}",${JSON.stringify(r).replace(/'/g, "&apos;")})'>
+                                        📌 Save to Timeline
+                                    </button>
+                                </div>
+                            `;
+
+                            resultsDiv.innerHTML = html + saveBtnHTML;
+
+                        } catch (e) {
+                            hideProgress();
+                            const isCreditError = e.message.toLowerCase().includes('credit') || e.message.toLowerCase().includes('upgrade');
+                            if (isCreditError) {
+                                resultsDiv.innerHTML = `
+                                    <div class="insufficient-credits-card" style="background: linear-gradient(135deg, rgba(239, 68, 68, 0.05), rgba(79, 70, 229, 0.05)); border: 1px solid rgba(239, 68, 68, 0.2); border-radius: 16px; padding: 32px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 20px; box-shadow: var(--shadow-sm); max-width: 500px; margin: 40px auto; color: var(--text-primary);">
+                                        <div style="font-size: 3rem; animation: pulse 2s infinite;">⚠️</div>
+                                        <div>
+                                            <h3 style="color: var(--text-primary); font-family: var(--font-display); font-size: 1.4rem; font-weight: 700; margin-bottom: 8px;">Insufficient Credits</h3>
+                                            <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin: 0;">
+                                                Your credit is not enough. Upgrade to a premium plan to continue researching universities, scholarships, and tests with our AI search engine.
+                                            </p>
+                                        </div>
+                                        <button class="btn btn-primary" onclick="switchView('pricing')" style="padding: 12px 28px; font-weight: 600; font-size: 0.95rem; border: none; border-radius: 8px; cursor: pointer; background: var(--accent-primary); color: white; display: inline-flex; align-items: center; gap: 8px;">
+                                            🚀 Upgrade Now
+                                        </button>
+                                    </div>
+                                `;
+                            } else {
+                                resultsDiv.innerHTML = `
+                                    <div style="padding:20px; background:rgba(255,107,107,0.1); border-radius:12px; border:1px solid rgba(255,107,107,0.3); color:var(--status-danger); text-align:center;">
+                                        <h3 style="margin-bottom:8px;">⚠️ Search Error</h3>
+                                        <p style="margin:0; font-size:0.9rem;">${e.message}</p>
+                                    </div>
+                                `;
+                            }
+                        }
+                    }
+
+                    // Save result to Timeline feature
+                    function saveSearchResult(title, type, data) {
+                        try {
+                            const list = JSON.parse(localStorage.getItem('scholarpath_saved_results') || '[]');
+                            const newItem = { id: Date.now().toString(), title, type, data, savedAt: new Date().toLocaleDateString() };
+                            list.unshift(newItem);
+                            localStorage.setItem('scholarpath_saved_results', JSON.stringify(list));
+                            if (window.showToast) window.showToast(`Saved "${title}" to your Saved Timeline!`, 'success');
+                            renderSavedItemsToTimeline();
+                        } catch (err) {
+                            console.error(err);
+                            if (window.showToast) window.showToast('Failed to save result.', 'warning');
+                        }
+                    }
+
+                    // Render saved items in the TIMELINE SECTION (#view-timeline)
+                    function renderSavedItemsToTimeline() {
+                        const timelineContainer = document.getElementById('timelineContainer');
+                        if (!timelineContainer) return;
+
+                        const list = JSON.parse(localStorage.getItem('scholarpath_saved_results') || '[]');
+                        if (list.length === 0) {
+                            timelineContainer.innerHTML = `
+                                <div style="background:var(--bg-surface); border:1px solid var(--border-color); padding:30px; border-radius:12px; text-align:center;">
+                                    <h3 style="font-size:1.2rem; margin-bottom:8px;">📌 Your Saved Timeline is Empty</h3>
+                                    <p style="color:var(--text-secondary); font-size:0.9rem;">Search any university, scholarship, or program, and click "Save to Timeline" to pin it here.</p>
+                                </div>
+                            `;
+                            return;
+                        }
+
+                        let itemsHTML = list.map((item) => `
+                            <div style="background: var(--bg-surface); border: 1px solid var(--border-color); padding: 16px 20px; border-radius: 12px; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center; box-shadow: var(--shadow-sm);">
+                                <div>
+                                    <div style="display:flex; align-items:center; gap:8px;">
+                                        <strong style="color: var(--text-primary); font-size:1rem;">${item.title}</strong>
+                                        <span style="background:var(--bg-elevated); border:1px solid var(--border-color); padding:2px 8px; border-radius:4px; font-size:0.75rem; text-transform:uppercase; color:var(--accent-primary); font-weight:600;">${item.type}</span>
+                                    </div>
+                                    <div style="font-size: 0.8rem; color: var(--text-tertiary); margin-top:4px;">Saved on ${item.savedAt}</div>
+                                </div>
+                                <button class="btn" style="background: rgba(255,107,107,0.15); color: var(--status-danger); border: 1px solid rgba(255,107,107,0.3); padding: 6px 14px; font-size: 0.8rem; border-radius: 6px; cursor:pointer;" onclick="removeSavedItem('${item.id}')">Remove</button>
+                            </div>
+                        `).join('');
+
+                        timelineContainer.innerHTML = `
+                            <div style="background:var(--bg-surface); border:1px solid var(--border-color); padding:24px; border-radius:12px; max-width:800px; margin:0 auto;">
+                                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px;">
+                                    <h2 style="font-size:1.3rem; margin:0; font-family:var(--font-display);">📌 Saved Timeline & Bookmarks (${list.length})</h2>
+                                    <button onclick="clearAllSaved()" style="background:none; border:none; color:var(--status-warning); font-size:0.8rem; cursor:pointer; font-weight:600;">Clear All</button>
+                                </div>
+                                ${itemsHTML}
+                            </div>
+                        `;
+                    }
+
+                    function removeSavedItem(id) {
+                        let list = JSON.parse(localStorage.getItem('scholarpath_saved_results') || '[]');
+                        list = list.filter(i => i.id !== id);
+                        localStorage.setItem('scholarpath_saved_results', JSON.stringify(list));
+                        if (window.showToast) window.showToast('Item removed from Saved Timeline.', 'info');
+                        renderSavedItemsToTimeline();
+                    }
+
+                    function clearAllSaved() {
+                        localStorage.removeItem('scholarpath_saved_results');
+                        if (window.showToast) window.showToast('Cleared all items from Saved Timeline.', 'info');
+                        renderSavedItemsToTimeline();
+                    }
+
+                    // Render saved items in Timeline when page loads
+                    document.addEventListener('DOMContentLoaded', () => {
+                        setTimeout(renderSavedItemsToTimeline, 500);
+                    });
+                </script>
+
+
+
+                <!-- ===== 3. TIMELINE VIEW ===== -->
+                <div class="view-section" id="view-timeline">
+                    <!-- MOBILE ONLY: Sub-feature landing grid -->
+                    <div class="mob-sub-landing" id="timelineMobileLanding">
+                        <div class="mob-sub-section-title">📅 Your Timeline</div>
+                        <div class="mob-sub-section-subtitle">Manage your academic journey</div>
+                        <div class="mob-sub-card" onclick="if(window.TimelineModule) window.TimelineModule.switchTab('saved-objects'); hideMobileSubLanding('timelineMobileLanding');">
+                            <span>📌</span><span>Saved Items</span>
+                        </div>
+                        <div class="mob-sub-card" onclick="if(window.TimelineModule) window.TimelineModule.switchTab('calendar'); hideMobileSubLanding('timelineMobileLanding');">
+                            <span>🗓️</span><span>Calendar</span>
+                        </div>
+                        <div class="mob-sub-card" onclick="if(window.TimelineModule) window.TimelineModule.switchTab('timeline'); hideMobileSubLanding('timelineMobileLanding');">
+                            <span>⏳</span><span>Deadlines</span>
+                        </div>
+                        <div class="mob-sub-card" onclick="if(window.TimelineModule) window.TimelineModule.switchTab('preparation-plan'); hideMobileSubLanding('timelineMobileLanding');">
+                            <span>📝</span><span>Prep Plan</span>
+                        </div>
+                    </div>
+                    <button class="mob-sub-back-btn" id="timelineBackBtn" style="display:none;" onclick="showMobileSubLanding('timelineMobileLanding', 'timeline')">
+                        ← Back to Timeline
+                    </button>
+                    <div id="timelineContainer"></div>
+                </div>
+
+                <!-- ===== ADMIN USERS VIEW ===== -->
+                <div class="view-section" id="view-admin">
+                    <div id="adminDashboardContainer"></div>
+                </div>
+
+                <!-- Programs View -->
+                <div class="view-section" id="view-programs">
+                    <div id="programsContainer"></div>
+                </div>
+
+                <!-- Universities View -->
+                <div class="view-section" id="view-universities">
+                    <div id="universitiesContainer"></div>
+                </div>
+
+                <!-- ===== 5. ARTICLES VIEW ===== -->
+                <div class="view-section" id="view-articles">
+                    <div id="articlesContainer"></div>
+                </div>
+
+                <!-- ===== 6. TEST PREP VIEW ===== -->
+                <div class="view-section" id="view-test-prep">
+                    <!-- MOBILE ONLY: Sub-feature landing grid (hidden on desktop) -->
+                    <div class="mob-sub-landing" id="testPrepMobileLanding">
+                        <div class="mob-sub-section-title">🎯 Test Prep Vault</div>
+                        <div class="mob-sub-section-subtitle">Choose what you want to explore</div>
+                        <div class="mob-sub-card" onclick="if(window.TestPrepModule) window.TestPrepModule.switchTab('guides'); hideMobileSubLanding('testPrepMobileLanding');">
+                            <span>📋</span><span>Entry Tests</span>
+                        </div>
+                        <div class="mob-sub-card" onclick="if(window.TestPrepModule) window.TestPrepModule.switchTab('academies'); hideMobileSubLanding('testPrepMobileLanding');">
+                            <span>🏫</span><span>Academies</span>
+                        </div>
+                        <div class="mob-sub-card" onclick="if(window.TestPrepModule) window.TestPrepModule.switchTab('practice'); hideMobileSubLanding('testPrepMobileLanding');">
+                            <span>✏️</span><span>Practice MCQs</span>
+                        </div>
+                        <div class="mob-sub-card" onclick="if(window.TestPrepModule) window.TestPrepModule.switchTab('vault'); hideMobileSubLanding('testPrepMobileLanding');">
+                            <span>📄</span><span>Model Papers</span>
+                        </div>
+                    </div>
+                    <button class="mob-sub-back-btn" id="testPrepBackBtn" style="display:none;" onclick="showMobileSubLanding('testPrepMobileLanding', 'test-prep')">
+                        ← Back to Test Prep
+                    </button>
+                    <!-- Mobile Back Button (shown after landing selection) -->
+                    <button class="mob-sub-back-btn" id="testPrepBackBtn" style="display:none;" onclick="showMobileSubLanding('testPrepMobileLanding', 'test-prep')">
+                        ← Back to Test Prep
+                    </button>
+                    <div id="testPrepContainer"></div>
+                </div>
+
+                <!-- ===== 7. DOCUMENTS VIEW ===== -->
+                <div class="view-section" id="view-documents">
+                    <div id="documentsContainer"></div>
+                </div>
+
+                <!-- ===== 8. SOP STUDIO VIEW ===== -->
+                <div class="view-section" id="view-sop">
+                    <div id="sopContainer"></div>
+                </div>
+
+                <!-- ===== 9. CONSULTANTS DESK VIEW ===== -->
+                <div class="view-section" id="view-consultants">
+                    <div class="mob-sub-landing" id="consultantsMobileLanding">
+                        <div class="mob-sub-section-title">🤝 Consultant Desk</div>
+                        <div class="mob-sub-section-subtitle">Find the right expert for you</div>
+                        <div class="mob-sub-card" onclick="switchView('consultants'); if(window.ConsultantsModule) window.ConsultantsModule.switchTab('comprehensive'); hideMobileSubLanding('consultantsMobileLanding');">
+                            <span>🎓</span><span>Comprehensive</span>
+                        </div>
+                        <div class="mob-sub-card" onclick="switchView('consultants'); if(window.ConsultantsModule) window.ConsultantsModule.switchTab('onetime'); hideMobileSubLanding('consultantsMobileLanding');">
+                            <span>💡</span><span>One-Time Advice</span>
+                        </div>
+                    </div>
+                    <button class="mob-sub-back-btn" id="consultantsBackBtn" style="display:none;" onclick="showMobileSubLanding('consultantsMobileLanding', 'consultants')">
+                        ← Back to Consultants
+                    </button>
+                    <div id="consultantsContainer"></div>
+                </div>
+
+                <!-- ===== 10. MATCHMAKER VIEW ===== -->
+                <div class="view-section" id="view-matchmaker">
+                    <div id="matchmakerContainer"></div>
+                </div>
+
+                <!-- ===== 11. SCHOLARSHIPS VIEW ===== -->
+                <div class="view-section" id="view-scholarships">
+                    <div id="scholarshipsContainer"></div>
+                </div>
+
+                <!-- ===== 12. PROFILE & CV VIEW ===== -->
+                <div class="view-section" id="view-profile">
+                    <div id="profileContainer"></div>
+                </div>
+
+                <!-- ===== 13. CALCULATOR VIEW ===== -->
+                <div class="view-section" id="view-calculator">
+                    <div id="calculatorContainer"></div>
+                </div>
+
+                <!-- ===== 14. PROGRAMS VIEW ===== -->
+                <div class="view-section" id="view-programs">
+                    <div id="programsContainer"></div>
+                </div>
+
+                <!-- ===== PRICING & PLANS VIEW ===== -->
+                <div class="view-section" id="view-pricing">
+                    <div id="pricingContainer"></div>
+                </div>
+
+                <!-- ===== 15. STUDY ABROAD VIEW ===== -->
+                <div class="view-section" id="view-study-abroad">
+                    <div class="mob-sub-landing" id="studyAbroadMobileLanding">
+                        <div class="mob-sub-section-title">✈️ Study Abroad</div>
+                        <div class="mob-sub-section-subtitle">Tools for your international journey</div>
+                        <div class="mob-sub-card" onclick="switchView('study-abroad'); if(window.showStudyAbroadTool) showStudyAbroadTool('visa'); hideMobileSubLanding('studyAbroadMobileLanding');">
+                            <span>🛂</span><span>Visa Risk Calc</span>
+                        </div>
+                        <div class="mob-sub-card" onclick="switchView('study-abroad'); if(window.showStudyAbroadTool) showStudyAbroadTool('fee'); hideMobileSubLanding('studyAbroadMobileLanding');">
+                            <span>💸</span><span>Fee Waivers</span>
+                        </div>
+                        <div class="mob-sub-card" onclick="switchView('study-abroad'); if(window.showStudyAbroadTool) showStudyAbroadTool('scholarships'); hideMobileSubLanding('studyAbroadMobileLanding');">
+                            <span>🌍</span><span>Scholarships</span>
+                        </div>
+                    </div>
+                    <button class="mob-sub-back-btn" id="studyAbroadBackBtn" style="display:none;" onclick="showMobileSubLanding('studyAbroadMobileLanding', 'study-abroad')">
+                        ← Back to Study Abroad
+                    </button>
+                    <div style="padding: 20px; max-width: 1000px; margin: 0 auto;">
+                        <div id="saTopBanner1" style="text-align:center; margin-bottom:40px;">
+                            <h2 style="font-family:var(--font-display); font-size:2.2rem; font-weight:800; color:var(--text-primary);">
+                                Study Abroad <span style="color:var(--accent-primary);">Planning Hub</span>
+                            </h2>
+                            <p style="color:var(--text-secondary); max-width:600px; margin:10px auto;">Tools to help you analyze your visa chances, find fee waivers, and plan your international education journey.</p>
+                        </div>
+                        
+                        <!-- Hub Navigation Cards -->
+                        <div id="saTopBanner2" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap:20px; margin-bottom:40px;">
+                            
+                            <!-- Card 1: Visa Risk -->
+                            <div id="sa-card-visa" class="sa-card active-card" onclick="showStudyAbroadTool('visa')" style="background:var(--bg-surface); border:2px solid var(--border-color); border-radius:var(--radius-lg); padding:20px; cursor:pointer; text-align:center; transition:all 0.2s ease;">
+                                <div style="font-size:2.5rem; margin-bottom:10px;">🛂</div>
+                                <h3 style="font-size:1.1rem; color:var(--text-primary); margin-bottom:8px;">Visa Risk Assessor</h3>
+                                <p style="font-size:0.85rem; color:var(--text-secondary);">Analyze your profile for visa rejection risks</p>
+                            </div>
+
+                            <!-- Card 2: Fee Waivers -->
+                            <div id="sa-card-fee" class="sa-card" onclick="showStudyAbroadTool('fee')" style="background:var(--bg-surface); border:2px solid var(--border-color); border-radius:var(--radius-lg); padding:20px; cursor:pointer; text-align:center; transition:all 0.2s ease;">
+                                <div style="font-size:2.5rem; margin-bottom:10px;">🎟️</div>
+                                <h3 style="font-size:1.1rem; color:var(--text-primary); margin-bottom:8px;">Fee Waiver Tracker</h3>
+                                <p style="font-size:0.85rem; color:var(--text-secondary);">Find universities with no application fees</p>
+                            </div>
+                            
+                            <!-- Card 3: Scholarships List -->
+                            <div id="sa-card-scholarships" class="sa-card" onclick="showStudyAbroadTool('scholarships')" style="background:var(--bg-surface); border:2px solid var(--border-color); border-radius:var(--radius-lg); padding:20px; cursor:pointer; text-align:center; transition:all 0.2s ease;">
+                                <div style="font-size:2.5rem; margin-bottom:10px;">🎓</div>
+                                <h3 style="font-size:1.1rem; color:var(--text-primary); margin-bottom:8px;">Scholarships List</h3>
+                                <p style="font-size:0.85rem; color:var(--text-secondary);">View available scholarships by country</p>
+                            </div>
+
+                        </div>
+
+                        <!-- Hub Tools Container -->
+                        <style>
+                            .sa-card:hover { transform:translateY(-3px); box-shadow:var(--shadow-md); border-color:var(--accent-primary); }
+                            .active-card { border-color:var(--accent-primary) !important; background:var(--accent-subtle) !important; }
+                        </style>
+                        
+                        <div style="background:var(--bg-surface); border:1px solid var(--border-color); border-radius:var(--radius-lg); padding:30px; box-shadow:var(--shadow-sm);">
+                            
+                            <!-- Tool 1: Visa Risk Assessor -->
+                            <div id="sa-tool-visa">
+                                <h3 style="font-size:1.4rem; color:var(--text-primary); margin-bottom:20px; border-bottom:1px solid var(--border-color); padding-bottom:10px;">Visa Risk Assessor</h3>
+                                <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap:20px; margin-bottom:24px;">
+                                    <div>
+                                        <label style="display:block; font-size:0.85rem; color:var(--text-secondary); margin-bottom:6px;">Current GPA</label>
+                                        <input type="number" step="0.1" id="visa-gpa" placeholder="e.g. 3.2" class="form-input" style="width:100%; padding:10px; border-radius:var(--radius-md); border:1px solid var(--border-color); background:var(--bg-elevated); color:var(--text-primary);">
+                                    </div>
+                                    <div>
+                                        <label style="display:block; font-size:0.85rem; color:var(--text-secondary); margin-bottom:6px;">Study Gap</label>
+                                        <select id="visa-gap" class="form-input" style="width:100%; padding:10px; border-radius:var(--radius-md); border:1px solid var(--border-color); background:var(--bg-elevated); color:var(--text-primary);">
+                                            <option value="none">No Gap (or < 1 year)</option>
+                                            <option value="1-2">1 - 2 Years</option>
+                                            <option value="3+">3+ Years</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label style="display:block; font-size:0.85rem; color:var(--text-secondary); margin-bottom:6px;">Proof of Funds</label>
+                                        <select id="visa-funds" class="form-input" style="width:100%; padding:10px; border-radius:var(--radius-md); border:1px solid var(--border-color); background:var(--bg-elevated); color:var(--text-primary);">
+                                            <option value="full">Full Amount Available</option>
+                                            <option value="partial">Partial / Need Loan</option>
+                                            <option value="none">None / Relying on Scholarship</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary" onclick="calculateVisaRisk()" style="padding:10px 24px;">Analyze Profile</button>
+                                
+                                <div id="visa-result-box" style="display:none; margin-top:24px; background:var(--bg-elevated); border:1px solid var(--border-color); border-radius:var(--radius-md); padding:20px;">
+                                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+                                        <h4 id="visa-result-title" style="font-size:1.2rem; font-weight:700;"></h4>
+                                        <span id="visa-result-score" style="font-size:1.5rem; font-weight:800; font-family:var(--font-display);"></span>
+                                    </div>
+                                    <ul id="visa-result-tips" style="padding-left:20px; color:var(--text-secondary); line-height:1.6; font-size:0.9rem;"></ul>
+                                </div>
+                            </div>
+
+                            <!-- Tool 2: Fee Waiver Tracker -->
+                            <div id="sa-tool-fee" style="display:none;">
+                                <h3 style="font-size:1.4rem; color:var(--text-primary); margin-bottom:20px; border-bottom:1px solid var(--border-color); padding-bottom:10px;">Application Fee Waivers</h3>
+                                <p style="font-size:0.9rem; color:var(--text-secondary); margin-bottom:20px;">Use these codes during your university application to skip the $50-$150 application fee.</p>
+                                
+                                <div style="overflow-x:auto;">
+                                    <table style="width:100%; border-collapse:collapse; text-align:left;">
+                                        <thead>
+                                            <tr style="background:var(--bg-elevated); border-bottom:2px solid var(--border-color);">
+                                                <th style="padding:12px; font-weight:600; font-size:0.85rem; color:var(--text-tertiary);">University</th>
+                                                <th style="padding:12px; font-weight:600; font-size:0.85rem; color:var(--text-tertiary);">Country</th>
+                                                <th style="padding:12px; font-weight:600; font-size:0.85rem; color:var(--text-tertiary);">Waiver Code</th>
+                                                <th style="padding:12px; font-weight:600; font-size:0.85rem; color:var(--text-tertiary);">Applicable For</th>
+                                                <th style="padding:12px; font-weight:600; font-size:0.85rem; color:var(--text-tertiary);">Valid Till</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="fee-waiver-tbody" style="font-size:0.9rem; color:var(--text-primary);">
+                                            <!-- Injected via JS -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <!-- Tool 3: Scholarships List -->
+                            <div id="sa-tool-scholarships" style="display:none;">
+                                <h3 style="font-size:1.4rem; color:var(--text-primary); margin-bottom:20px; border-bottom:1px solid var(--border-color); padding-bottom:10px;">Global Scholarships List</h3>
+                                <p style="font-size:0.9rem; color:var(--text-secondary); margin-bottom:20px;">A comprehensive list of fully and partially funded scholarships available for international students.</p>
+                                
+                                <div style="margin-bottom: 20px;">
+                                    <input type="text" id="scholarships-search" placeholder="Search by Country, Scholarship Name, or Funding Type..." class="form-input" style="width:100%; padding:12px; border-radius:var(--radius-md); border:1px solid var(--border-color); background:var(--bg-elevated); color:var(--text-primary); font-size:1rem;" oninput="filterScholarshipsList()">
+                                </div>
+                                <div id="scholarships-accordion-container" style="display:flex; flex-direction:column; gap:10px;">
+                                    <!-- Injected via JS -->
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js?v=5"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js?v=7"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js?v=5"></script>
+    <script src="js/firebase-config.js?v=5"></script>
+    <script src="js/api-config.js?v=5"></script>
+    <script src="js/universities/data.js?v=5"></script>
+    <script src="js/scholarships/data.js?v=5"></script>
+    <script src="js/database.js?v=5"></script>
+    <script src="js/gemini-search.js?v=5"></script>
+    <script src="js/aggregate-calculator.js?v=5"></script>
+    <script src="js/documents.js?v=5"></script>
+    <script src="js/test-prep.js?v=7"></script>
+    <script src="js/timeline.js?v=12"></script>
+    <script src="js/articles.js?v=5"></script>
+    <script src="js/consultants.js?v=11"></script>
+    <script src="js/matchmaker.js?v=5"></script>
+    <script src="js/programs.js?v=5"></script>
+    <script src="js/universities.js?v=5"></script>
+    <script src="js/scholarships.js?v=5"></script>
+    <script src="js/sop-editor.js?v=5"></script>
+    <script src="js/tracker.js?v=5"></script>
+    <script src="js/profile.js?v=4"></script>
+    <script src="js/dashboard.js?v=5"></script>
+
+    <script>
+        function toggleTheme() {
+            const body = document.body;
+            const icon = document.getElementById('themeIcon');
+            const btn = document.getElementById('themeToggle');
+            
+            if (body.classList.contains('light-mode')) {
+                body.classList.remove('light-mode');
+                if(icon) icon.textContent = '☀️';
+                if(btn && btn.childNodes[2]) btn.childNodes[2].textContent = ' Light Mode';
+                localStorage.setItem('theme', 'dark');
+            } else {
+                body.classList.add('light-mode');
+                if(icon) icon.textContent = '🌙';
+                if(btn && btn.childNodes[2]) btn.childNodes[2].textContent = ' Dark Mode';
+                localStorage.setItem('theme', 'light');
+            }
+        }
+
+        // Apply saved theme on load
+        if (localStorage.getItem('theme') === 'light') {
+            document.body.classList.add('light-mode');
+            const icon = document.getElementById('themeIcon');
+            const btn = document.getElementById('themeToggle');
+            if(icon) icon.textContent = '🌙';
+            if(btn && btn.childNodes[2]) btn.childNodes[2].textContent = ' Dark Mode';
+        }
+    </script>
+    <!-- For PDF CV Export -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js?v=5"></script>
+    <script src="js/admin.js?v=5"></script>
+
+    <!-- Auth Modal -->
+    <div id="authBackdrop" class="auth-backdrop" style="position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6); z-index:9999; align-items:center; justify-content:center;">
+        <div class="auth-modal" style="background:var(--bg-surface); border-radius:var(--radius-lg); padding:30px; width:90%; max-width:400px; position:relative; box-shadow:0 10px 30px rgba(0,0,0,0.3);">
+            <button id="authCloseBtn" style="position:absolute; top:15px; right:15px; background:none; border:none; font-size:1.5rem; cursor:pointer; color:var(--text-secondary);">&times;</button>
+            <div style="margin-bottom:20px;">
+                <h3 style="color:var(--text-primary); margin-bottom:10px;">Welcome</h3>
+                <div style="display:flex; gap:10px; border-bottom:1px solid var(--border-color); padding-bottom:10px;">
+                    <button id="tabLogin" class="auth-tab active" style="background:none; border:none; font-weight:600; color:var(--accent-primary); cursor:pointer; padding:5px 10px;">Login</button>
+                    <button id="tabSignup" class="auth-tab" style="background:none; border:none; color:var(--text-secondary); cursor:pointer; padding:5px 10px;">Sign Up</button>
+                </div>
+            </div>
+            <div id="authAlert" style="padding:10px; border-radius:4px; margin-bottom:15px; font-size:0.9rem;"></div>
+            <form id="authForm" style="display:flex; flex-direction:column; gap:15px;">
+                <div id="authNameGroup" style="display:none;">
+                    <label style="display:block; font-size:0.85rem; color:var(--text-secondary); margin-bottom:5px;">Full Name</label>
+                    <input type="text" id="authName" style="width:100%; padding:10px; border:1px solid var(--border-color); border-radius:var(--radius-md); background:var(--bg-elevated); color:var(--text-primary);">
+                </div>
+                <div>
+                    <label style="display:block; font-size:0.85rem; color:var(--text-secondary); margin-bottom:5px;">Email</label>
+                    <input type="text" id="authEmail" style="width:100%; padding:10px; border:1px solid var(--border-color); border-radius:var(--radius-md); background:var(--bg-elevated); color:var(--text-primary);">
+                </div>
+                <div>
+                    <label style="display:block; font-size:0.85rem; color:var(--text-secondary); margin-bottom:5px;">Password</label>
+                    <input type="password" id="authPassword" style="width:100%; padding:10px; border:1px solid var(--border-color); border-radius:var(--radius-md); background:var(--bg-elevated); color:var(--text-primary);">
+                </div>
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-top: -5px;">
+                    <a href="#" id="forgotPassLink" onclick="window.ScholarAuth.handleForgotPassword(); return false;" style="font-size:0.8rem; color:var(--accent-primary); text-decoration:none;">Forgot Password?</a>
+                </div>
+                <button type="submit" class="btn btn-primary" style="padding:12px; font-weight:600;"><span id="authSubmitText">Continue</span> <span id="authSpinner" class="spinner" style="display:none; width:16px; height:16px; margin-left:8px;"></span></button>
+
+                <div style="text-align:center; margin: 5px 0; position:relative;">
+                    <div style="position:absolute; top:50%; left:0; right:0; border-top:1px solid var(--border-color); z-index:1;"></div>
+                    <span style="position:relative; z-index:2; background:var(--bg-surface); padding:0 10px; color:var(--text-secondary); font-size:0.85rem;">Or</span>
+                </div>
+                
+                <button type="button" onclick="window.ScholarAuth.handleGoogleLogin()" style="display:flex; align-items:center; justify-content:center; gap:10px; width:100%; padding:12px; border:1px solid var(--border-color); border-radius:var(--radius-md); background:var(--bg-elevated); color:var(--text-primary); cursor:pointer; font-weight:600; font-family:var(--font-body); transition:background 0.2s;" onmouseover="this.style.background='var(--bg-surface)'" onmouseout="this.style.background='var(--bg-elevated)'">
+                    <svg width="18" height="18" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+                    Continue with Google
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/auth.js?v=7"></script>
+    <script src="js/roi-calculator.js?v=5"></script>
+    <script src="js/study-abroad-scholarships-data.js?v=5"></script>
+    <script src="js/study-abroad.js?v=11"></script>
+    <script src="js/pricing.js?v=5"></script>
+    </script>
+    
+    <!-- ===== Mobile Bottom Navigation Bar ===== -->
+    <nav class="mobile-bottom-nav" aria-label="Main navigation">
+        <a href="#" class="bottom-nav-item active" onclick="switchView('home'); document.querySelectorAll('.bottom-nav-item').forEach(e=>e.classList.remove('active')); this.classList.add('active'); return false;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+            Home
+        </a>
+        <a href="#" class="bottom-nav-item" onclick="switchView('search'); document.querySelectorAll('.bottom-nav-item').forEach(e=>e.classList.remove('active')); this.classList.add('active'); return false;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+            Search
+        </a>
+        <a href="#" class="bottom-nav-item" onclick="switchView('test-prep'); document.querySelectorAll('.bottom-nav-item').forEach(e=>e.classList.remove('active')); this.classList.add('active'); return false;" style="position:relative;">
+            <div style="background:var(--accent-primary); border-radius:50%; width:44px; height:44px; display:flex; align-items:center; justify-content:center; color:#fff; position:absolute; top:-16px; box-shadow:0 4px 12px var(--accent-glow); border:4px solid var(--bg-body);">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            </div>
+            <span style="margin-top:20px;">Test Prep</span>
+        </a>
+        <a href="#" class="bottom-nav-item" onclick="switchView('timeline'); document.querySelectorAll('.bottom-nav-item').forEach(e=>e.classList.remove('active')); this.classList.add('active'); return false;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            Timeline
+        </a>
+        <a href="#" class="bottom-nav-item" onclick="switchView('profile'); document.querySelectorAll('.bottom-nav-item').forEach(e=>e.classList.remove('active')); this.classList.add('active'); return false;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            Profile
+        </a>
+    </nav>
+    
+    <!-- Mobile Experience Banner (Restored) -->
+    <div id="mobile-exp-banner" style="position:fixed; bottom:0; left:0; width:100%; background:var(--bg-surface); padding:16px 20px; box-shadow:0 -4px 20px rgba(0,0,0,0.1); border-top:1px solid var(--border-color); display:flex; justify-content:space-between; align-items:center; z-index:9999; transform:translateY(100%); transition:transform 0.4s cubic-bezier(0.4, 0, 0.2, 1); display:none;">
+        <div style="display:flex; align-items:center; gap:12px;">
+            <div style="width:40px; height:40px; background:var(--accent-primary); border-radius:10px; display:flex; align-items:center; justify-content:center; color:#fff; font-size:1.2rem; box-shadow:0 4px 10px var(--accent-glow);">
+                📱
+            </div>
+            <div>
+                <h4 style="font-weight:700; font-size:0.95rem; margin:0 0 2px 0;">Mobile UI Available</h4>
+                <p style="font-size:0.75rem; color:var(--text-secondary); margin:0;">Switch to optimized mobile app view</p>
+            </div>
+        </div>
+        <div style="display:flex; align-items:center; gap:8px;">
+            <a href="mobile/dashboard.html" class="btn btn-primary" style="padding:8px 16px; border-radius:20px; font-size:0.8rem; font-weight:600;">Open App</a>
+            <button onclick="document.getElementById('mobile-exp-banner').style.transform = 'translateY(100%)'; localStorage.setItem('hideMobileBanner', 'true');" style="background:transparent; border:none; color:var(--text-tertiary); width:32px; height:32px; border-radius:50%; display:flex; align-items:center; justify-content:center; cursor:pointer;">
+                ✕
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Old mobile banner disabled — proper mobile UI is now built-in
+        // (mobile-base.css handles all mobile layout)
+
+        /* =====================================================
+           MOBILE SUB-FEATURE NAVIGATION HELPERS
+           These helpers work WITH the existing switchView() system.
+           Desktop is completely unaffected.
+        ===================================================== */
+
+        // Show the mobile sub-landing grid (called when navigating back)
+        function showMobileSubLanding(landingId, viewName) {
+            if (window.innerWidth > 768) return; // Desktop: do nothing
+            var landing = document.getElementById(landingId);
+            if (!landing) return;
+            landing.style.display = 'grid';
+            
+            var backBtnId = landingId.replace('MobileLanding', 'BackBtn');
+            var backBtn = document.getElementById(backBtnId);
+            if (backBtn) backBtn.style.display = 'none';
+
+            var viewEl = document.getElementById('view-' + (viewName.replace('view-', '')));
+            if (viewEl) {
+                viewEl.classList.remove('in-sub-feature');
+                // Hide the actual container so the grid is the only thing visible
+                Array.from(viewEl.children).forEach(child => {
+                    if (child.id !== landingId && child.id !== backBtnId) {
+                        if (child.style.display !== 'none') {
+                            child.dataset.originalDisplay = child.style.display || '';
+                        }
+                        child.style.display = 'none';
+                    }
+                });
+                viewEl.scrollTop = 0;
+            }
+        }
+
+        // Hide the mobile sub-landing grid and reveal the actual content
+        function hideMobileSubLanding(landingId) {
+            if (window.innerWidth > 768) return; // Desktop: do nothing
+            var landing = document.getElementById(landingId);
+            if (!landing) return;
+            landing.style.display = 'none';
+            
+            var backBtnId = landingId.replace('MobileLanding', 'BackBtn');
+            var backBtn = document.getElementById(backBtnId);
+            if (backBtn) backBtn.style.display = 'inline-flex';
+
+            // Restore visibility of container elements
+            var viewEl = landing.parentElement;
+            if (viewEl) {
+                viewEl.classList.add('in-sub-feature');
+                Array.from(viewEl.children).forEach(child => {
+                    if (child.id !== landingId && child.id !== backBtnId) {
+                        child.style.display = child.dataset.originalDisplay || 'block';
+                    }
+                });
+                viewEl.scrollTop = 0;
+            }
+        }
+
+        // Override switchView to show mobile sub-landings on mobile
+        // We wrap the existing switchView without breaking it
+        document.addEventListener('DOMContentLoaded', function() {
+            // Map view names to their mobile sub-landing IDs
+            var mobileSubLandings = {
+                'test-prep':   'testPrepMobileLanding',
+                'timeline':    'timelineMobileLanding',
+                'study-abroad': 'studyAbroadMobileLanding',
+                'consultants':  'consultantsMobileLanding'
+            };
+
+            // Store reference to original switchView if it exists
+            var _originalSwitchView = window.switchView;
+
+            // Wrap switchView to add mobile sub-landing logic
+            window.switchView = function(viewName) {
+                // Always call the original function first (preserves all functionality)
+                if (typeof _originalSwitchView === 'function') {
+                    _originalSwitchView(viewName);
+                }
+
+                // Mobile only: show sub-landing grid if this view has one
+                if (window.innerWidth <= 768 && mobileSubLandings[viewName]) {
+                    var landingId = mobileSubLandings[viewName];
+                    var landing = document.getElementById(landingId);
+                    if (landing) {
+                        landing.style.display = 'grid';
+                        
+                        var backBtnId = landingId.replace('MobileLanding', 'BackBtn');
+                        var backBtn = document.getElementById(backBtnId);
+                        if (backBtn) backBtn.style.display = 'none';
+
+                        // Hide the rest of the content
+                        var viewEl = document.getElementById('view-' + viewName);
+                        if (viewEl) {
+                            viewEl.classList.remove('in-sub-feature');
+                            Array.from(viewEl.children).forEach(child => {
+                                if (child.id !== landingId && child.id !== backBtnId) {
+                                    if (child.style.display !== 'none') {
+                                        child.dataset.originalDisplay = child.style.display || '';
+                                    }
+                                    child.style.display = 'none';
+                                }
+                            });
+                        }
+                    }
+                }
+
+                // Update bottom nav active state
+                var navMap = {
+                    'home': 0, 'search': 1, 'test-prep': 2, 'timeline': 3, 'profile': 4
+                };
+                var navItems = document.querySelectorAll('.bottom-nav-item');
+                navItems.forEach(function(item) { item.classList.remove('active'); });
+                if (navMap.hasOwnProperty(viewName) && navItems[navMap[viewName]]) {
+                    navItems[navMap[viewName]].classList.add('active');
+                }
+            };
+
+            // If switchView wasn't loaded yet, retry once scripts load
+            if (!_originalSwitchView) {
+                window.addEventListener('load', function() {
+                    if (window.switchView !== window.switchView) return;
+                    _originalSwitchView = null; // reset to pick up from dashboard.js
+                });
+            }
+        });
+    </script>
+</body>
+</html>
+
