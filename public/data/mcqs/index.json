@@ -1,0 +1,293 @@
+[
+  {
+    "id": "physics",
+    "title": "PHYSICS",
+    "icon": "🧲",
+    "color": "#3B82F6",
+    "totalCount": 500,
+    "topics": [
+      {
+        "name": "Mechanics",
+        "total": 32
+      },
+      {
+        "name": "Modern & Nuclear Physics",
+        "total": 72
+      },
+      {
+        "name": "Optics",
+        "total": 58
+      },
+      {
+        "name": "Current Electricity",
+        "total": 26
+      },
+      {
+        "name": "Oscillations & Waves",
+        "total": 52
+      },
+      {
+        "name": "Kinematics",
+        "total": 23
+      },
+      {
+        "name": "Work & Energy",
+        "total": 25
+      },
+      {
+        "name": "Circular & Rotational Motion",
+        "total": 21
+      },
+      {
+        "name": "Physics of Solids & Electronics",
+        "total": 48
+      },
+      {
+        "name": "Fluid Dynamics",
+        "total": 21
+      },
+      {
+        "name": "Thermodynamics",
+        "total": 26
+      },
+      {
+        "name": "Electromagnetism & EMI",
+        "total": 67
+      },
+      {
+        "name": "Electrostatics & Capacitance",
+        "total": 29
+      }
+    ]
+  },
+  {
+    "id": "english",
+    "title": "ENGLISH",
+    "icon": "📖",
+    "color": "#8B5CF6",
+    "totalCount": 1000,
+    "topics": [
+      {
+        "name": "Prepositions",
+        "total": 125
+      },
+      {
+        "name": "Vocabulary",
+        "total": 125
+      },
+      {
+        "name": "Grammar",
+        "total": 125
+      },
+      {
+        "name": "Sentence Correction",
+        "total": 125
+      },
+      {
+        "name": "Analogies",
+        "total": 100
+      },
+      {
+        "name": "Idioms & Phrases",
+        "total": 100
+      },
+      {
+        "name": "Active/Passive Voice",
+        "total": 100
+      },
+      {
+        "name": "Direct/Indirect Speech",
+        "total": 100
+      },
+      {
+        "name": "Reading Comprehension",
+        "total": 100
+      }
+    ]
+  },
+  {
+    "id": "math",
+    "title": "MATHEMATICS",
+    "icon": "π",
+    "color": "#EC4899",
+    "totalCount": 550,
+    "topics": [
+      {
+        "name": "Matrices & Determinants",
+        "total": 40
+      },
+      {
+        "name": "Complex Numbers",
+        "total": 10
+      },
+      {
+        "name": "Calculus (Limits)",
+        "total": 53
+      },
+      {
+        "name": "Calculus (Continuity)",
+        "total": 47
+      },
+      {
+        "name": "Calculus (Integration)",
+        "total": 58
+      },
+      {
+        "name": "Calculus (Differentiation)",
+        "total": 59
+      },
+      {
+        "name": "Differential Equations",
+        "total": 60
+      },
+      {
+        "name": "Permutations & Combinations",
+        "total": 58
+      },
+      {
+        "name": "Probability",
+        "total": 61
+      },
+      {
+        "name": "Statistics",
+        "total": 55
+      },
+      {
+        "name": "Calculus (Functions)",
+        "total": 49
+      }
+    ]
+  },
+  {
+    "id": "computer",
+    "title": "COMPUTER SCIENCE",
+    "icon": "💻",
+    "color": "#6366F1",
+    "totalCount": 500,
+    "topics": [
+      {
+        "name": "Basic Architecture",
+        "total": 100
+      },
+      {
+        "name": "Networking",
+        "total": 100
+      },
+      {
+        "name": "Databases",
+        "total": 100
+      },
+      {
+        "name": "Operating Systems",
+        "total": 100
+      },
+      {
+        "name": "Programming Fundamentals",
+        "total": 100
+      }
+    ]
+  },
+  {
+    "id": "biology",
+    "title": "BIOLOGY",
+    "icon": "🧬",
+    "color": "#10B981",
+    "totalCount": 150,
+    "topics": [
+      {
+        "name": "Cellular Biology & Biological Molecules",
+        "total": 29
+      },
+      {
+        "name": "Bioenergetics, Diversity & Plant Physiology",
+        "total": 35
+      },
+      {
+        "name": "Genetics, Inheritance & Biotechnology",
+        "total": 31
+      },
+      {
+        "name": "Human Physiology & Coordination",
+        "total": 55
+      }
+    ]
+  },
+  {
+    "id": "chemistry",
+    "title": "CHEMISTRY",
+    "icon": "🧪",
+    "color": "#06B6D4",
+    "totalCount": 500,
+    "topics": [
+      {
+        "name": "Physical Chemistry & Kinetics",
+        "total": 155
+      },
+      {
+        "name": "Electrochemistry & Ionic Equilibria",
+        "total": 41
+      },
+      {
+        "name": "Chemical Bonding & Periodicity",
+        "total": 49
+      },
+      {
+        "name": "Inorganic & Applied Chemistry",
+        "total": 89
+      },
+      {
+        "name": "Basic & Hydrocarbon Organic Chemistry",
+        "total": 58
+      },
+      {
+        "name": "Organic Functional Groups",
+        "total": 72
+      },
+      {
+        "name": "Biochemistry & Environmental Chemistry",
+        "total": 36
+      }
+    ]
+  },
+  {
+    "id": "iq",
+    "title": "IQ & LOGICAL REASONING",
+    "icon": "🧠",
+    "color": "#F59E0B",
+    "totalCount": 700,
+    "topics": [
+      {
+        "name": "Number & Letter Series",
+        "total": 113
+      },
+      {
+        "name": "Coding & Decoding",
+        "total": 130
+      },
+      {
+        "name": "Direction Sense Tests",
+        "total": 133
+      },
+      {
+        "name": "Blood Relations",
+        "total": 124
+      },
+      {
+        "name": "Syllogism",
+        "total": 48
+      },
+      {
+        "name": "Logical Deduction",
+        "total": 50
+      },
+      {
+        "name": "Analytical Reasoning",
+        "total": 51
+      },
+      {
+        "name": "Non-Verbal Reasoning",
+        "total": 51
+      }
+    ]
+  }
+]
