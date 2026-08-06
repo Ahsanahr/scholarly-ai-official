@@ -1,0 +1,20 @@
+[
+  {
+    "name": "EduGlobe Consultants",
+    "regions": "UK, Australia & Canada",
+    "rating": "4.9 ★",
+    "bio": "EduGlobe specializes in handling the complete A-to-Z process of international admissions. They assign a dedicated counselor who works with you from shortlisting universities to polishing your Statement of Purpose, securing unconditional offer letters, managing your financial documentation, and handling the entire visa application process. They are highly recommended for students aiming for post-graduate work visas. He is recomended by our web."
+  },
+  {
+    "name": "EuroPath Overseas Advisers",
+    "regions": "Italy, Germany & Hungary",
+    "rating": "4.8 ★",
+    "bio": "EuroPath focuses exclusively on European universities, particularly public universities in Germany and Italy that offer free tuition. They provide complete instruction and guidance on navigating complex European bureaucracy, legalizing documents, applying for regional need-based scholarships (like DSU in Italy), and securing student accommodation before arrival."
+  },
+  {
+    "name": "PakStudent Abroad Desk",
+    "regions": "Turkey, Northern Cyprus & China",
+    "rating": "4.7 ★",
+    "bio": "The PakStudent team handles the entire lifecycle of applying to Turkish and Chinese universities. They specialize in fully-funded government programs like Turkiye Burslari and Chinese Government Scholarships (CSC). Their comprehensive program includes language barrier assistance, equivalence certificates, and travel arrangements."
+  }
+]
